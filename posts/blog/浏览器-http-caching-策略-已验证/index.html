@@ -360,7 +360,7 @@
 
 <p>那浏览器对资源的缓存究竟是怎么做到的？遵循什么策略，什么时候会返回 <code>304</code> 的 <code>code</code> ，具体有什么约束呢，我们来接着看。</p>
 
-<p>###HTTP 缓存策略</p>
+<h3 id="http-缓存策略">HTTP 缓存策略</h3>
 
 <blockquote>
 <p><strong>HTTP 1.0</strong></p>
@@ -480,7 +480,7 @@ server.listen(8080)
 
 <p>以上这些结论都可以从 repo 的测试用例中得到，我们使用了 <strong>puppeteer</strong>（谷歌官方出品的一个通过DevTools协议控制headless Chrome的Node库。可以通过Puppeteer的提供的api直接控制Chrome模拟大部分用户操作来进行UI Test或者作为爬虫访问页面来收集数据）来模拟对浏览器的操作， 还有前端测试框架 <strong>Jest</strong> 写了一些很容易看懂的测试用例, 大家也可以添加自己不明白想验证的 Case，也欢迎大家提 Feedback。</p>
 
-<p>###最后</p>
+<h3 id="最后">最后</h3>
 
 <p>最后想说的是，很多人应该也见到过同样是  <code>200</code>的 <code>code</code>， 有些资源是 from memory cache，而有些却是 from disk cache 的，如下图
 <img src="https://upload-images.jianshu.io/upload_images/2190281-ec05410362c558aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from disk cahce" /></p>
@@ -503,7 +503,7 @@ server.listen(8080)
   <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91" role="button">开发 </a></li>
+      <li><a href="https://wdanna.com/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" role="button">软件开发 </a></li>
       
     
   </div>

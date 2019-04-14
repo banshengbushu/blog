@@ -44,7 +44,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</guid>
-      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 ###2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发</description>
+      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发音 很庆</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/%E6%95%99%E5%B8%88%E5%87%BA%E9%A2%98%E6%B5%81%E7%A8%8B/</guid>
-      <description>###paper-maker出题流程 1、教师填好题目的相关信息（name、 type、Github地址（包括script.sh脚本文件、templeteRepo(基于这么模板做题)、readme.md(题目描述) ））后点击保存按钮后 2、添加一个字段status，默认值为1（保存按钮为pending状态），将这四个字段保存至mongo中，并给前台返回一个_id字段，前台应将这个_id通过replace</description>
+      <description>paper-maker出题流程 1、教师填好题目的相关信息（name、 type、Github地址（包括script.sh脚本文件、templeteRepo(基于这么模板做题)、readme.md(题目描述) ））后点击保存按钮后 2、添加一个字段status，默认值为1（保存按钮为pending状态），将这四个字段保存至mongo中，并给前台返回一个_id字段，前台应将这个_id通过replace的方法</description>
     </item>
     
     <item>

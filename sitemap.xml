@@ -3,47 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://wdanna.com/posts/blog/2018-11/accessibility-%E6%88%91%E4%BB%AC%E8%83%BD%E5%81%9A%E4%BA%9B%E4%BB%80%E4%B9%88%E4%B8%8B/</loc>
-    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
+    <loc>https://wdanna.com/posts/blog/2018-12/2018-%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E4%B8%8D%E5%AE%8C%E7%BE%8E/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wdanna.com/posts/blog/</loc>
-    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wdanna.com/categories/</loc>
-    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wdanna.com/series/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wdanna.com/tags/</loc>
-    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://wdanna.com/tags/web/</loc>
-    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
+    <loc>https://wdanna.com/tags/thoughtworks/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://wdanna.com/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://wdanna.com/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wdanna.com/tags/%E6%88%90%E9%95%BF/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wdanna.com/categories/%E9%9A%BE%E5%85%8D%E7%9A%84%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wdanna.com/series/%E9%BB%84%E6%98%8F%E8%A7%81%E8%AF%81%E4%BA%86%E6%9C%80%E5%BF%A0%E5%AE%9E%E7%9A%84%E4%BF%A1%E5%BE%92/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wdanna.com/posts/blog/2018-11/accessibility-%E6%88%91%E4%BB%AC%E8%83%BD%E5%81%9A%E4%BA%9B%E4%BB%80%E4%B9%88%E4%B8%8B/</loc>
+    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wdanna.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2018-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2018-11-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/</loc>
     <lastmod>2018-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -57,12 +86,6 @@
   <url>
     <loc>https://wdanna.com/posts/books/</loc>
     <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/series/</loc>
-    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -83,32 +106,8 @@
   </url>
   
   <url>
-    <loc>https://wdanna.com/tags/thoughtworks/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/tags/%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://wdanna.com/posts/books/2017-12/%E8%BF%98%E8%AE%B0%E5%BE%972017%E9%82%A3%E5%A3%B0%E5%86%8D%E8%A7%81.../</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/categories/%E9%9A%BE%E5%85%8D%E7%9A%84%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/series/%E9%BB%84%E6%98%8F%E8%A7%81%E8%AF%81%E4%BA%86%E6%9C%80%E5%BF%A0%E5%AE%9E%E7%9A%84%E4%BF%A1%E5%BE%92/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -123,7 +122,7 @@
   </url>
   
   <url>
-    <loc>https://wdanna.com/tags/%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://wdanna.com/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2017-12-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -438,6 +437,10 @@
   </url>
   
   <url>
+    <loc>https://wdanna.com/posts/blog/2019-01/%E5%8E%A6%E9%97%A8%E8%B8%A9%E5%9D%913%E6%97%A5%E6%B8%B8/</loc>
+  </url>
+  
+  <url>
     <loc>https://wdanna.com/posts/blog/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/</loc>
   </url>
   
@@ -484,6 +487,11 @@
   </url>
   
   <url>
+    <loc>https://wdanna.com/categories/%E6%83%B3%E7%9C%8B%E7%9C%8B%E4%B8%96%E7%95%8C/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wdanna.com/posts/blog/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E7%9B%91%E7%9D%A3%E5%9F%B9%E5%85%BB%E4%B8%AA%E4%B9%A0%E6%83%AF%E5%90%A7/</loc>
   </url>
   
@@ -509,11 +517,6 @@
   
   <url>
     <loc>https://wdanna.com/posts/blog/%E6%95%99%E6%88%91%E5%90%83%E9%A5%AD%E8%B5%B0%E8%B7%AF%E7%9A%84%E4%BA%BA%E5%84%BF%E7%AD%89%E7%AD%89%E6%88%91%E5%A5%BD%E5%90%97/</loc>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/categories/%E6%97%85%E8%A1%8C%E5%9C%A8%E8%B7%AF%E4%B8%8A/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -576,11 +579,6 @@
   
   <url>
     <loc>https://wdanna.com/posts/blog/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%8E%E5%A4%96%E6%95%99%E8%A7%86%E9%A2%91%E7%BB%8F%E5%8E%86%E8%AF%B7%E6%8B%BF%E8%B5%B0/</loc>
-  </url>
-  
-  <url>
-    <loc>https://wdanna.com/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

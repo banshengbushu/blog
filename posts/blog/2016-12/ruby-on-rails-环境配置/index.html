@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="半生不熟 | Amber">
-  <meta name="description" content="###配置之前 从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！ 周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧 &gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。 apt-get只能安装一个版本，如果使用了sudo apt-get upd">
+  <meta name="description" content="配置之前 从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！ 周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧 &gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。 apt-get只能安装一个版本，如果使用了sudo apt-get update">
   
   <meta property="og:title" content="Ruby on rails 环境配置" />
-<meta property="og:description" content="###配置之前 从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！ 周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧 &gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。 apt-get只能安装一个版本，如果使用了sudo apt-get upd" />
+<meta property="og:description" content="配置之前 从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！ 周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧 &gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。 apt-get只能安装一个版本，如果使用了sudo apt-get update" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://wdanna.com/posts/blog/2016-12/ruby-on-rails-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" />
 <meta property="article:published_time" content="2016-12-07T00:00:00&#43;00:00"/>
@@ -327,8 +327,11 @@
 
 
           <div class="post-content markdown">
-            <p>###配置之前
-从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍<code>Ctrl V</code> 和 <code>Ctrl C</code>，终于，功夫不负有心人，它成功了！！！
+            
+
+<h3 id="配置之前">配置之前</h3>
+
+<p>从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍<code>Ctrl V</code> 和 <code>Ctrl C</code>，终于，功夫不负有心人，它成功了！！！
 <img src="http://upload-images.jianshu.io/upload_images/2190281-ce46be153e9ce030.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9788E4C3095705CD21EA9BC6C45EBCF7.jpg" /></p>
 
 <p>周围有同学用<code>apt-get</code>安装的，有用<code>rbenv</code>安装的，也有用<code>rvm</code>安装的，这里简单介绍下它们分别是什么吧
@@ -339,7 +342,7 @@
 <li><code>rvm</code>和<code>rbenv</code>都是<code>Ruby</code>的版本管理工具，都可以安装多个<code>Ruby</code>版本，<code>rvm</code>应该是最早出现、使用最多的，<code>rbenv</code> 比较受欢迎，所以选择哪个自己看喽，本人使用的是<code>rbenv</code>安装，</li>
 </ul>
 
-<p>###配置步骤</p>
+<h3 id="配置步骤">配置步骤</h3>
 
 <pre><code>$ cd $HOME
 $ sudo apt-get update 
@@ -408,15 +411,16 @@ Done installing documentation for bundler after 6 seconds
 <pre><code>$ rbenv rehash
 </code></pre>
 
-<p>###Ruby和Rails的关系
-&gt;<strong>Ruby</strong>是编辑语言，Rails是基于Ruby来实现的一个用于网站开发的MVC框架，学习Rails需要一些Ruby的基础知识，先学Ruby</p>
+<h3 id="ruby和rails的关系">Ruby和Rails的关系</h3>
 
 <blockquote>
+<p><strong>Ruby</strong>是编辑语言，Rails是基于Ruby来实现的一个用于网站开发的MVC框架，学习Rails需要一些Ruby的基础知识，先学Ruby</p>
+
 <p><strong>Ruby on Rails</strong>（官方简称为 Rails。也有人简称为 RoR，该缩写目前仍于一些中文讨论中被使用。），是一个使用<a href="https://zh.wikipedia.org/wiki/Ruby">Ruby</a>语言写的<a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%BA%90">开源</a><a href="https://zh.wikipedia.org/wiki/Web%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6">Web應用框架</a>，它是严格按照<a href="https://zh.wikipedia.org/wiki/MVC">MVC</a>结构开发的。它努力使自身保持简单，来使实际的应用开发时的代码更少，使用最少的配置。
 安装<code>rails</code></p>
 </blockquote>
 
-<p>###安装Rails</p>
+<h3 id="安装rails">安装Rails</h3>
 
 <pre><code>$ gem install rails
 Fetching: nokogiri-1.6.8.1.gem (100%)
@@ -457,7 +461,7 @@ Rails 5.0.0.1
   <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91" role="button">开发 </a></li>
+      <li><a href="https://wdanna.com/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" role="button">软件开发 </a></li>
       
     
   </div>
@@ -492,6 +496,136 @@ Rails 5.0.0.1
 	
 	
 	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%85%8d%e7%bd%ae%e4%b9%8b%e5%89%8d">
+												 配置之前
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%85%8d%e7%bd%ae%e6%ad%a5%e9%aa%a4">
+												 配置步骤
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#ruby%e5%92%8crails%e7%9a%84%e5%85%b3%e7%b3%bb">
+												 Ruby和Rails的关系
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85rails">
+												 安装Rails
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
 	
 
     </div>

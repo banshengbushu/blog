@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="半生不熟 | Amber">
-  <meta name="description" content="###paper-maker出题流程 1、教师填好题目的相关信息（name、 type、Github地址（包括script.sh脚本文件、templeteRepo(基于这么模板做题)、readme.md(题目描述) ））后点击保存按钮后 2、添加一个字段status，默认值为1（保存按钮为pending状态），将这四个字段保存至mongo中，并给前台返回一个_id字段，前台应将这个_id通过replace">
+  <meta name="description" content="paper-maker出题流程 1、教师填好题目的相关信息（name、 type、Github地址（包括script.sh脚本文件、templeteRepo(基于这么模板做题)、readme.md(题目描述) ））后点击保存按钮后 2、添加一个字段status，默认值为1（保存按钮为pending状态），将这四个字段保存至mongo中，并给前台返回一个_id字段，前台应将这个_id通过replace的方法">
   
   <meta property="og:title" content="教师出题流程" />
-<meta property="og:description" content="###paper-maker出题流程 1、教师填好题目的相关信息（name、 type、Github地址（包括script.sh脚本文件、templeteRepo(基于这么模板做题)、readme.md(题目描述) ））后点击保存按钮后 2、添加一个字段status，默认值为1（保存按钮为pending状态），将这四个字段保存至mongo中，并给前台返回一个_id字段，前台应将这个_id通过replace" />
+<meta property="og:description" content="paper-maker出题流程 1、教师填好题目的相关信息（name、 type、Github地址（包括script.sh脚本文件、templeteRepo(基于这么模板做题)、readme.md(题目描述) ））后点击保存按钮后 2、添加一个字段status，默认值为1（保存按钮为pending状态），将这四个字段保存至mongo中，并给前台返回一个_id字段，前台应将这个_id通过replace的方法" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://wdanna.com/posts/blog/%E6%95%99%E5%B8%88%E5%87%BA%E9%A2%98%E6%B5%81%E7%A8%8B/" />
 
@@ -323,8 +323,11 @@
 
 
           <div class="post-content markdown">
-            <p>###paper-maker出题流程
- 1、教师填好题目的相关信息（<code>name</code>、 <code>type</code>、<code>Github</code>地址（包括<code>script.sh</code>脚本文件、<code>templeteRepo</code>(基于这么模板做题)、<code>readme.md</code>(题目描述)
+            
+
+<h3 id="paper-maker出题流程">paper-maker出题流程</h3>
+
+<p>1、教师填好题目的相关信息（<code>name</code>、 <code>type</code>、<code>Github</code>地址（包括<code>script.sh</code>脚本文件、<code>templeteRepo</code>(基于这么模板做题)、<code>readme.md</code>(题目描述)
 ））后点击保存按钮后
 2、添加一个字段<code>status</code>，默认值为1（保存按钮为<code>pending</code>状态），将这四个字段保存至<code>mongo</code>中，并给前台返回一个<code>_id</code>字段，前台应将这个<code>_id</code>通过<code>replace</code>的方法放到<code>url</code>中（不用<code>push</code>的原因是页面进行回退操作后会先返回新建的界面然后才到试卷列表界面，而<code>replace</code>会直接返回到试卷列表界面）
 3、这时<code>Jenkins</code>获取本机的<code>IP</code>地址和<code>Github</code>地址进行一系列检查，如果检测到<code>Github</code>仓库地址里的字段有错误，则去<code>mongo</code>中更新<code>status</code>为0（新建试题失败），若检测所有数据没有问题则进入步骤4
