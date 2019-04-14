@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="如果选择用一段话来概括这篇文章，那可能是这样的。 ª 有时候做一个东西的时候潜意识地觉得自己没做过，不熟悉，然后就立马打开 Chrome 去搜，然而不巧网上的这方面的答案都随波逐流走偏了，看似完美的实现了，实际背后埋藏着很大的坑，但匆匆一看，这就是你想要的，这时候，你的思路也就潜移默化地被带偏了。 但当你泡好了茶，认真测试的时候，才发现，我靠，怎么会有个 Bug，一阵抓狂之后就开始想着怎么填上这个坑，于是一套自己认为可">
+  
+  <meta property="og:title" content="又被坑了之自动跳转" />
+<meta property="og:description" content="如果选择用一段话来概括这篇文章，那可能是这样的。 ª 有时候做一个东西的时候潜意识地觉得自己没做过，不熟悉，然后就立马打开 Chrome 去搜，然而不巧网上的这方面的答案都随波逐流走偏了，看似完美的实现了，实际背后埋藏着很大的坑，但匆匆一看，这就是你想要的，这时候，你的思路也就潜移默化地被带偏了。 但当你泡好了茶，认真测试的时候，才发现，我靠，怎么会有个 Bug，一阵抓狂之后就开始想着怎么填上这个坑，于是一套自己认为可" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/2018-11/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/" />
+<meta property="article:published_time" content="2018-11-30T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-11-30T00:00:00&#43;00:00"/><meta property="og:see_also" content="https://wdanna.com/posts/blog/2018-10/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility%E4%B8%8A/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2018-08/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-11/%E6%A8%A1%E6%80%81%E6%A1%86%E5%92%8C%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-09/react%E9%82%A3%E4%BA%9B%E4%BA%8B/" />
+
+
+
+  <title>
+  
+       又被坑了之自动跳转 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2018-11/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 前端开发 </a></li>
+      
+    
+    
+      
+        <li><a href="https://wdanna.com/series/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>前端开发</a></li>
+      
+    
+  </ul>
+
+  <div class="px-2 post-heading">又被坑了之自动跳转</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Nov 30, 2018</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>3 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <p>如果选择用一段话来概括这篇文章，那可能是这样的。
+ª
+有时候做一个东西的时候潜意识地觉得自己没做过，不熟悉，然后就立马打开 Chrome 去搜，然而不巧网上的这方面的答案都随波逐流走偏了，看似完美的实现了，实际背后埋藏着很大的坑，但匆匆一看，这就是你想要的，这时候，你的思路也就潜移默化地被带偏了。</p>
+
+<p>但当你泡好了茶，认真测试的时候，才发现，我靠，怎么会有个 Bug，一阵抓狂之后就开始想着怎么填上这个坑，于是一套自己认为可以完美修复并且对用户友好的方案就出来了，但当你再次准备好一切，正想怎么去实现它的时候，无意间随手又试了试一个自己的想法，刹那间，什么都不一样了，就多想了那么一一点点 才发现自己很容易就能解决那个问题，根本不用什么自己觉得复杂而且对用户友好的设计，最后就剩吐槽网上的答案了。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-70e970a7dd469110.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt="" /></p>
+
+<p>想如果你还感兴趣，那就继续滑吧。
+想必你应该对这样一个功能并不陌生。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-aa421cb87fcbe2db.gif?imageMogr2/auto-orient/strip" alt="自动跳转下一个input" /></p>
+
+<p>可能你会想说这个问题不是很简单吗，没错，我当时也这样想，实际做完后才发现，它是真的简单。</p>
+
+<p>大体的思路：<strong>对于自动 focus on 下一个输入框，监听 input 的事件，在用户输入满足校验条件以及限定的位数的时候，获取下一个应该给聚焦的元素，然后调用 focus 方法。</strong></p>
+
+<p>然后对于这个需要监听的 input 事件，想都没想，就打开 Chrome了，连续看了四五六七八个解决方案，一致地推荐 onKayUp 是个完美的解决方案。</p>
+
+<p>测试完毕，欣喜，提交。</p>
+
+<p>然鹅，当我输完第三个，我想直接回去修改上一个，才发现 Shift tab 根本回不去，如果想硬回，要不上鼠标，要不同时按个 Shift Tab Space 键。</p>
+
+<p>像这样：</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-4cc4c0407c5b1a17.gif?imageMogr2/auto-orient/strip" alt="Shift Tab issue" /></p>
+
+<p>然后第一反应是去网上试了五六七八个推荐用法的 Demo，原来都有这个问题，What？这些人都不修的吗，终于找到一个Shift Tab 可以回去的，看了下描述，是用了一个 Toggle 来控制 自动跳转的功能会不会被启用。</p>
+
+<p>仔细又测了一波，发现 Tab 的时候也有同样道理的问题，如果我现在从第一个填到了最后一个，这时候发现都填的不对，但我就是想从第一个iput 开始修改，这时候 Shift Tab 是回不去的，无奈，用鼠标点击了第一个input，修改完后，心想跳到第二个应该就可以再改了，然鹅，它直接给我跳转到了第三个。</p>
+
+<p>我在想，幸好，我这只有三个 input需要实现自动跳转，如果有七八九十个，那还不得给用户表演个一系列跳转动画？</p>
+
+<p>然后，就在这个坑里挣扎，想着要怎么跳出去呢，是不是需要监听用户使用了 Shift 还是 Shift Tab 还是鼠标呀，你根本不知道用户是怎么样在你的页面点点点一通的。</p>
+
+<p>冷静下，仔细思考下怎么样才能尽可能地让用户收益于这个自动跳转功能，还不会被它带来的副作用 block 呢。</p>
+
+<p>于是，就有了这样一张图，还和其他同事讨论了一下这方案，都觉得可行，虽然看着有点略复杂，但这个问题百分百是要修的。
+<img src="http://upload-images.jianshu.io/upload_images/2190281-a6a5aa0779698b60.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt="图片发自简书App" /></p>
+
+<p>当做好所有准备，开始按这样实现的时候。</p>
+
+<p>想了一个问题，onKeyUp才是罪魁祸首呀，当Shift Tab 按下的时候，就是因为触发了 keyUp 事件，所有根本跳不回去。我为什么不用 onChange？</p>
+
+<p>冷静了1分钟，我为什么不用 onChange，？竟半天想不出答案。</p>
+
+<p>实锤了一波，简直完美。这里有 Demo，感兴趣可以点一点，哈哈。</p>
+
+<p>还想了想这样用是不是有什么别的坑，因为百分之九十九的答案都是 onKeyUp。 但我想说，真的是不对的，要不是账号有经验限制，真想每个都评论一遍问下作者这个问题。</p>
+
+<p>其实一开始真的觉得很浪费时间，自己干嘛不多想那么一下，如果一开始没有去搜，直接用了 onChange，是不是就根本没有这个问题，但换了个思路想，如果没有搜，也不会知道网上的这些一模一样所谓正确的答案原来都是有问题的，那也就不会有坐在这里一字一句地把件事情记录下来，让更多的人意识到这个问题，也提醒自己以后不要犯类似的错误。</p>
+
+<p>也许，这就是生活吧。
+少走了弯路，也就错过了风景。</p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" role="button">软件开发 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

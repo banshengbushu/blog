@@ -6,10 +6,19 @@
     <description>Recent content in 前端开发 on 半生不熟 | Amber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Tue, 06 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>又被坑了之自动跳转</title>
+      <link>https://wdanna.com/posts/blog/2018-11/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2018-11/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/</guid>
+      <description>如果选择用一段话来概括这篇文章，那可能是这样的。 ª 有时候做一个东西的时候潜意识地觉得自己没做过，不熟悉，然后就立马打开 Chrome 去搜，然而不巧网上的这方面的答案都随波逐流走偏了，看似完美的实现了，实际背后埋藏着很大的坑，但匆匆一看，这就是你想要的，这时候，你的思路也就潜移默化地被带偏了。 但当你泡好了茶，认真测试的时候，才发现，我靠，怎么会有个 Bug，一阵抓狂之后就开始想着怎么填上这个坑，于是一套自己认为可</description>
+    </item>
     
     <item>
       <title>Accessibility 我们能做些什么(下)</title>
@@ -30,12 +39,30 @@
     </item>
     
     <item>
+      <title>浏览器 HTTP Caching 策略 (已验证)</title>
+      <link>https://wdanna.com/posts/blog/2018-08/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/</link>
+      <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2018-08/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/</guid>
+      <description>很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。 这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和 项目组大牛 Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。 Cache 说到缓存，知乎上看到过这样一个</description>
+    </item>
+    
+    <item>
       <title>Flex布局也就这么多</title>
       <link>https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/</guid>
       <description>还清楚记得第一次用Flex实现了垂直居中的时候，我那各种unbelievable的心情，然后就深深喜欢上了这个好玩的东西 为什么出现 关于Flex布局的出现解决了的问题，个人总结了以下几点原因。 先看看到现在WEB布局的一个发展吧 传统的布局都是基于盒模型，然后设置各种display和position，必要时再加上相应地float，想必写过CSS的同学都感受到过，实现一些复杂的布局会非常不方便，有时候自己</description>
+    </item>
+    
+    <item>
+      <title>模态框和禁止页面滚动</title>
+      <link>https://wdanna.com/posts/blog/2017-11/%E6%A8%A1%E6%80%81%E6%A1%86%E5%92%8C%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-11/%E6%A8%A1%E6%80%81%E6%A1%86%E5%92%8C%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</guid>
+      <description>问题 今天帮朋友看了一个问题，是要实现点击按钮出现一个弹框以及背景遮罩的功能。 因为项目在用Bootstrap，所以第一想法当然是直接用Bootstrap的模态框，但是奇葩的是一直出现闪退的情况，但之前从来没有遇到这种情况，就去搜了下。 看到大部分人都说一般是因为JS文件发生了冲突，想了想可能项目引入的库有重写模态框的东西，但是试了半天也没有找到是哪个文件，于是决定换一种方式了，因为项目原因，要尽量少用</description>
     </item>
     
     <item>
@@ -48,12 +75,30 @@
     </item>
     
     <item>
+      <title>动手前记得问自己一个问题</title>
+      <link>https://wdanna.com/posts/blog/2017-08/%E5%8A%A8%E6%89%8B%E5%89%8D%E8%AE%B0%E5%BE%97%E9%97%AE%E8%87%AA%E5%B7%B1%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-08/%E5%8A%A8%E6%89%8B%E5%89%8D%E8%AE%B0%E5%BE%97%E9%97%AE%E8%87%AA%E5%B7%B1%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/</guid>
+      <description>在写任何页面之前记得问自己一个问题 — 真的确定看清楚了吗？ 要实现的页面 乍一看挺简单的一张页面，但是写完后和大神交流了下才发现，很多东西是我没有看清楚的，更或者说一些东西只看到了其中的一部分，写完反复感受了下大神提到的需要改进的地方，在这里简单总结了一下。 我们想的一样吗 有兴趣的可以试试按自己的想法划分一下这个页面，挺好玩的。 按功能块划分大的整体应该是分三部分的，依据有背景颜色、页面功能、重复性用户体验</description>
+    </item>
+    
+    <item>
       <title>CSS 实现动态百分比圆环</title>
       <link>https://wdanna.com/posts/blog/2017-08/css-%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%9C%86%E7%8E%AF/</link>
       <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2017-08/css-%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%9C%86%E7%8E%AF/</guid>
       <description>#效果展示 没掌握上传动图的操作，这里就先截静态图吧 #实现思路 自己的思路 一开始看到这个图的时候，想着应该不难 * 外面一个div，里面一个div，一个背景深蓝色，一个背景白色 * 蓝色的div加一个伪元素，背景浅蓝色，再裁剪一半 还是先试试，写着写着发现中间各种设置四周边距，才让中间div居中，我都看不下去了 参考了别人的思路 看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然</description>
+    </item>
+    
+    <item>
+      <title>前端学习网站整理</title>
+      <link>https://wdanna.com/posts/blog/2017-06/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-06/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</guid>
+      <description>配置 nvm 国内版本（命令行下执行） sh -c &amp;quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot; 配置 cnpm 方法(淘宝NPM镜像) 一套绝佳的图表字体和 CSS 框架 React 适合初学者学习 React 的网站-中文 React项目新手指南 适合初学者学习 React 的网站-视频 使用React-router和Webpack快速构建一个react程序 React结合redux实现一个todoList 深入理解 react-router 路由系统 Bootstrap Bootstrap所有组建模板 Bootstrap做的登录界面优化版 Bootsnipp 一个网页设计师和网站</description>
     </item>
     
     <item>
@@ -126,51 +171,6 @@
       
       <guid>https://wdanna.com/posts/blog/2016-10/reflux-%E5%AE%9E%E7%8E%B0-hello-world/</guid>
       <description>初识Reflux Reflux 是一个简单的单向数据流应用库，灵感来自于ReactJs Flux 解决了数据在React 应用中的流动方式及过程 需求分析 用 Reflux 实现界面渲染 hello world 分解任务 使用 React 创建一个组件，在页面渲染出 hello word 安装 Reflux 创建一个 Action 创建一个 Store，用来监听** Action **，并且获取 Action 传递的 hello world Store 将值传递给 Component，并且渲染到页面 将代码上传至 Github 分步实现任务 使用 React 创建一个组件，在页面渲染出 hello word &#39;use strict&#39;; import React from &#39;react&#39;; import {render} from &#39;react-dom&#39;; const App =</description>
-    </item>
-    
-    <item>
-      <title>动手前记得问自己一个问题</title>
-      <link>https://wdanna.com/posts/blog/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</guid>
-      <description>配置 nvm 国内版本（命令行下执行） sh -c &amp;quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot; 配置 cnpm 方法(淘宝NPM镜像) 一套绝佳的图表字体和 CSS 框架 React 适合初学者学习 React 的网站-中文 React项目新手指南 适合初学者学习 React 的网站-视频 使用React-router和Webpack快速构建一个react程序 React结合redux实现一个todoList 深入理解 react-router 路由系统 Bootstrap Bootstrap所有组建模板 Bootstrap做的登录界面优化版 Bootsnipp 一个网页设计师和网站</description>
-    </item>
-    
-    <item>
-      <title>动手前记得问自己一个问题</title>
-      <link>https://wdanna.com/posts/blog/%E5%8A%A8%E6%89%8B%E5%89%8D%E8%AE%B0%E5%BE%97%E9%97%AE%E8%87%AA%E5%B7%B1%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E5%8A%A8%E6%89%8B%E5%89%8D%E8%AE%B0%E5%BE%97%E9%97%AE%E8%87%AA%E5%B7%B1%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/</guid>
-      <description>在写任何页面之前记得问自己一个问题 — 真的确定看清楚了吗？ 要实现的页面 乍一看挺简单的一张页面，但是写完后和大神交流了下才发现，很多东西是我没有看清楚的，更或者说一些东西只看到了其中的一部分，写完反复感受了下大神提到的需要改进的地方，在这里简单总结了一下。 我们想的一样吗 有兴趣的可以试试按自己的想法划分一下这个页面，挺好玩的。 按功能块划分大的整体应该是分三部分的，依据有背景颜色、页面功能、重复性用户体验</description>
-    </item>
-    
-    <item>
-      <title>又被坑了之自动跳转</title>
-      <link>https://wdanna.com/posts/blog/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E5%8F%88%E8%A2%AB%E5%9D%91%E4%BA%86%E4%B9%8B%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC/</guid>
-      <description>如果选择用一段话来概括这篇文章，那可能是这样的。 ª 有时候做一个东西的时候潜意识地觉得自己没做过，不熟悉，然后就立马打开 Chrome 去搜，然而不巧网上的这方面的答案都随波逐流走偏了，看似完美的实现了，实际背后埋藏着很大的坑，但匆匆一看，这就是你想要的，这时候，你的思路也就潜移默化地被带偏了。 但当你泡好了茶，认真测试的时候，才发现，我靠，怎么会有个 Bug，一阵抓狂之后就开始想着怎么填上这个坑，于是一套自己认为可</description>
-    </item>
-    
-    <item>
-      <title>模态框和禁止页面滚动</title>
-      <link>https://wdanna.com/posts/blog/%E6%A8%A1%E6%80%81%E6%A1%86%E5%92%8C%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E6%A8%A1%E6%80%81%E6%A1%86%E5%92%8C%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</guid>
-      <description>问题 今天帮朋友看了一个问题，是要实现点击按钮出现一个弹框以及背景遮罩的功能。 因为项目在用Bootstrap，所以第一想法当然是直接用Bootstrap的模态框，但是奇葩的是一直出现闪退的情况，但之前从来没有遇到这种情况，就去搜了下。 看到大部分人都说一般是因为JS文件发生了冲突，想了想可能项目引入的库有重写模态框的东西，但是试了半天也没有找到是哪个文件，于是决定换一种方式了，因为项目原因，要尽量少用</description>
-    </item>
-    
-    <item>
-      <title>浏览器 HTTP Caching 策略 (已验证)</title>
-      <link>https://wdanna.com/posts/blog/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/</guid>
-      <description>很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。 这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和 项目组大牛 Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。 Cache 说到缓存，知乎上看到过这样一个</description>
     </item>
     
   </channel>
