@@ -107,12 +107,12 @@ a:active .active-color  {
 }
 
 @media (max-width: 450px) {
-  .carousel-item .view {
+  .carousel-indicators~.carousel-inner .carousel-item .view {
     background-position-x: -300px;
   }
 
   .post-main-wrapper .col-md-9 {
-    padding: 0;
+    padding: 0; !important;
   }
 }
 
