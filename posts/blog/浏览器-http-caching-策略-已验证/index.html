@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。 这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和 项目组大牛 Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。 Cache 说到缓存，知乎上看到过这样一个">
+  
+  <meta property="og:title" content="浏览器 HTTP Caching 策略 (已验证)" />
+<meta property="og:description" content="很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。 这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和 项目组大牛 Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。 Cache 说到缓存，知乎上看到过这样一个" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/" />
+<meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-09/react%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-08/css-%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%9C%86%E7%8E%AF/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AE%A9%E5%A4%A7%E8%84%91%E6%AD%87%E6%AD%87%E5%90%A7-%E7%8E%A9%E7%8E%A9gtd/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AF%95%E4%BA%86%E5%85%AD%E5%A4%A9gtd%E7%9A%84%E6%88%91/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2016-12/trello-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/" />
+
+
+
+  <title>
+  
+       浏览器 HTTP Caching 策略 (已验证) | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/%E6%B5%8F%E8%A7%88%E5%99%A8-http-caching-%E7%AD%96%E7%95%A5-%E5%B7%B2%E9%AA%8C%E8%AF%81/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 前端开发 </a></li>
+      
+    
+    
+      
+        <li><a href="https://wdanna.com/series/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>前端开发</a></li>
+      
+    
+  </ul>
+
+  <div class="px-2 post-heading">浏览器 HTTP Caching 策略 (已验证)</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jan 1, 0001</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>7 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<p>很多人会觉得 HTTP 的 Caching 策略很难，我之前也不例外，究其原因，它是乌龟的屁股，规定（龟腚），在官方介绍中也没有给出简单有效的事实验证，自己也没有相对多的机会去实践验证。</p>
+
+<p>这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和  <a href="https://liyaodong.com/">项目组大牛</a> Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-9ffea266c68d97d1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<h3 id="cache">Cache</h3>
+
+<p>说到缓存，知乎上看到过这样一个解释，觉得还挺有意思。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-df5cca82a32a6b2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Cache" /></p>
+
+<blockquote>
+<p>如上图一样，Cache 可以认为是一种保管箱。
+右边那个被锈掉的 Food Cache，就是部署在森林里的存应急物资的保管箱。功能是把你需要用的东西放在更容易拿到的地方。</p>
+
+<p>虽然常用准确翻译叫缓存，但台湾的翻译更好，叫快取。</p>
+</blockquote>
+
+<p>这样一来，看WiKi 的解释也就很清楚了。
+&gt;A <strong>cache</strong> <a href="https://en.wikipedia.org/wiki/Help:IPA/English" title="Help:IPA/English">/kæʃ/</a> <a href="https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key" title="Help:Pronunciation respelling key"><em>KASH</em></a>,<sup><a href="https://en.wikipedia.org/wiki/Cache_(computing)#cite_note-1">[1]</a></sup> is a hardware or software component that stores data so future requests for that data can be served faster</p>
+
+<p>相信很多人应该经常也会看到 <code>304</code> 的请求吧</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-c456429b8d7a8e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>这也就为什么进入一个网页后之后的刷新会比首次快很多，归根结底都是 Cache 的功劳。</p>
+
+<p>至于缓存的作用，我想应该就不用多说了，减少服务器压力，减少网络延迟和带宽，加快网页加载速度等等，所以可想而知，一个优秀的缓存策略其实对网站的优化帮助还是蛮大的。</p>
+
+<p>那浏览器对资源的缓存究竟是怎么做到的？遵循什么策略，什么时候会返回 <code>304</code> 的 <code>code</code> ，具体有什么约束呢，我们来接着看。</p>
+
+<p>###HTTP 缓存策略</p>
+
+<blockquote>
+<p><strong>HTTP 1.0</strong></p>
+</blockquote>
+
+<p>在 HTTP 1.0 的时代，可以通过在 HTTP <code>Header</code> 中设置以下两个值来控制缓存</p>
+
+<ul>
+<li><p><strong>Pragma: no-cache</strong>
+Pragma 只有这一个用法，强制要求服务器在返回缓存的资源之前将请求提交到源服务器进行验证。</p></li>
+
+<li><p><strong>Expires</strong>
+定义了是资源“失效时刻”，对应的值是一个具体的 GMT（格林尼治时间），比如<code>Mon, 22 Jul 2002 11:12:01 GMT</code>，如果浏览器的时间还没过该时间点，那么发起的请求都不会到达服务器，它会直接从本地的缓存中读取资源内容 。
+但要注意的是，Expires 所定义的缓存时间是相对服务器上的时间而言的，因为其定义的是资源“失效时刻”，所以如果浏览器上的时间跟服务器上的时间不一致（特别是用户修改了自己电脑的系统时间），那缓存时间可能就没啥意义了。</p></li>
+</ul>
+
+<blockquote>
+<p><strong>HTTP 1.1</strong></p>
+</blockquote>
+
+<p>为了解决前面说到的 <code>Expires 定义的时间是相对服务器而言，无法保证和浏览器时间统一</code>的问题， HTTP 1.1 新增了 <code>Cache-Control</code> 通用首部字段来控制已缓存的内容，在 <code>request</code> 和 <code>response</code> 的 Header 均可设置，设置方法很简单，举一个例子</p>
+
+<pre><code>import HTTP from 'http';
+
+let server = HTTP.createServer(( req, res )) =&gt; {
+  res.setHeader( 'Cache-Control', 'public, max-age=86400' )
+  res.end( 'harttle.land' )
+})
+
+server.listen(8080)
+</code></pre>
+
+<p>具体可以设置的值有以下几种：
+* <strong>no-store</strong>
+缓存中不允许存储任何关于浏览器请求和服务器响应的内容。每次由浏览器发起的请求都会从服务器下载完整的响应内容</p>
+
+<ul>
+<li><p><strong>public</strong>
+该响应可以被任何中间人（比如中间代理、CDN等）缓存。若指定了&rdquo;public&rdquo;，则一些通常不被中间人缓存的页面（默认是private）（比如 带有 HTTP 验证信息（帐号密码）的页面或某些特定影响状态码的页面），将会被其缓存</p></li>
+
+<li><p><strong>private</strong>
+表示该响应是专用于某单个用户的，中间人不能缓存此响应，该响应只能应用于用户自己的浏览器私有缓存中</p></li>
+
+<li><p><strong>max-age</strong>
+<code>max-age =&lt;seconds&gt;</code>表示资源能够被缓存的最大时间，在该时间段内，不会向 服务器发起请求。
+相对 Expires 而言，max-age 是距离请求发起的时间的秒数，通常针对一些不会改变的文件，可以手动设置一定的时长以保证缓存有效，比如图片、css、js等静态资源。</p></li>
+</ul>
+
+<blockquote>
+<p>如果没有设置 <code>max-age</code> 则会检查是否有 <code>Expires</code> 字段，如果这两个都没有设置，浏览器则会有条默认的计算规则，就是读取 <code>Date</code> 和 <code>Last-Modified</code> 的差值除以 10，也就是说浏览器总有一个时间来保证缓存的有效期</p>
+</blockquote>
+
+<ul>
+<li><strong>no-cache</strong>
+每次有请求发出时，缓存会将此请求发到服务器（该请求应该会带有与本地缓存相关的验证字段），服务器端会验证请求中所描述的缓存是否过期，若未过期（实际就是返回304），则缓存才使用本地缓存副本，如过期，就是正常的返回响应内容。</li>
+</ul>
+
+<blockquote>
+<p>所以 <code>Pragma: no-cache</code> 可以应用到 HTTP 1.0 和 HTTP 1.1 ,而 <code>Cache-Control: no-cache</code> 只能应用于 http 1.1，所以很多网站为了做 HTTP 协议的向下兼容，还是可以看到依旧会带上这两个字段，比如 <a href="https://ke.qq.com/">腾讯课堂</a>。</p>
+</blockquote>
+
+<p><strong>同时要注意，如果三个字段同时出现的话，优先级从高到低分别是</strong>
+ <strong>Pragma &gt; Cache-Control &gt; Expires</strong></p>
+
+<h3 id="其他首部字段"><strong>其他首部字段</strong></h3>
+
+<ul>
+<li><strong>Last-Modified &amp; If-Modified-Since</strong></li>
+</ul>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-d3c2dc76da10e9b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>在第一次请求资源，服务器将资源传递给浏览器时，会将资源最后更改的时间以 <code>Last-Modified: GMT</code> 的形式加在 <code>response</code> 首部上一起返回给浏览器。</p>
+
+<p>第二次请求这个资源时，浏览器会给 <code>request</code> 加上 <code>If-Modified-Since: GMT</code> 这个头，发送给服务器，询问该时间之后文件是否被修改过，如果浏览器传来的最后修改时间与服务器上的一致，则直接返回 <code>304</code> 状态码，内容为空，如果两个时间不一致，则服务器会返回该资源并返回 <code>200</code> 状态码，和第一次请求类似。</p>
+
+<ul>
+<li><strong>ETag &amp; If-None-Match</strong></li>
+</ul>
+
+<p>不知道你有没有发现，其实仅仅使用 <code>Last-Modified: GTM</code> 是存在一些问题的，</p>
+
+<p>比如说有些资源的内容并没有修改，只是修改了时间，其实我们是不希望重新请求服务器的，但 <code>Last-Modified</code>是无法识别的。</p>
+
+<p>还有一个问题就是 <code>Last-Modified</code> 和 <code>If-Modified-Since</code> 的单位是以秒计算的，如果说资源的修改非常频繁的时候，比如在毫秒之内的话，依然是会有问题的。</p>
+
+<p>为了解决上面这些问题，Http 1.1 还推出了 ETag (Entity Tag) 实体首部字段，具体的原理是这样的。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-acb37806b2bbca68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>服务器会通过某种算法，为每个资源都计算得出一个唯一标识符，比如 <code>md5</code> 标识符，一旦这个资源发生了变化，这个标识符就会发生变化。</p>
+
+<p>如上图，在浏览器第一次请求这个资源的时候， 服务器会加上<code>ETag: 唯一标识符</code> 的头，随资源一起返回给浏览器。</p>
+
+<p>浏览器在收到后会保留该 <code>ETag</code> 字段，并在下一次请求时在头部增加 <code>If-None-Match: 唯一标识符</code> 将其发到服务器端，这时，服务器端只需要比较浏览器传来的<code>If-None-Match: 唯一标识符</code>跟自己服务器上该资源的 <code>ETag</code> 是否一致，就能很好地判断该资源相对浏览器而言是否被修改过了，如果被修改了，就返回 200 以及新的资源，如果 ETag 是一致的，则直接返回 <code>304</code> 告诉浏览器读取本地缓存即可。</p>
+
+<p><strong>所以可以明显的看到，ETag 是有很多好处的，它可以更加精确的判断资源是否被修改，可以识别一秒内多次修改的情况。</strong></p>
+
+<h3 id="组合需合理">组合需合理</h3>
+
+<p>从官网上找了一张图，可以通过组合的方式来确定你使用的特定资源或一组资源的最优缓存策略。</p>
+
+<blockquote>
+<p><strong>理想情况下，目标应该是在浏览器上缓存尽可能多的响应、缓存尽可能长的时间，并且为每个响应提供 ETag，以便进行高效的重新验证。</strong></p>
+</blockquote>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-a679fdec71fe8bc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="组合需合理" /></p>
+
+<p>但说到这里，相信大家对具体情况到底该怎么组合应该还是有疑虑的，我们在研究后写了一些测试用例，建立在每个 Case 都可以被验证的事实上加深了对它的理解，得出的其中一个很重要的结论就是：<strong>组合需合理</strong></p>
+
+<ul>
+<li><strong>如果只设置了 max-age ，则在其设置的有效期内永远不会向服务器发起请求</strong></li>
+<li><strong>public 和 max-age 一起使用，相当于 只设置 max-age，因为 max-age 会隐式地表明该资源是public的）</strong></li>
+<li><strong>no cache 单独和 max-age 一起使用其实是没有意义的，因为这每次都会向 服务器发起请求，返回资源内容，即使请求的资源内容没有发生变化</strong></li>
+<li><strong>ETag 和 max-age 一起使用是一个较好的缓存策略，在资源内容没有改变的情况下，服务器会返回 <code>304</code> ，让浏览器从缓存中读取资源，并且这时的缓存有效期会根据 max-age 的值自动向后 extend。</strong></li>
+</ul>
+
+<p>以上这些结论都可以从 repo 的测试用例中得到，我们使用了 <strong>puppeteer</strong>（谷歌官方出品的一个通过DevTools协议控制headless Chrome的Node库。可以通过Puppeteer的提供的api直接控制Chrome模拟大部分用户操作来进行UI Test或者作为爬虫访问页面来收集数据）来模拟对浏览器的操作， 还有前端测试框架 <strong>Jest</strong> 写了一些很容易看懂的测试用例, 大家也可以添加自己不明白想验证的 Case，也欢迎大家提 Feedback。</p>
+
+<p>###最后</p>
+
+<p>最后想说的是，很多人应该也见到过同样是  <code>200</code>的 <code>code</code>， 有些资源是 from memory cache，而有些却是 from disk cache 的，如下图
+<img src="https://upload-images.jianshu.io/upload_images/2190281-ec05410362c558aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from disk cahce" /></p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-f25375a25a1e7105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from memory cache" /></p>
+
+<p>这个我们其实没有做过多的研究，因为这并不影响缓存策略的设置，但确定的是，这完全是由浏览器自己决定的，<code>memory cache</code> 会将资源存到内存中，从内存中获取，<code>disk cache</code> 则会将资源缓存到磁盘中，从磁盘中获取，<strong>二者最大的区别在于：当退出进程时，内存中的数据会被清空，而磁盘的数据则不会。大家如果感兴趣可以自己再做些研究的啦。</strong></p>
+
+<p>最后附上 <a href="https://drive.google.com/file/d/1Scr71fTScyWEPCWqUUms5Uypsk2rWSdK/view?usp=sharing">PPT 的链接</a> 以及 <a href="https://github.com/banshengbushu/HTTP-Caching-demo"> repo</a> 地址</p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91" role="button">开发 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="1、命令行真的好吗 * 维基百科的解释 &gt;命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。 * 也有人这样说 &gt;熟练使用命令行是一种常常被忽视，或被认为难以掌握的技能，但实际上，它会提高你作为工程师的灵活性以及生产">
+  
+  <meta property="og:title" content="神奇的 Linux 命令行" />
+<meta property="og:description" content="1、命令行真的好吗 * 维基百科的解释 &gt;命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。 * 也有人这样说 &gt;熟练使用命令行是一种常常被忽视，或被认为难以掌握的技能，但实际上，它会提高你作为工程师的灵活性以及生产" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/2016-11/%E7%A5%9E%E5%A5%87%E7%9A%84-linux-%E5%91%BD%E4%BB%A4%E8%A1%8C/" />
+<meta property="article:published_time" content="2016-11-19T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-11-19T00:00:00&#43;00:00"/><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-09/react%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-08/css-%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%9C%86%E7%8E%AF/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AE%A9%E5%A4%A7%E8%84%91%E6%AD%87%E6%AD%87%E5%90%A7-%E7%8E%A9%E7%8E%A9gtd/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AF%95%E4%BA%86%E5%85%AD%E5%A4%A9gtd%E7%9A%84%E6%88%91/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2016-12/trello-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/" />
+
+
+
+  <title>
+  
+       神奇的 Linux 命令行 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2016-11/%E7%A5%9E%E5%A5%87%E7%9A%84-linux-%E5%91%BD%E4%BB%A4%E8%A1%8C/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 软件开发 </a></li>
+      
+    
+    
+      
+        <li><a href="https://wdanna.com/series/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>前端开发</a></li>
+      
+    
+  </ul>
+
+  <div class="px-2 post-heading">神奇的 Linux 命令行</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Nov 19, 2016</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>7 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h4 id="1-命令行真的好吗">1、命令行真的好吗</h4>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-654d37c0cc309fba.jpg" alt="程序员的使命" />
+* <strong>维基百科的解释</strong>
+&gt;命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。
+* <strong>也有人这样说</strong>
+&gt;熟练使用命令行是一种常常被忽视，或被认为难以掌握的技能，但实际上，它会提高你作为工程师的灵活性以及生产力</p>
+
+<ul>
+<li><p><strong>个人观点</strong>
+有看到不同行业的人在评论区各种互撕，那到底用命令行是好还是不好呢..其实我觉得有时候花时间纠结这些问题是没有意义的，你觉得有用就学，不看好它就不看了呗，等哪天你发现它的好了，打心里想学了就去学呗，学习这东西，只要你愿意开始，什么时候都不晚。
+任何东西都没有绝对的说法，要看使用的场合，常说水能载舟，它亦能覆舟。
+我自己会的命令行也不是很多，但真的打心里羡慕那些把命令行用的很溜的大牛们，也在学习着熟悉大部分命令行，因为我觉得至少现在对我来说，它是极好的。
+你是否注意到，在电影中一个“超级黑客”坐在电脑前，从不摸一下鼠标， 就能够在30秒内侵入到超安全的军事计算机中。这是因为电影制片人意识到， 作为人类，本能地知道让计算机圆满完成工作的唯一途径，是用键盘来操纵计算机。
+<strong>但不得不说不好的地方是</strong></p>
+
+<ul>
+<li><p>命令行对新手不太友好，所以能否熟练应用命令行算是一个高手和新手能显著拉开效率差距的点。</p></li>
+
+<li><p>娱乐的时候不友好，你要打游戏或者要聊天，这个时候就还是图形化界面占上风了，当然对用户来说也美观</p></li>
+
+<li><p>看到有人这样说—我就想让照片上妹子脸上的小痘痘消失，怎么用命令行实现呢</p></li>
+</ul></li>
+</ul>
+
+<p><strong>好在哪</strong>
+ * 人生苦短，效率，效率，效率，还是效率
+ * 鼠标不适合快速操作，命令行通常比在菜单中点来点去更简单，更容易，更直接。
+ * 稳定,可移植性强
+ * 开发省心省钱</p>
+
+<h3 id="2-感受下效率">2、感受下效率</h3>
+
+<p>试着玩玩，就能体会到它的效率了</p>
+
+<table>
+<thead>
+<tr>
+<th>使用命令</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>poweroff</td>
+<td>立刻关机</td>
+</tr>
+
+<tr>
+<td>shutdown -h 10</td>
+<td>10分钟后自动关机</td>
+</tr>
+
+<tr>
+<td>reboot</td>
+<td>重启</td>
+</tr>
+
+<tr>
+<td>shutdown -r 10（20:35）</td>
+<td>过10分钟（在时间为20:35）自动重启(root用户使用)</td>
+</tr>
+
+<tr>
+<td>ls</td>
+<td>列举出当前工作目录的文件和文件夹</td>
+</tr>
+
+<tr>
+<td>mkdir <new-directory-name></td>
+<td>新建一个文件夹</td>
+</tr>
+
+<tr>
+<td>touch <new-directory-name></td>
+<td>新建一个文件</td>
+</tr>
+
+<tr>
+<td>rm <file-name></td>
+<td>删除给定的文件或文件夹</td>
+</tr>
+
+<tr>
+<td>cp <source-file> <destination-file></td>
+<td>对文件或文件夹进行复制</td>
+</tr>
+
+<tr>
+<td>cat <file></td>
+<td>用于在标准输出（监控器或屏幕）上查看文件内容</td>
+</tr>
+
+<tr>
+<td>pwd</td>
+<td>显示当前工作目录</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="3-基本命令行">3、基本命令行</h3>
+
+<table>
+<thead>
+<tr>
+<th>使用命令</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>sudo passwd root</td>
+<td>设置root密码（输入当前系统账户的密码并设置新的UNIX密码</td>
+</tr>
+
+<tr>
+<td>users</td>
+<td>显示当前登录系统地用户</td>
+</tr>
+
+<tr>
+<td>who</td>
+<td>登录在本机的用户与来源</td>
+</tr>
+
+<tr>
+<td>hostname</td>
+<td>查看主机名</td>
+</tr>
+
+<tr>
+<td>man <command-name></td>
+<td>会为给定的命令显示一个使用手册页面</td>
+</tr>
+
+<tr>
+<td>tail -n N <file-name></td>
+<td>指定在标准输出上显示文件的最后N行内容（默认显示10行）</td>
+</tr>
+
+<tr>
+<td>grep &ldquo;<string>&rdquo; <file-name></td>
+<td>在给定的文件中搜寻指定的字符串</td>
+</tr>
+
+<tr>
+<td>tar xvf FileName.tar</td>
+<td>解包</td>
+</tr>
+
+<tr>
+<td>tar cvf FileName.tar DirName</td>
+<td>打包文件</td>
+</tr>
+
+<tr>
+<td>gzip -d FileName.gz</td>
+<td>解压</td>
+</tr>
+
+<tr>
+<td>gzip FileName</td>
+<td>压缩</td>
+</tr>
+
+<tr>
+<td>which <file_name></td>
+<td>查看可执行文件的位置，在PATH变量指定的路径中查看系统命令是否存在及其位置</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="4-这些你也要会-举例说明">4、这些你也要会（举例说明）</h4>
+
+<table>
+<thead>
+<tr>
+<th>使用命令</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>$ cat &gt;&gt; /Documents/test.txt &lt;&lt;  &quot;EOF&quot;export PATH=$HOME/jdk1.8.0_31/bin:$PATHexport JAVA_HOME=$HOME/jdk1.8.0_31/EOF</code></td>
+<td>使用<code>&gt;&gt;</code>命令往配置文件里插入多行文本（两个”EOF“之间的所有内容都会被添加到文件中）</td>
+</tr>
+
+<tr>
+<td>tree #使用<code>sudo apt-get install tree</code>安装</td>
+<td>将文件目录以树状形式查看，有时候很方便</td>
+</tr>
+
+<tr>
+<td>echo  &ldquo;line 1\nline 1&rdquo;</td>
+<td>显示<code>line 1\nline 1</code></td>
+</tr>
+
+<tr>
+<td>echo -e &ldquo;line 1\nline 2&rdquo;</td>
+<td>显示<code>line 1(换行了)line 2</code>（-e：遇到转义字符特殊处理）</td>
+</tr>
+
+<tr>
+<td>ps -aux</td>
+<td>显示所有进程状态</td>
+</tr>
+
+<tr>
+<td>kill &lt;进程号(就是ps -A中的第一列的数字)&gt;</td>
+<td>终止一个进程</td>
+</tr>
+
+<tr>
+<td>kill -9 &lt;进程号&gt;</td>
+<td>强制中止一个进程(在上面进程中止不成功的时候使用)</td>
+</tr>
+
+<tr>
+<td>netstat -tp</td>
+<td>查看网络连接命令</td>
+</tr>
+
+<tr>
+<td>service &ndash;status-all</td>
+<td>查看系统服务状态</td>
+</tr>
+
+<tr>
+<td>whereis &lt;安装的应用名称&gt;</td>
+<td>查找应用位置</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="5神奇的-top">5神奇的<code>top</code></h4>
+
+<p><strong>这里选择把top单独介绍（信息量略大）</strong>
+* <code>top</code>的用途—作为日常管理工作中最常用也是最重要的Linux 系统监控工具之一，可以动态观察系统进程状况，显示当前系统正在执行的进程的相关信息，包括进程ID、内存占用率、CPU占用率等默认值是每5秒更新一次，按q键可以退出。
+* 在你的终端输入这条命令即可查看</p>
+
+<pre><code>$ top
+</code></pre>
+
+<ul>
+<li>它会出现这些信息（本人电脑举例）
+```
+top - 21:11:46 up 29 min,  2 users,  load average: 0.29, 0.28, 0.18
+Tasks: 240 total,   1 running, 239 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.6 us,  0.8 sy,  0.0 ni, 96.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  8081084 total,  4966452 free,  1533752 used,  1580880 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.  5930172 avail Mem</li>
+</ul>
+
+<p>PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND<br />
+  979 root      20   0  370140  45300  33148 S   4.6  0.6   0:56.69 Xorg<br />
+ 3473 wangdan+  20   0  643452  53564  31976 S   3.3  0.7   0:01.12 python2<br />
+ 2067 wangdan+  20   0 1233768 113492  65108 S   2.3  1.4   1:06.83 compiz<br />
+  769 mongodb   20   0  552156  67876  33636 S   0.7  0.8   0:12.55 mongod<br />
+ 2466 wangdan+  20   0 1122656 213372 122840 S   0.7  2.6   1:42.89 chrome<br />
+ 3509 wangdan+  20   0   49044   4240   3516 R   0.7  0.1   0:00.52 top<br />
+ 3552 wangdan+  20   0  924300 189484  82964 S   0.7  2.3   0:04.20 chrome<br />
+ 1680 wangdan+  20   0  578900 101304  46068 S   0.3  1.3   0:03.93 fcitx<br />
+ 1905 wangdan+  20   0  206868   6532   5900 S   0.3  0.1   0:00.23 at-spi2-registr<br />
+ 2097 wangdan+  20   0  469672  14668  11180 S   0.3  0.2   0:00.33 indicator-appli<br />
+ 2398 wangdan+  20   0 3091788  80880  49128 S   0.3  1.0   0:03.90 sogou-qimpanel<br />
+ 3141 root      20   0       0      0      0 S   0.3  0.0   0:00.24 kworker/u8:2<br />
+ 3581 wangdan+  20   0  531268  52284  28648 S   0.3  0.6   0:00.12 chrome<br />
+    1 root      20   0  185468   6144   4020 S   0.0  0.1   0:02.98 systemd<br />
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd<br />
+    3 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0<br />
+    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H<br />
+    6 root      20   0       0      0      0 S   0.0  0.0   0:01.88 kworker/u8:0<br />
+    7 root      20   0       0      0      0 S   0.0  0.0   0:01.92 rcu_sched<br />
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh<br />
+    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0<br />
+   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/0<br />
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/1<br />
+   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/1<br />
+   13 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/1<br />
+   14 root      20   0       0      0      0 S   0.0  0.0   0:00.01 kworker/1:0<br />
+   15 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H<br />
+   16 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/2<br />
+   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/2<br />
+   18 root      20   0       0      0      0 S   0.0  0.0   0:00.06 ksoftirqd/2<br />
+   20 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H<br />
+   21 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/3<br />
+   22 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/3<br />
+   23 root      20   0       0      0      0 S   0.0  0.0   0:00.01 ksoftirqd/3<br />
+   25 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:0H<br />
+   26 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kdevtmpfs<br />
+``<code>
+* 第一行含义解释
+  *</code>21:11:46<code>—当前系统时间
+  *</code> up 29 min<code>—系统已经运行了29分钟（在这期间系统没有重启过）
+  *</code>2users<code>—当前有2个用户登录系统
+  *</code> load average: 0.29, 0.28, 0.18—loadaverage<code>—后面的三个数分别是1分钟、5分钟、15分钟的负载情况
+  *</code>loadaverage<code>—数据是每隔5秒钟检查一次活跃的进程数，然后按特定算法计算出的数值。如果这个数除以逻辑CPU的数量，结果高于5的时候就表明系统在超负荷运转了
+* 第二行含义解释
+  *</code>Tasks: 240 total,   1 running, 239 sleeping,   0 stopped,   0 zombie<code>—系统现在共有240个进程，其中处于运行中的有1个，239个在休眠（sleep），stoped状态的有0个，zombie状态（僵尸）的有0个。
+* 第三行含义解释
+ *</code>2.6 us<code>—用户空间占用CPU的百分比。 
+ *</code>0.8 sy<code>—内核空间占用CPU的百分比。
+ *</code> 0.0%ni<code>—改变过优先级的进程占用CPU的百分比
+ *</code>96.6 id<code>—空闲CPU百分比
+ *</code>0.0 wa<code>—IO等待占用CPU的百分比
+ *</code>0.0hi<code>—硬中断（HardwareIRQ）占用CPU的百分比
+ *</code>0.0si<code>—软中断（SoftwareInterrupts）占用CPU的百分比</code>
+* 第四行含义解释
+ * <code>8081084 total</code>—物理内存总量（80GB）
+ * <code>1533752 used</code>—使用中的内存总量（14GB）
+ * <code>4966452 free</code>—空闲内存总量（49GB）
+ * <code>1580880 buff/cache</code>—缓存的内存量（15G）
+* 第五行含义解释(swap交换分区信息)
+ * <code>0 total</code>—交换区总量（0K）
+ * <code>0used</code>—使用的交换区总量（0K）
+ * <code>0free</code>—空闲交换区总量（0K）
+ * <code>5930172 avail Mem</code>—可用内存（59G）
+* 第七行含义解释（各进程（任务）的状态监控）
+ * <code>PID</code>—进程id
+ * <code>USER</code>—进程所有者
+ * <code>PR</code>—进程优先级
+ * <code>NI</code>—nice值。负值表示高优先级，正值表示低优先级
+  * <code>VIRT</code>—进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES
+  * <code>RES</code>—进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA
+  * <code>SHR</code>—共享内存大小，单位kb
+  * <code>S</code>—进程状态。D=不可中断的睡眠状态R=运行S=睡眠T=跟踪/停止Z=僵尸进程
+  * <code>%CPU</code>—上次更新到现在的CPU时间占用百分比
+  * <code>%MEM</code>—进程使用的物理内存百分比
+  * <code>TIME+</code>—进程使用的CPU时间总计，单位1/100秒
+  * <code>COMMAND</code>—进程名称（命令名/命令行）</p>
+
+<h4 id="6-参考-来自-卓越女生bbs总理的分享-https-bbs-excellence-girls-org-topic-213-markdown">6、参考（来自<a href="https://bbs.excellence-girls.org/topic/213/markdown">卓越女生BBS总理的分享</a>）</h4>
+
+<ul>
+<li><a href="https://github.com/iamcoach/console/blob/master/COMMANDS.md">常用命令行介绍</a></li>
+<li><a href="https://bbs.excellence-girls.org/topic/167">常用命令行cheet sheet</a></li>
+<li><a href="http://www.imooc.com/article/1276">每个程序员都应该知道的8个Linux命令</a></li>
+<li><a href="http://www.imooc.com/article/1285">29个你必须知道的Linux命令</a></li>
+<li><a href="http://www.imooc.com/article/1316">Linux mkdir、tar 和 kill 命令的 4 个有用小技巧</a></li>
+<li><a href="http://www.imooc.com/learn/175">慕课网 《Linux达人养成计划 I》</a></li>
+<li><a href="http://www.imooc.com/learn/111">慕课网 《Linux达人养成计划 II》</a></li>
+<li><a href="http://wiki.ubuntu.org.cn/UbuntuSkills">Ubuntu各种技巧</a></li>
+<li><a href="http://teliute.org/linux/Tecli/">Ubuntu常用命令行教程</a></li>
+<li><a href="https://book.douban.com/subject/4889838/">书籍《鸟哥的Linux私房菜》</a></li>
+</ul>
+
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事
+喜欢一切意外 想把生活过成诗的样子
+若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E6%88%90%E9%95%BF" role="button">成长 </a></li>
+      
+    
+      <li><a href="https://wdanna.com/tags/%E9%AB%98%E6%95%88" role="button">高效 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%9c%9f%e7%9a%84%e5%a5%bd%e5%90%97">
+												 1、命令行真的好吗
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e6%84%9f%e5%8f%97%e4%b8%8b%e6%95%88%e7%8e%87">
+												 2、感受下效率
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e5%9f%ba%e6%9c%ac%e5%91%bd%e4%bb%a4%e8%a1%8c">
+												 3、基本命令行
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e8%bf%99%e4%ba%9b%e4%bd%a0%e4%b9%9f%e8%a6%81%e4%bc%9a-%e4%b8%be%e4%be%8b%e8%af%b4%e6%98%8e">
+												 4、这些你也要会（举例说明）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#5%e7%a5%9e%e5%a5%87%e7%9a%84-top">
+												 5神奇的top
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#6-%e5%8f%82%e8%80%83-%e6%9d%a5%e8%87%aa-%e5%8d%93%e8%b6%8a%e5%a5%b3%e7%94%9fbbs%e6%80%bb%e7%90%86%e7%9a%84%e5%88%86%e4%ba%ab-https-bbs-excellence-girls-org-topic-213-markdown">
+												 6、参考（来自卓越女生BBS总理的分享）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

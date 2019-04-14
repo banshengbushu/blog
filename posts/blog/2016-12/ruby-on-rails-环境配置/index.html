@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="###配置之前 从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！ 周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧 &gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。 apt-get只能安装一个版本，如果使用了sudo apt-get upd">
+  
+  <meta property="og:title" content="Ruby on rails 环境配置" />
+<meta property="og:description" content="###配置之前 从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍Ctrl V 和 Ctrl C，终于，功夫不负有心人，它成功了！！！ 周围有同学用apt-get安装的，有用rbenv安装的，也有用rvm安装的，这里简单介绍下它们分别是什么吧 &gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。 apt-get只能安装一个版本，如果使用了sudo apt-get upd" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/2016-12/ruby-on-rails-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" />
+<meta property="article:published_time" content="2016-12-07T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-12-07T00:00:00&#43;00:00"/><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-09/react%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-08/css-%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%9C%86%E7%8E%AF/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AE%A9%E5%A4%A7%E8%84%91%E6%AD%87%E6%AD%87%E5%90%A7-%E7%8E%A9%E7%8E%A9gtd/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AF%95%E4%BA%86%E5%85%AD%E5%A4%A9gtd%E7%9A%84%E6%88%91/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2016-12/trello-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/" />
+
+
+
+  <title>
+  
+       Ruby on rails 环境配置 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2016-12/ruby-on-rails-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 前端开发 </a></li>
+      
+    
+    
+      
+        <li><a href="https://wdanna.com/series/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>前端开发</a></li>
+      
+    
+  </ul>
+
+  <div class="px-2 post-heading">Ruby on rails 环境配置</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Dec 7, 2016</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>3 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <p>###配置之前
+从开始到现在不知道怀疑了多少遍网速，从实验室的无线到有线，从学校的CMCC到EDU到xayd，不知道执行了多少遍<code>Ctrl V</code> 和 <code>Ctrl C</code>，终于，功夫不负有心人，它成功了！！！
+<img src="http://upload-images.jianshu.io/upload_images/2190281-ce46be153e9ce030.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9788E4C3095705CD21EA9BC6C45EBCF7.jpg" /></p>
+
+<p>周围有同学用<code>apt-get</code>安装的，有用<code>rbenv</code>安装的，也有用<code>rvm</code>安装的，这里简单介绍下它们分别是什么吧
+&gt;rvm 的设计理念是自动化，全面。 rbenv 的设计理念是规范化，小核。</p>
+
+<ul>
+<li><code>apt-get</code>只能安装一个版本，如果使用了<code>sudo apt-get update</code>后安装则是最新的版本</li>
+<li><code>rvm</code>和<code>rbenv</code>都是<code>Ruby</code>的版本管理工具，都可以安装多个<code>Ruby</code>版本，<code>rvm</code>应该是最早出现、使用最多的，<code>rbenv</code> 比较受欢迎，所以选择哪个自己看喽，本人使用的是<code>rbenv</code>安装，</li>
+</ul>
+
+<p>###配置步骤</p>
+
+<pre><code>$ cd $HOME
+$ sudo apt-get update 
+$ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
+$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+$ echo 'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;' &gt;&gt; ~/.bashrc
+$ echo 'eval &quot;$(rbenv init -)&quot;' &gt;&gt; ~/.bashrc
+$ exec $SHELL
+
+$ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+$ echo 'export PATH=&quot;$HOME/.rbenv/plugins/ruby-build/bin:$PATH&quot;' &gt;&gt; ~/.bashrc
+$ exec $SHELL
+</code></pre>
+
+<p>确保每一步执行成功后，更改rvm源服务器资源信息，毕竟国外的经常被墙掉，还有就是国内的速度快。若不设置，下面可能出现各种问题，如出现服务器积极拒绝（被墙），或者下载速度慢，执行以下命令</p>
+
+<pre><code>$ sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
+</code></pre>
+
+<p>查看<code>rbenv</code>版本</p>
+
+<pre><code>$ rbenv -v
+rbenv 1.1.0
+</code></pre>
+
+<p>查看可用的 ruby版本</p>
+
+<pre><code>$ rbenv install --list
+</code></pre>
+
+<p>这里我选择安装最新版本</p>
+
+<pre><code>$ rbenv install 2.3.3
+Downloading ruby-2.3.3.tar.bz2...
+-&gt; https://cache.ruby-china.org/pub/ruby/2.3/ruby-2.3.3.tar.bz2
+Installing ruby-2.3.3...
+Installed ruby-2.3.3 to /home/xx/.rbenv/versions/2.3.3
+</code></pre>
+
+<p>设置全局版本（全局版本是在没有找到“当前终端”或“本地”作用域的设置时执行）</p>
+
+<pre><code>$ rbenv global 2.3.3
+</code></pre>
+
+<p>查看安装的<code>ruby</code>版本</p>
+
+<pre><code>$ ruby -v
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+</code></pre>
+
+<p><code>gem</code>就是<code>ruby</code>的软件包.，所以可以直接使用<code>gem</code>
+<code>bundle</code>是<code>rails</code>框架里面安装<code>Gemfile</code>指定的各种库的工具，先安装了</p>
+
+<pre><code>$ gem install bundler
+Fetching: bundler-1.13.6.gem (100%)
+Successfully installed bundler-1.13.6
+Parsing documentation for bundler-1.13.6
+Installing ri documentation for bundler-1.13.6
+Done installing documentation for bundler after 6 seconds
+1 gem installed
+</code></pre>
+
+<p>接下来这条命令的作用<a href="https://rubygems.org/gems/rbenv-rehash/versions/0.3">看这里</a>，我试了不执行就会出错</p>
+
+<pre><code>$ rbenv rehash
+</code></pre>
+
+<p>###Ruby和Rails的关系
+&gt;<strong>Ruby</strong>是编辑语言，Rails是基于Ruby来实现的一个用于网站开发的MVC框架，学习Rails需要一些Ruby的基础知识，先学Ruby</p>
+
+<blockquote>
+<p><strong>Ruby on Rails</strong>（官方简称为 Rails。也有人简称为 RoR，该缩写目前仍于一些中文讨论中被使用。），是一个使用<a href="https://zh.wikipedia.org/wiki/Ruby">Ruby</a>语言写的<a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%BA%90">开源</a><a href="https://zh.wikipedia.org/wiki/Web%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6">Web應用框架</a>，它是严格按照<a href="https://zh.wikipedia.org/wiki/MVC">MVC</a>结构开发的。它努力使自身保持简单，来使实际的应用开发时的代码更少，使用最少的配置。
+安装<code>rails</code></p>
+</blockquote>
+
+<p>###安装Rails</p>
+
+<pre><code>$ gem install rails
+Fetching: nokogiri-1.6.8.1.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed nokogiri-1.6.8.1
+Fetching: loofah-2.0.3.gem (100%)
+Successfully installed loofah-2.0.3
+Fetching: rails-html-sanitizer-1.0.3.gem (100%)
+Successfully installed rails-html-sanitizer-1.0.3
+Fetching: rails-dom-testing-2.0.1.gem (100%)
+Successfully installed rails-dom-testing-2.0.1
+Fetching: builder-3.2.2.gem (100%)
+Successfully installed builder-3.2.2
+...
+Done installing documentation for nokogiri, loofah, rails-html-sanitizer, rails-dom-testing, builder, erubis, actionview, actionpack, activemodel, arel, activerecord, globalid, activejob, mime-types-data, mime-types, mail, actionmailer, nio4r, websocket-extensions, websocket-driver, actioncable, thor, method_source, railties, sprockets, sprockets-rails, rails after 45 seconds
+27 gems installed
+</code></pre>
+
+<p>成功后查看版本</p>
+
+<pre><code>$ rails -v
+Rails 5.0.0.1
+</code></pre>
+
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事
+喜欢一切意外 想把生活过成诗的样子
+若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91" role="button">开发 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

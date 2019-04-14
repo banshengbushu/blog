@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="配置 nvm 国内版本（命令行下执行） sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; 配置 cnpm 方法(淘宝NPM镜像) 一套绝佳的图表字体和 CSS 框架 React 适合初学者学习 React 的网站-中文 React项目新手指南 适合初学者学习 React 的网站-视频 使用React-router和Webpack快速构建一个react程序 React结合redux实现一个todoList 深入理解 react-router 路由系统 Bootstrap Bootstrap所有组建模板 Bootstrap做的登录界面优化版 Bootsnipp 一个网页设计师和网站">
+  
+  <meta property="og:title" content="动手前记得问自己一个问题" />
+<meta property="og:description" content="配置 nvm 国内版本（命令行下执行） sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; 配置 cnpm 方法(淘宝NPM镜像) 一套绝佳的图表字体和 CSS 框架 React 适合初学者学习 React 的网站-中文 React项目新手指南 适合初学者学习 React 的网站-视频 使用React-router和Webpack快速构建一个react程序 React结合redux实现一个todoList 深入理解 react-router 路由系统 Bootstrap Bootstrap所有组建模板 Bootstrap做的登录界面优化版 Bootsnipp 一个网页设计师和网站" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/" />
+<meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-09/react%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2017-08/css-%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%9C%86%E7%8E%AF/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AE%A9%E5%A4%A7%E8%84%91%E6%AD%87%E6%AD%87%E5%90%A7-%E7%8E%A9%E7%8E%A9gtd/" /><meta property="og:see_also" content="https://wdanna.com/posts/books/2017-05/%E8%AF%95%E4%BA%86%E5%85%AD%E5%A4%A9gtd%E7%9A%84%E6%88%91/" /><meta property="og:see_also" content="https://wdanna.com/posts/blog/2016-12/trello-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/" />
+
+
+
+  <title>
+  
+       动手前记得问自己一个问题 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 前端开发 </a></li>
+      
+    
+    
+      
+        <li><a href="https://wdanna.com/series/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>前端开发</a></li>
+      
+    
+  </ul>
+
+  <div class="px-2 post-heading">动手前记得问自己一个问题</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jan 1, 0001</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>2 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <p><img src="http://upload-images.jianshu.io/upload_images/2190281-0c18a637d427fa80.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<ul>
+<li>配置 <code>nvm</code> 国内版本（命令行下执行）
+<code>
+sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</code></li>
+
+<li><p><a href="https://npm.taobao.org/">配置 <code>cnpm</code> 方法</a>(淘宝NPM镜像)</p></li>
+
+<li><p><a href="http://fontawesome.dashgame.com/">一套绝佳的图表字体和 <code>CSS</code> 框架</a></p></li>
+</ul>
+
+<blockquote>
+<p><strong>React</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="http://cn.redux.js.org/docs/basics/Reducers.html">适合初学者学习 <code>React</code> 的网站-中文</a></p></li>
+
+<li><p><a href="https://w3ctech.com/topic/1496">React项目新手指南</a></p></li>
+
+<li><p><a href="https://egghead.io/lessons/react-react-in-7-minutes">适合初学者学习 <code>React</code> 的网站-视频</a></p></li>
+
+<li><p><a href="http://www.jackpu.com/shi-yong-react-routehe-webpackkuai-su-gou-jian-ge-reactcheng-xu/">使用React-router和Webpack快速构建一个react程序</a></p></li>
+
+<li><p><a href="https://egghead.io/lessons/javascript-redux-react-todo-list-example-filtering-todos">React结合redux实现一个todoList</a></p></li>
+
+<li><p><a href="https://w3ctech.com/topic/1604">深入理解 react-router 路由系统</a></p></li>
+</ul>
+
+<blockquote>
+<p><strong>Bootstrap</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="http://how2j.cn/k/boostrap/boostrap-badge/494.html">Bootstrap所有组建模板</a></p></li>
+
+<li><p><a href="http://runjs.cn/detail/f42nfs3g">Bootstrap做的登录界面优化版</a></p></li>
+
+<li><p><a href="https://bootsnipp.com/">Bootsnipp</a> 一个网页设计师和网站开发人员的元素库</p></li>
+</ul>
+
+<blockquote>
+<p><strong>有趣网站</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="http://www.ideaboardz.com/">ideaboard</a> 一个很好的团队意见收集平台</p></li>
+
+<li><p><a href="http://edu.csdn.net/course/detail/1243">好玩的学习CSS网站</a></p></li>
+
+<li><p><a href="http://foundation.zurb.com/">一个很赞的UI库，提供一套默认组件UI，可以拿来直接用 </a></p></li>
+
+<li><p><a href="http://ohmyz.sh/">Oh My ZSH</a>一个超好用的开源的，社区驱动的框架，用于管理ZSH配置</p></li>
+
+<li><p><a href="https://www.zhihu.com/question/31127495/answer/101092391">一个超好玩有趣的网站</a></p></li>
+
+<li><p><a href="http://www.techug.com/post/40-important-html-5-interview-questions-with-answers.html">HTML5中40个最重要的技术点</a></p></li>
+
+<li><p><a href="http://www.hubwiz.com/course/543e1a4f032c7816c0d5dfa1/">学习异步编程Node.js</a></p></li>
+
+<li><p><a href="https://nodeschool.io/">NodeSchool在线学习网站</a></p></li>
+
+<li><p><a href="https://github.com/freewind/async_demo/blob/master/waterfall.js">异步编程之waterFall</a></p></li>
+
+<li><p><a href="https://cn.udacity.com">优步学城</a></p></li>
+</ul>
+
+<blockquote>
+<p><strong>Git</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="http://takentech.com/flyaway/">Github上适合初学者上手的开源项目之CSS3纸飞机动画特效</a></p></li>
+
+<li><p><a href="https://www.zhihu.com/question/23498424">GitHub 上看到过的最有意思的项目</a> 来自知乎大神的回答</p></li>
+
+<li><p><a href="https://codingstyle.cn/topics/181">用游戏闯关的模式学Git</a></p></li>
+
+<li><p><a href="http://www.ycku.com/course/">前端李艳辉视频</a></p></li>
+
+<li><p><a href="https://zh.coursera.org/">Coursera</a>(由斯坦福大学两位计算机教授创办的在线教育平台)</p></li>
+
+<li><p><a href="http://www.mugeda.com/help.php">mugeda</a>&mdash;自学HTML5网站，教程简单易懂 ，容易上手</p></li>
+
+<li><p><a href="http://www.51yuansu.com/?z=cvvskwtru">高清免抠设计元素网站</a></p></li>
+
+<li><p><a href="http://ace.jeka.by/">一套前端完整样式参考网站</a></p></li>
+
+<li><p><a href="http://geek.csdn.net/news/detail/88239">前端开发人员必须了解的七大技能图谱</a></p></li>
+</ul>
+
+<blockquote>
+<p><strong>Markdown</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="https://unnamed42.github.io/2015-12-02-Markdown%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.html">Markdown基本语法</a></p></li>
+
+<li><p><a href="https://school.thoughtworks.cn/bbs/topic/133/linux-windows-mac%E4%B8%8B%E9%80%9A%E7%94%A8%E4%B8%94%E5%A5%BD%E7%94%A8%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8-typora">Typora</a> Linux/Windows/Mac下通用且好用的Markdown编辑器</p></li>
+
+<li><p><a href="http://dillinger.io/">在线markdown生成预览</a></p></li>
+
+<li><p><a href="https://stackedit.io/editor">在线Markdown编辑器</a></p></li>
+
+<li><p><a href="https://github.com/vim-chat/vim-chat/blob/master/README.md">vim安装聊天工具</a></p></li>
+
+<li><p><a href="http://www.ggfwzs.com/">谷歌访问助手使用方法</a></p></li>
+
+<li><p><a href="http://fontawesome.io/">Fontawesome</a> 一个超赞的图标设计网站</p></li>
+
+<li><p><a href="https://12factor.net/">高质量软件遵循的十二大法</a></p></li>
+</ul>
+
+<blockquote>
+<p><strong>Ubuntu</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="https://wiki.ubuntu.com.cn/UbuntuManual">Ubuntu 中文参考手册</a> 提供了大量 shell-command 实例，涵盖了系统管理的方方面面</p></li>
+
+<li><p><a href="https://github.com/ZQiang94/ubuntu-QQ">ubuntu安装2012版QQ</a></p></li>
+
+<li><p><a href="http://blog.fens.me/nodejs-enviroment/">Ubuntu准备Nodejs开发环境</a></p></li>
+
+<li><p><a href="http://blog.csdn.net/andie_guo/article/details/9011973">ubuntu屏幕截图工具scrot 的安装和使用</a></p></li>
+
+<li><p><a href="http://insights.thoughtworkers.org/reading-radar-2016/">Thoughtworks提供的读书雷达</a></p></li>
+</ul>
+
+<blockquote>
+<p><strong>简历</strong></p>
+</blockquote>
+
+<ul>
+<li><p><a href="https://www.zhihu.com/question/23150301">一份优秀的前端简历指导</a></p></li>
+
+<li><p><a href="https://www.zhihu.com/question/25002833">程序员简历</a> 知乎大牛的建议</p></li>
+
+<li><p><a href="https://www.phodal.com/blog/thoughtworks-salary/">一位敬佩的前端大神博客</a></p></li>
+</ul>
+
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事
+喜欢一切意外 想把生活过成诗的样子
+若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91" role="button">开发 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

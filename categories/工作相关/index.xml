@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工作相关 on 半生不熟 | Amber</title>
+    <link>https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/</link>
+    <description>Recent content in 工作相关 on 半生不熟 | Amber</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    
+	<atom:link href="https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>呀，上班都30天了</title>
+      <link>https://wdanna.com/posts/blog/%E5%91%80%E4%B8%8A%E7%8F%AD%E9%83%BD30%E5%A4%A9%E4%BA%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E5%91%80%E4%B8%8A%E7%8F%AD%E9%83%BD30%E5%A4%A9%E4%BA%86/</guid>
+      <description>今天一过，正式上班就整整30天了，也是来这个项目的30天了，特意翻了好几遍日历，是的，真的是，是真的。 讲真，感觉一切都好快，好像很多东西突然都变得不够用了。 时间过的好快，还那么不够用，什么都不会，还学的那么慢。 若有所思脸&amp;hellip;&amp;hellip; 但就像那句话说的，急好像并没有什么用，还是得慢慢来。 说着说着，一个月也就说过去了，很庆幸，又发现了自己的一些不足，也看到了别人很多优点，瞻仰了组里的</description>
+    </item>
+    
+    <item>
+      <title>思沃学院一期考试系统环境配置</title>
+      <link>https://wdanna.com/posts/blog/%E6%80%9D%E6%B2%83%E5%AD%A6%E9%99%A2%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E6%80%9D%E6%B2%83%E5%AD%A6%E9%99%A2%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <description>###安装Docker * 按照Docker官网的步骤执行（要注意自己系统的版本号） https://docs.docker.com/compose/install/ Hello from Docker！ #安装成功后看到这句即可 ###安装Docker-compose * 命令行如下顺序执行 $ curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` &amp;gt; /usr/local/bin/docker-compose $ chmod +x /usr/local/bin/docker-compose $ docker-compose --version docker-compose version: 1.8.0 执行这几行命令，使用 Docker时 不用加sudo $ sudo groupadd docker #将当前用户加入docker组 $ sudo gpasswd -a ${USER} docker $ sudo service docker restart ###克隆一期源码 选择好目录执行 $ git clone git@github.com:thoughtworks-academy/recruiting-system.git $ git submodule init $ git submodule update ###开始环境配置</description>
+    </item>
+    
+    <item>
+      <title>我来项目一周了</title>
+      <link>https://wdanna.com/posts/blog/%E6%88%91%E6%9D%A5%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%91%A8%E4%BA%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E6%88%91%E6%9D%A5%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%91%A8%E4%BA%86/</guid>
+      <description>6月26，是第一天正式去公司实习的日子。￼ 还记得那件可笑的事。25晚上都十一点了，翻聊天记录才发现HR姐姐要的身份证复印件学生证复印件银行卡复印件居然都没有印！！！重点是还忘得一干二净，丝毫不记得。我个猪脑子，居然会把这么重要的事忘记加到清单里。 当时我就慌了，大晚上的，刚搬来住的地方，一个人人生地不熟的，白天在附近都没有看到有复印店，况且，那会儿都十一点多了，幸好幸好的是，我告诉了箫声远，就是吐槽</description>
+    </item>
+    
+  </channel>
+</rss>

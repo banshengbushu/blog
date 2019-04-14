@@ -6,10 +6,46 @@
     <description>Recent content in Tools on 半生不熟 | Amber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 19 Oct 2016 21:28:48 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wdanna.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>剪不断理还乱 | GTD 第三弹</title>
+      <link>https://wdanna.com/posts/books/2017-06/%E5%89%AA%E4%B8%8D%E6%96%AD%E7%90%86%E8%BF%98%E4%B9%B1gtd%E7%AC%AC%E4%B8%89%E5%BC%B9/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/books/2017-06/%E5%89%AA%E4%B8%8D%E6%96%AD%E7%90%86%E8%BF%98%E4%B9%B1gtd%E7%AC%AC%E4%B8%89%E5%BC%B9/</guid>
+      <description>转眼又是两礼拜 生活时不时地会有些意外，这次就是，过了两周，第二次分享才终于完成了，昨晚听完的心情…复杂，惊喜，混乱，amazing！ 其实没有听第二次分享之前，我对自己建的清单还算是基本满意的，也许是真的觉得比以前好了很多，也充实了很多，所以随说没有按最优来也小小地满足了，但长此以往，这样会有问题的，大问题。 所以，听完后，开始意识到自己的问题是真的很有问题的。 先总结几个比较严重的几个问题。 * 关于过滤</description>
+    </item>
+    
+    <item>
+      <title>让大脑歇歇吧 | 玩玩GTD</title>
+      <link>https://wdanna.com/posts/books/2017-05/%E8%AE%A9%E5%A4%A7%E8%84%91%E6%AD%87%E6%AD%87%E5%90%A7-%E7%8E%A9%E7%8E%A9gtd/</link>
+      <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/books/2017-05/%E8%AE%A9%E5%A4%A7%E8%84%91%E6%AD%87%E6%AD%87%E5%90%A7-%E7%8E%A9%E7%8E%A9gtd/</guid>
+      <description>听分享前的困惑 一、现象 * 规定时间内没有完成自己 todoList 里面的任务 * 任务多的时候不知道怎么划分优先级 * 有时候不注重效率 * 从第一天的 todoList 里面拖到第二天，第三天，长此以往更加不想做 二、问题 * 有无法预估完成时间的事情不知怎么排优先级 * 关于任务的划分，尺度和细节问题 * 如果有任务超时或者拖延的情况怎么解决 * 如果一个todo是建立在多个人的基础上，无法确定其他人的时间安排或者意外情况怎么办 三、影响 * 偶尔会选择熬夜或者通</description>
+    </item>
+    
+    <item>
+      <title>试了六天GTD的我</title>
+      <link>https://wdanna.com/posts/books/2017-05/%E8%AF%95%E4%BA%86%E5%85%AD%E5%A4%A9gtd%E7%9A%84%E6%88%91/</link>
+      <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/books/2017-05/%E8%AF%95%E4%BA%86%E5%85%AD%E5%A4%A9gtd%E7%9A%84%E6%88%91/</guid>
+      <description>心态怎么就变了呢 还记得上个月有段时间的我，整体是处于这种状态的，用一个表情包的话来形容&amp;hellip;&amp;hellip; &amp;gt;我在谁，我在哪里，我在干什么。 再听了GTD的分享后，尝试了六天，虽然现在还没有完全按游戏规则来玩，但至少我清楚地感觉到我的状态好像比之前好了一些了，要是还用一个表情包来形容的话，那应该就是这个吧&amp;hellip;&amp;hellip; 又特么帅了，真是造孽啊 我发现 之前的问题 感觉自己想</description>
+    </item>
+    
+    <item>
+      <title>Trello 无法打开</title>
+      <link>https://wdanna.com/posts/blog/2016-12/trello-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-12/trello-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/</guid>
+      <description>一直用的好好的Trello，某天打开它却突然成了这个样子，什么鬼&amp;hellip;&amp;hellip; 很明显不是翻墙的问题，于是按照提示刷新了几遍，但还是不行，看到它说浏览器的问题，于是跑去FireFox试了试，果然是好的 那么问题来了&amp;hellip;&amp;hellip; That&amp;rsquo;s Why?? google了下原因和解决办法 原因 事实上，它是关于SSL证书问题 - Chrome无法访问Trello CDN 解决办法 访问这个链接 https://</description>
+    </item>
     
     <item>
       <title>这个 fish 不是鱼</title>
@@ -17,7 +53,34 @@
       <pubDate>Wed, 19 Oct 2016 21:28:48 +0800</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2016-10/%E8%BF%99%E4%B8%AA-fish-%E4%B8%8D%E6%98%AF%E9%B1%BC/</guid>
-      <description>1、介绍 ![]() fish是一个用户友好的命令行外壳程序全称Friendly Interactive Shell可用于如 Linux 这样的 Unix 类操作系统中 二逼青年用 bash，普通青年用 zsh，文艺青年用 fish fish的主页这样说—好了，这是一个为 90 后而生的命令行 shell 对于一个没有学过并且不需要学习 bash（或者 Posix shell），我感觉 fish 是一个更好的选择 2、好处 那些高端的好处并没有使用过多少，就自身使用过的经验来说感觉最人性化的好处有 * 语法高亮—可以在</description>
+      <description>1、介绍 fish是一个用户友好的命令行外壳程序全称Friendly Interactive Shell可用于如 Linux 这样的 Unix 类操作系统中 二逼青年用 bash，普通青年用 zsh，文艺青年用 fish fish的主页这样说—好了，这是一个为 90 后而生的命令行 shell 对于一个没有学过并且不需要学习 bash（或者 Posix shell），我感觉 fish 是一个更好的选择 2、好处 那些高端的好处并没有使用过多少，就自身使用过的经验来说感觉最人性化的好处有 * 语法高亮—可以在写</description>
+    </item>
+    
+    <item>
+      <title>优雅的Markdown</title>
+      <link>https://wdanna.com/posts/blog/%E4%BC%98%E9%9B%85%E7%9A%84markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E4%BC%98%E9%9B%85%E7%9A%84markdown/</guid>
+      <description>-1- 先感受下 你可以试着搜下，网上关于Markdown的介绍和称赞数不胜数，而且都写的很优美，在这里我就不用自己的话夸赞它了，引用几句话大家随意感受下 &amp;gt; * Markdown本身就是为写博客而生的 * 15分钟就能够基本了解，连续使用一星期就能够熟练掌握 * 专注文字内容本身，而更少的关注排版样式 * 低碳环保，可移植性高 哦&amp;hellip;对了，知道一下创始人也是必要的—约翰·格鲁伯（John Gruber），于200</description>
+    </item>
+    
+    <item>
+      <title>使用apt-get和nvm安装node的区别</title>
+      <link>https://wdanna.com/posts/blog/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>初识 apt-get 和 nvm ###apt-get * 是什么 在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统 * 如何使用 apt-get 安装 node $ sudo apt-get install nodejs $ sudo apt-get install npm 这里，因为使用 apt-get 安装的 node 的包管理工具 npm 并没有初始安装，所以需要安装 npm 查看安装版本 查看 node 版本 $ node --version v6.3.0 查看 npm 版本 $ npm --version 3.10.3 在查看版本号时，也可</description>
+    </item>
+    
+    <item>
+      <title>还在为找不到高清图发愁吗</title>
+      <link>https://wdanna.com/posts/blog/%E8%BF%98%E5%9C%A8%E4%B8%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E9%AB%98%E6%B8%85%E5%9B%BE%E5%8F%91%E6%84%81%E5%90%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E8%BF%98%E5%9C%A8%E4%B8%BA%E6%89%BE%E4%B8%8D%E5%88%B0%E9%AB%98%E6%B8%85%E5%9B%BE%E5%8F%91%E6%84%81%E5%90%97/</guid>
+      <description>由于个人总喜欢隔一段时间换掉桌面壁纸，所以总会各种海量找图，同时也收藏了很多免费的很赞的网站，分享给大家，平时用的这些就够了 https://unsplash.com 一个免费分享高质量照片的网站，照片分辨率都很大，而且都是真实的摄影师作品，图片多是风景和静物，（简书君的首页封面就用过这个网站的） http://publicdomainarchive.com 目前已经拥有28万免费高清图片供下载，支持添加邮箱发送 https://pixabay.com 有67万张免费的不同类型的高清摄影照片，目前提供中文界面，个人大部分桌面都是从这里找的</description>
     </item>
     
   </channel>

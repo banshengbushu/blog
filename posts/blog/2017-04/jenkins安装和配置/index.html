@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="">
+  
+  <meta property="og:title" content="Jenkins安装和配置" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/2017-04/jenkins%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/" />
+<meta property="article:published_time" content="2017-04-28T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-04-28T00:00:00&#43;00:00"/>
+
+
+  <title>
+  
+       Jenkins安装和配置 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2017-04/jenkins%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 前端开发 </a></li>
+      
+    
+    
+  </ul>
+
+  <div class="px-2 post-heading">Jenkins安装和配置</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Apr 28, 2017</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>0 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h2 id="一-作用">一、作用</h2>
+
+<p>项目中一直在用<code>Jenkins</code>，但自己对这部分的开发参与的不是很多，最近准备毕设的时候才开始慌了，倒腾了大半天，之前也有人问我，就准备整理了下相关知识，也便以后回顾。</p>
+
+<p>我们在做项目的时候简单来说一般会有这五个步骤，<strong>开发—&gt;提交—&gt;编译—&gt;测试—&gt;部署</strong>。人工的流程走就是把项目同步到<code>Git</code>，再用 <code>SSH</code> 登录服务器把项目<code>pull</code>下来，再<code>migrate</code>数据库，运行单元测试和迁移静态资源，项目每天都会有若干个<code>commit</code>，在多人开发中带来许多的不便。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-7b40d6e8d66d6c15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Jenkins管家" /></p>
+
+<p>为了减轻人为的操作，就可以使用<code>Jenkins</code>来对项目进行持续集成。它可以帮你在写完代码后，一键完成开发过程中的一系列工作，就比如上面五个步骤中，除了第一步，后续的四步都可以自动化完成。具体的，当你完成了提交，Jenkins会自动运行你的编译脚本，编译成功后，再运行你的测试脚本，这一步成功后，接着它会帮你把新程序发布出去，完成部署。</p>
+
+<blockquote>
+<p>Jenkins是一个持续集成工具，如大家所说相当于一个调度平台，如果你的目的只是自动化部署的话，直接自己写脚本或者用<code>Ansible</code>、<code>Salt</code>、<code>Puppet</code>、<code>Chef</code>、<code>Fabric</code>等自动化部署工具就行如果你是想在<code>job</code>中加入自动话部署流程的话，可以先写好自动化部署脚本然后在<code>Jenkins</code>构建任务的<code>Execute Shell</code>中调用相应的<code>Script</code>。</p>
+</blockquote>
+
+<p>重复单一易出错的操作将慢慢被机器所取代，具体到软件开发中就是，每次打包送测等操作是可以交给机器去自动执行的。以前打包给测试的流程是，测试拿了好几个手机过来，开发一一安装，然后送给测试慢慢测试。使用了持续集成之后将变成，开发本地提交代码，Jenkins等持续集成工具监测到代码变化，自动编译打包，生成开发包，测试直接拿着开发包安装测试即可。Jenkins做的操作其实很简单，它只是将我们平时做的每一步重复的操作自动化了而已。</p>
+
+<h2 id="二-安装-ubuntu16-04">二、安装（ubuntu16.04）</h2>
+
+<p><em><code>Jenkins</code>是开源的,使用<code>Java</code>编写的持续集成的工具</em>
+首先需要先安装<code>Java</code>，再执行以下步骤
+* 添加LTS版本PPA</p>
+
+<pre><code>$ wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -
+$ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list'
+</code></pre>
+
+<ul>
+<li><p>更新源并安装Jenkins</p>
+
+<pre><code>$ sudo apt-get update
+$ sudo apt-get install jenkins
+</code></pre></li>
+
+<li><p>安装后，Jenkins默认在8080端口上启动，如果8080被用，可以配置其他，比如配置为8088
+```
+编辑 /etc/default/jenkins  并更新HTTP_PORT到8088。</p></li>
+</ul>
+
+<p>HTTP_PORT=8088</p>
+
+<pre><code>* 启动`Jenkins`服务
+</code></pre>
+
+<p>$ sudo service jenkins start</p>
+
+<pre><code>* 关闭`Jenkins`服务
+</code></pre>
+
+<p>$ sudo service jenkins stop
+```</p>
+
+<p>这时已经安装成功，可以在浏览器访问<code>localhost:8088</code>
+* 首次进入，首先要输入一个密钥来进入<code>Jenkins</code>,密钥可以在 /var/lib/jenkins/secrets/initialAdminPassword 获取
+<img src="http://upload-images.jianshu.io/upload_images/2190281-d816e580280de86b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="复制命令行的密码粘过来" /></p>
+
+<ul>
+<li><p>选择相应的选项来安装插件，选择系统推荐即可
+<img src="http://upload-images.jianshu.io/upload_images/2190281-7a11c5f5cd155f2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="installplugins.png" /></p></li>
+
+<li><p>会有失败的情况，我搜了下，说不影响，很多由于从国外的网站下，失败很正常，直接进行下一步，后面也可以再安装
+<img src="http://upload-images.jianshu.io/upload_images/2190281-84c6ee6fd61c1f05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p></li>
+
+<li><p>接下来可以为Jenkins设置一个管理员帐户，以后就可以用它登录到Jenkins了
+<img src="http://upload-images.jianshu.io/upload_images/2190281-619a6e9a88edba98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="填写即可" /></p></li>
+
+<li><p>Jenkins安装向导成功完成后，就可以看到这个页面啦
+<img src="http://upload-images.jianshu.io/upload_images/2190281-c6dff5b5813401af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="weblcome.png" /></p></li>
+</ul>
+
+<h2 id="三-安装插件">三、安装插件</h2>
+
+<p><code>Jenkins</code>提供了非常多的插件，几乎你想要的插件全有，前提是你能找的到~官网提供了插件搜索功能，选择<code>Plugins</code>页就可以各种搜索了。
+<img src="http://upload-images.jianshu.io/upload_images/2190281-9f9847b0a103b368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="manage jenkins" /></p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-5c4dc2562e6789b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="plugins" /></p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-a98ce285d172371f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="search plugins" /></p>
+
+<p>安装完成之后重启<code>Jenkins</code></p>
+
+<p>这里推荐我们使用的几个插件</p>
+
+<ul>
+<li><p>要用Jenkins对项目进行持续集成，首先要在插件管理中下载好<code>Github Plugin</code>，使得Jenkins能操作<code>Github</code>中的仓库</p></li>
+
+<li><p><code>Dashboard</code>插件可以用来定义自己的<code>Jenkins</code>主页 <a href="https://wiki.jenkins-ci.org/display/JENKINS/Dashboard+View">Dashboard View</a>
+<img src="http://upload-images.jianshu.io/upload_images/2190281-ffe470335ed10f73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="homepage.png" /></p></li>
+
+<li><p><code>Wall display</code> 用来将<code>jobs</code>的状态更加直观地显示在大屏幕上。
+<img src="http://upload-images.jianshu.io/upload_images/2190281-f625e6b92ccfb555.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="display" /></p></li>
+
+<li><p><code>Jenkins</code>内置的邮件功能,它可根据构建的结果，发送构建报告，给当前的committer （用git做代码管理） <a href="https://link.juejin.im/?target=http%3A%2F%2Fwiki.jenkins-ci.org%2Fdisplay%2FJENKINS%2FEmail-ext%2Bplugin">Email Extension Plugin</a> 的配置
+开发人员<code>build project</code> 之后，build结果无论是成功还是失败，都要及时的通知组内其他成员了解最新情况，邮件通知这时候就派上用场
+<strong>不知什么原因，用QQ邮箱配置失败了，后面若成功了会把步骤贴上来，请参照这个链接 <a href="http://www.jianshu.com/p/2afb099f2a79">jenkins邮件扩展插件的使用</a></strong></p></li>
+</ul>
+
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事
+喜欢一切意外 想把生活过成诗的样子
+若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91" role="button">开发 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80-%e4%bd%9c%e7%94%a8">
+												 一、作用
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c-%e5%ae%89%e8%a3%85-ubuntu16-04">
+												 二、安装（ubuntu16.04）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89-%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">
+												 三、安装插件
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
