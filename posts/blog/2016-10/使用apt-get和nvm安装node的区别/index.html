@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="初识 apt-get 和 nvm apt-get 是什么 在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统 如何使用 apt-get 安装 node $ sudo apt-get install nodejs $ sudo apt-get install npm 这里，因为使用 apt-get 安装的 node 的包管理工具 npm 并没有初始安装，所以需要安装 npm 查看安装版本 查看 node 版本 $ node --version v6.3.0 查看 npm 版本 $ npm --version 3.10.3 在查看版本号时，也可以通">
+  
+  <meta property="og:title" content="使用apt-get和nvm安装node的区别" />
+<meta property="og:description" content="初识 apt-get 和 nvm apt-get 是什么 在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统 如何使用 apt-get 安装 node $ sudo apt-get install nodejs $ sudo apt-get install npm 这里，因为使用 apt-get 安装的 node 的包管理工具 npm 并没有初始安装，所以需要安装 npm 查看安装版本 查看 node 版本 $ node --version v6.3.0 查看 npm 版本 $ npm --version 3.10.3 在查看版本号时，也可以通" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wdanna.com/posts/blog/2016-10/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/" />
+<meta property="article:published_time" content="2016-10-09T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-10-09T00:00:00&#43;00:00"/>
+
+
+  <title>
+  
+       使用apt-get和nvm安装node的区别 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2016-10/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/tools"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Tools </a></li>
+      
+        <li><a href="https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 软件开发 </a></li>
+      
+    
+    
+  </ul>
+
+  <div class="px-2 post-heading">使用apt-get和nvm安装node的区别</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Oct 9, 2016</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>5 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h2 id="初识-apt-get-和-nvm">初识 apt-get 和 nvm</h2>
+
+<hr />
+
+<h3 id="apt-get">apt-get</h3>
+
+<ul>
+<li><strong>是什么</strong>
+在各个平台都有相关的包管理工具，比如 ubuntu 下面有 <code>apt-get</code>，centos 下面有 <code>yum</code>，mac 下面有 <code>brew</code> 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统</li>
+
+<li><p><strong>如何使用 apt-get 安装 node</strong></p>
+
+<pre><code>$ sudo apt-get install nodejs
+$ sudo apt-get install npm
+</code></pre>
+
+<p>这里，因为使用 <code>apt-get</code>  安装的 node 的包管理工具 <code>npm</code> 并没有初始安装，所以需要安装 <code>npm</code></p></li>
+
+<li><p><strong>查看安装版本</strong></p>
+
+<ul>
+<li>查看 node 版本
+<code>
+$ node --version
+v6.3.0
+</code></li>
+<li>查看 npm 版本
+<code>
+$ npm  --version
+3.10.3
+</code>
+在查看版本号时，也可以通过 <code>-v</code> 命令查看，比如： <code>node -v</code>，<code>npm -v</code></li>
+</ul></li>
+
+<li><p><strong>怎么使用 node</strong></p>
+
+<ul>
+<li><p>进入 node  环境</p>
+
+<pre><code>$  node
+&gt; 
+</code></pre>
+
+<p>或</p>
+
+<pre><code>$ nodejs
+&gt;
+</code></pre>
+
+<p>通过 <code>&gt;</code> 可以看出现在已经进入 node 环境</p></li>
+
+<li><p>运行  js 文件，例如运行 hello.js</p>
+
+<pre><code>$ nodejs hello.js
+</code></pre>
+
+<p>或</p>
+
+<pre><code>$ node hello.js
+</code></pre></li>
+</ul></li>
+</ul>
+
+<h3 id="nvm">nvm</h3>
+
+<ul>
+<li><strong>是什么</strong>
+<a href="https://github.com/creationix/nvm">nvm</a>是一个开源的 Node 版本管理器，通过简单的 bash 脚本来管理、切换多个 Node.js  版本,使用 <code>nvm</code> 可以安装官网最新版本之前的任意版本,可以任意切换不同版本</li>
+
+<li><p><strong>如何使用 nvm 安装 node</strong></p>
+
+<ul>
+<li>首先我们需要安装 nvm
+<code>
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+</code></li>
+
+<li><p>接下来查看一下 node 有哪些版本可以安装</p>
+
+<pre><code>$ nvm ls-remote
+
+ v6.1.0  
+ v6.2.0  
+ v6.2.1  
+ v6.2.2  
+ v6.3.0  
+ ....
+</code></pre></li>
+
+<li><p>下载所需要的 node 版本,比如说我们需要 <code>v6.3.0</code> 版本</p>
+
+<pre><code>$ nvm install v6.3.0
+</code></pre></li>
+</ul></li>
+
+<li><p>**查看安装版本和使用 node 的方法 和 <code>apt-get</code> 相同，这里不再复述 **</p></li>
+
+<li><p><strong>使用 nvm 切换 node 版本</strong></p>
+
+<ul>
+<li>查看当前已安装版本
+<code>
+$ nvm ls
+-&gt;       v6.3.0  
+default -&gt; v6.3.0
+node -&gt; stable (-&gt; v6.3.0) (default)
+stable -&gt; 6.3 (-&gt; v6.3.0) (default)
+iojs -&gt; N/A (default)
+lts/* -&gt; lts/argon (-&gt; N/A)
+lts/argon -&gt; v4.6.0 (-&gt; N/A)
+</code>
+从运行结果可以看出，当前电脑上的 node 版本只有一个 <code>v6.3.0</code>,并且当前正在使用的版本也是 <code>v6.3.0</code>,默认的版本同样也是 <code>v6.3.0</code></li>
+<li>例如要使用 <code>v4.4.5</code> 版本，首先安装该版本(可以先使用 <code>nvm ls-remote</code> 查看所有版本)
+<code>
+$ nvm install v4.4.5
+</code></li>
+<li>使用 <code>use</code> 命令切换至该版本
+<code>
+$ nvm use v4.4.5
+Now using node v4.4.5 (npm v2.15.5)
+</code></li>
+
+<li><p>设置默认版本</p>
+
+<pre><code>$ nvm alias default v6.3.0
+</code></pre>
+
+<p> 如果没有设置  <code>default</code> 默认开机 node 是没有启动的，所以可能会报找不到 node 命令的错误，因此我们需要设置默认版本</p></li>
+
+<li><p>卸载某个 node 版本,例如卸载 <code>v4.4.5</code> 版本</p>
+
+<pre><code>$ nvm uninstall v4.4.5
+</code></pre></li>
+</ul></li>
+</ul>
+
+<h4 id="个人建议">个人建议</h4>
+
+<ul>
+<li>个人平时使用 node 时，习惯使用  node 命令，毕竟少输个 “js”，节省时间</li>
+<li>安装 node 时，node 各个版本特性不同，对于 Node.js 这个版本帝而言，很多项目需要使用不同版本的  node 开发机器上可能要同时存在几个 Node.js 的大版本，所以建议大家使用 nvm 方式安装 node</li>
+</ul>
+
+<h2 id="两种方式安装的具体差异">两种方式安装的具体差异</h2>
+
+<hr />
+
+<ul>
+<li><p><strong>安装版本</strong></p>
+
+<ul>
+<li><p>apt-get
+不是最新版本（在linux下默认源中没有 node 的程序），安装的版本有且只有一个，而且执行<code>sudo</code>命令的时候，是以超级管理员身份运行，以后你用<code>npm</code>如果是以超级管理员权限执行的，所以别人就可以更改系统文件，会造成安全性问题，假如别人上传了一个不太好的npm包，里面的脚本实际上是删除系统文件，让你装一下，说帮他测试一下，你install完，sudo一执行。他就可以改系统文件了，那就完蛋了&hellip;但前提是你使用了<code>sudo</code></p></li>
+
+<li><p>nvm
+可以供我们选择要安装的版本，并且则解决了多版本共存、切换问题，但在安装之前，请确认本机以前的安装包已经被卸载</p></li>
+</ul></li>
+
+<li><p><strong>安装目录</strong>（终端通过 <code>whereis node</code> 查看）</p>
+
+<ul>
+<li>apt-get
+<code>
+/usr/local/bin/node
+</code></li>
+<li>nvm
+<code>
+/home/xxx/.nvm/versions/node/v6.3.0/bin/node
+</code></li>
+</ul></li>
+</ul>
+
+<h2 id="nvm-使用-node-切换版本内部实现原理">nvm 使用 node 切换版本内部实现原理</h2>
+
+<hr />
+
+<p><strong>实现原理：</strong>在一个目录下存放多个版本的目录，在切换时候将相应的版本路径加入 PATH 中，从而实现版本的切换，例如从 <code>v6.3.0</code>  切换到  <code>v4.4.5</code> 具体流程如下：
+* 查看一下当前使用的 node 版本</p>
+
+<pre><code>$ node --version
+  v6.3.0
+</code></pre>
+
+<ul>
+<li>现在来看一下  node 环境变量
+<code>
+$ echo $PATH    
+/home/guoru/.nvm/versions/node/v6.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+</code>
+通过环境变量我们可以看出，现在使用的 node 版本是  <code>v6.3.0</code></li>
+<li>使用 <code>nvm use v4.4.5</code> 切换版本，并且查看环境变量 
+<code>
+$ nvm use v4.4.5
+Now using node v4.4.5 (npm v2.15.5)
+$ echo $PATH    
+/home/guoru/.nvm/versions/node/v4.4.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+</code>
+可以看出环境变量已经将 PATH 路径中的版本改为 <code>v4.4.5</code>版本了</li>
+</ul>
+
+<h2 id="总结">总结</h2>
+
+<hr />
+
+<p>如果您是一个前端开发人员，建议您使用 <code>nvm</code> 来安装  node，如果您是一个普通的用户，建议您使用 <code>apt-get</code> 安装 node 。</p>
+
+<p>** 如果您还有兴趣，请继续阅读 **</p>
+
+<h2 id="启动-node-时内部实现过程">启动 node 时内部实现过程</h2>
+
+<hr />
+
+<p>在命令行启动 node 程序时，传入参数，node 程序根据输入的命令参数，执行相应的处理流程。即：在 node 程序中会使用<code>process.argv</code>获取命令行输入参数。<code>Process.argv</code>是一个数组，用于存放从命令行传入的参数。其类似C语言 main  函数中的<code>char* argv[]</code>，假定我们在控制台输入 <code>node argument.js –r arguments.js</code>. 那么程序argument.js 启动后， <code>process.argv</code> 数组中就就存储了以下几个字符串信息:<code>process.argv[0] = “node”, process.argv [1]= “argument.js”, process.argv [2] = “-r”，process.argv[3] = “argument.js</code>”. 由于参数数组的前两个存储的是字符串 ”node” 和源代码文件名，要想获得有效的输入参数，我们一般会从<code>process.argv[2]</code> 开始处理。</p>
+
+<pre><code>var args = {  
+ '-h': displayHelp,  
+ '-r': readFile  
+};  
+function displayHelp() {  
+    console.log('Argument processor:', args);  
+}  
+function readFile(file) {  
+    if (file &amp;&amp; file.length) {  
+       console.log('Reading:' ,file);  
+       console.time('read');  
+       var stream = require('fs').createReadStream(file);  
+  
+       stream.on('end', function() {  
+          console.timeEnd('read');  
+       });  
+       stream.pipe(process.stdout);  
+    }  
+    else {  
+        console.error('A file must be provided with the -r option');  
+        process.exit(1);  
+    }  
+  }  
+  
+    if (process.argv.length &gt; 0) {  
+  
+        process.argv.forEach(function(arg, index) {  
+            if (arg === '-r' || arg === '-h') {                    
+              console.log(process.argv.slice(index + 1));           
+              args[arg].apply(this, process.argv.slice(index+1));  
+            }  
+        });  
+    } 
+</code></pre>
+
+<p>args 对象存储了对应参数要执行的对应函数，例如输入参数是 <code>-r</code> 那么执行 <code>readFile</code>函数， 如果输入参数<code>-h</code>则执行<code>displayHelp</code>函数。readFile 函数被调用时，传入的参数是要读取的文件名。通过 Node  的文件系统模块<code>fs</code>所提供的接口调用<code>createReadStream</code>, 将指定文件名的文件内容读入形成输入流对象，然后再通过输入流对象的<code>pipe</code>函数，将输入流中的所有数据内容，重定向到标准输出，其实也就是输出到控制台</p>
+
+<p><strong>我是半生不熟 喜欢照自己的怪念头行事
+喜欢一切意外 想把生活过成诗的样子
+若哪天有幸相遇 请别诧异 其实我并不是个乖孩子</strong></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

@@ -6,10 +6,19 @@
     <description>Recent content in 软件开发 on 半生不熟 | Amber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Tue, 06 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ubuntu 安装 mongoDB 报错</title>
+      <link>https://wdanna.com/posts/blog/2017-06/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-06/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</guid>
+      <description>一、安装步骤一切ok 启动时 $ sudo service mongodb start #报错 couldn&#39;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146 #停止时 $ sudo service mongodb stop #报错 unknown instance 搜了下有人这样解决了： Step 1: Remove lock file.sudo rm /var/lib/mongodb/mongod.lock Step 2: Repair mongodb. sudo mongod &amp;ndash;repair Step 3: start mongodb.sudo start mongodb orsudo service mongodb start Step 4: Check status of mongodb.sudo status mongodb or sudo service mongodb status Step 5: Start mongo console.mongo 但我也试了，却没有解决&amp;hellip; 卸载之前装的mongodb $ sudo apt-get purge mongodb-org $ sudo apt-get autoremoveRemove the old mongodb.list you created $ sudo rm /etc/apt/sources.list.d/mongodb.list 准备重新安装，由失败到成功，整理了一下： 执行命令 sudo apt-get install mongodb-server 进入目录 vim ~/.bashrc 添加此句 $ export PATH=/home/yhl/mongodb-linux/bin:$PATH 查看版本号 $ mongod -version $ mkdir</description>
+    </item>
     
     <item>
       <title>Git 入门篇</title>
@@ -18,6 +27,15 @@
       
       <guid>https://wdanna.com/posts/blog/2016-12/git-%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
       <description>1、读音 本人一直对技术词汇的发音有不可描述的强迫症现象，所以还是先来聊一聊它的发音。 曾经偶尔不止一次地听到身边有人看着Git叫“鸡特”（谐音），从一开始的满脸懵逼到最后竟笑出了声&amp;hellip; 我觉得作为一个程序不管是猿还是媛，为了避免引起其他猿或者是媛莫名发笑，为了避=避免被一群诧异的眼光注视，为了避免在跟别人讨论技术问题的时候被人揪着发音不放，还是确保你的发音准确吧。 忘掉“鸡特”，记住“给特”</description>
+    </item>
+    
+    <item>
+      <title>你不知道 Ubuntu 我来告诉你</title>
+      <link>https://wdanna.com/posts/blog/2016-12/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</link>
+      <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-12/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</guid>
+      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发音 很庆</description>
     </item>
     
     <item>
@@ -30,30 +48,21 @@
     </item>
     
     <item>
-      <title>Ubuntu 安装 mongoDB 报错</title>
-      <link>https://wdanna.com/posts/blog/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</guid>
-      <description>一、安装步骤一切ok 启动时 $ sudo service mongodb start #报错 couldn&#39;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146 #停止时 $ sudo service mongodb stop #报错 unknown instance 搜了下有人这样解决了： Step 1: Remove lock file.sudo rm /var/lib/mongodb/mongod.lock Step 2: Repair mongodb. sudo mongod &amp;ndash;repair Step 3: start mongodb.sudo start mongodb orsudo service mongodb start Step 4: Check status of mongodb.sudo status mongodb or sudo service mongodb status Step 5: Start mongo console.mongo 但我也试了，却没有解决&amp;hellip; 卸载之前装的mongodb $ sudo apt-get purge mongodb-org $ sudo apt-get autoremoveRemove the old mongodb.list you created $ sudo rm /etc/apt/sources.list.d/mongodb.list 准备重新安装，由失败到成功，整理了一下： 执行命令 sudo apt-get install mongodb-server 进入目录 vim ~/.bashrc 添加此句 $ export PATH=/home/yhl/mongodb-linux/bin:$PATH 查看版本号 $ mongod -version $ mkdir</description>
-    </item>
-    
-    <item>
-      <title>你不知道 Ubuntu 我来告诉你</title>
-      <link>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</guid>
-      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发音 很庆</description>
-    </item>
-    
-    <item>
       <title>修改文件要不要重启 - 一期考试系统</title>
-      <link>https://wdanna.com/posts/blog/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://wdanna.com/posts/blog/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</guid>
       <description>需要修改一期项目中的代码了,之前每次都是用&amp;rdquo;试一下&amp;rdquo;的方式得出要不要启动,现在总结下哪些情况需要启动什么 1、首先再熟悉下每条命令的作用 * docker-compose up -d —将会在后台启动并运行所有的容器 * docker-compose stop —停止一个已经运行的容器，但不删除它，可通过docker-compose start重新启动它 * docker exec -it XX bash —方便用户在容器之外让容器执行指定的命令 * docker logs XX —查看XX容器的日志 2、启动 * 修改前台代码 包</description>
+    </item>
+    
+    <item>
+      <title>使用apt-get和nvm安装node的区别</title>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>初识 apt-get 和 nvm apt-get 是什么 在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统 如何使用 apt-get 安装 node $ sudo apt-get install nodejs $ sudo apt-get install npm 这里，因为使用 apt-get 安装的 node 的包管理工具 npm 并没有初始安装，所以需要安装 npm 查看安装版本 查看 node 版本 $ node --version v6.3.0 查看 npm 版本 $ npm --version 3.10.3 在查看版本号时，也可以通</description>
     </item>
     
     <item>

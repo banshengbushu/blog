@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>不能永远忽略的 Accessibility (上)</title>
+      <link>https://wdanna.com/posts/blog/2018-10/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility%E4%B8%8A/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2018-10/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility%E4%B8%8A/</guid>
+      <description>我们可能都见过的 不知道你有没有注意到，身边有很多每天都在用的东西，很多特别好用也习惯了在用的东西，好像从来都只是觉得很好用，并没有真正思考过设计它们的本来用意，或者换句话说叫思考过它为什么要做成那个样子。 比如你有没有想过很多电梯里为什么设计成半透明的，或者直接四面都是镜子呢？它其实是为了增加空间感，让人们觉得不太压抑，甚至可以在等电梯的时候可以整理自己的衣物或者照照镜子，不会觉得等电梯的时候无聊，</description>
+    </item>
+    
+    <item>
+      <title>为什么我会梦到曼陀罗</title>
+      <link>https://wdanna.com/posts/blog/2018-03/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E6%A2%A6%E5%88%B0%E6%9B%BC%E9%99%80%E7%BD%97/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2018-03/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E6%A2%A6%E5%88%B0%E6%9B%BC%E9%99%80%E7%BD%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>房思琪的痛 即使感同也无法身受</title>
       <link>https://wdanna.com/posts/books/2018-02/%E6%88%BF%E6%80%9D%E7%90%AA%E7%9A%84%E7%97%9B-%E5%8D%B3%E4%BD%BF%E6%84%9F%E5%90%8C%E4%B9%9F%E6%97%A0%E6%B3%95%E8%BA%AB%E5%8F%97/</link>
       <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
@@ -54,6 +72,51 @@
       
       <guid>https://wdanna.com/posts/blog/2017-12/flex%E5%B8%83%E5%B1%80%E4%B9%9F%E5%B0%B1%E8%BF%99%E4%B9%88%E5%A4%9A/</guid>
       <description>还清楚记得第一次用Flex实现了垂直居中的时候，我那各种unbelievable的心情，然后就深深喜欢上了这个好玩的东西 为什么出现 关于Flex布局的出现解决了的问题，个人总结了以下几点原因。 先看看到现在WEB布局的一个发展吧 传统的布局都是基于盒模型，然后设置各种display和position，必要时再加上相应地float，想必写过CSS的同学都感受到过，实现一些复杂的布局会非常不方便，有时候自己</description>
+    </item>
+    
+    <item>
+      <title>TWU那些曾经不认识的单词们</title>
+      <link>https://wdanna.com/posts/blog/2017-11/twu%E9%82%A3%E4%BA%9B%E6%9B%BE%E7%BB%8F%E4%B8%8D%E8%AE%A4%E8%AF%86%E7%9A%84%E5%8D%95%E8%AF%8D%E4%BB%AC/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-11/twu%E9%82%A3%E4%BA%9B%E6%9B%BE%E7%BB%8F%E4%B8%8D%E8%AE%A4%E8%AF%86%E7%9A%84%E5%8D%95%E8%AF%8D%E4%BB%AC/</guid>
+      <description>在TWU（ThoughtWorks University）的这段时间，有一点特别深的感触，那就是单词，很多应该知道却不知道，应该应该见过却没见过的，很多见过但没有记住意思的，很多要是去之前就知道的话，或许能学到的会更多些。 如果知道它们的意思，也不至于因为一两个单词影响整个session的理解，有些可以本理解的东西就那样错过了，有些知道答案的的问题也就那样过去了。 当然，你完全可以不知道就直接问coac</description>
+    </item>
+    
+    <item>
+      <title>不知道最近怎么了</title>
+      <link>https://wdanna.com/posts/blog/2017-11/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%9C%80%E8%BF%91%E6%80%8E%E4%B9%88%E4%BA%86/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-11/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%9C%80%E8%BF%91%E6%80%8E%E4%B9%88%E4%BA%86/</guid>
+      <description>不知道最近怎么了，感觉心里有些东西在翻动，像海水，像夏风，那种感觉，呼呼的，会一阵一阵地强烈，一阵一阵地出现，是那种无法忽略的，总能会想到以前很多事情，好像可以做的更好或者做的更早的，只是好像从来都没开始过。 又不知道自己在说什么了，好了，简单一些，从小事做起吧。今天是2017年11月14日，就从今天开始，你要比以前好一点点，至少别让一些无关紧要的事情影响自己的心情，一点点改变，总有一天会好的。 取完</description>
+    </item>
+    
+    <item>
+      <title>Pecha Kucha - Constellations</title>
+      <link>https://wdanna.com/posts/blog/2017-10/pecha-kucha-constellations/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-10/pecha-kucha-constellations/</guid>
+      <description>Hello everyone, Tonight my topic is about constellations. Do you know about every one&amp;rsquo;s charactor of your friends and colleagues？ Anyway, I&amp;rsquo;m not! I often like ask them, Whats your sign? There are two versions of the sign origin.One is basic on the ancient Greek mythology,Another one is more scientific. It says the twelve constellations is the sign of the zodiac to mark the sun&amp;rsquo;s position. The first is the Aries, The fire element of Aries full of energy and they also very active. but sometimes impatient. Your persistence will lead you to success. The second is the Taurus, The most traditional one. Taurus&amp;rsquo;s element is earth. That&amp;rsquo;s bring the strength for life. You might be a little bit slow-witted, but your consistency will make it up. Gemini usually express their love through speech and mental activities, Gemini&amp;rsquo;s element is air, They good at communication and intellect Your mutable motivation brings adaptability. Cancer has a great need for love, Cancer’s element is water. water signs need to give and receive. So for yours good memory is your born gift. Leo is fire to</description>
+    </item>
+    
+    <item>
+      <title>厦门踩坑3日游</title>
+      <link>https://wdanna.com/posts/blog/2019-01/%E5%8E%A6%E9%97%A8%E8%B8%A9%E5%9D%913%E6%97%A5%E6%B8%B8/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2019-01/%E5%8E%A6%E9%97%A8%E8%B8%A9%E5%9D%913%E6%97%A5%E6%B8%B8/</guid>
+      <description>踏上厦门那片土地之前，总是想象不来她的样子，鼓浪屿，厦大，海盗，沙滩，曾厝垵，异国建筑&amp;hellip;&amp;hellip; 那是所有的零散记忆，虽然看过了许多照片，听到过不止一个人提起它的欣喜若狂，我想，还是自己去看一看吧，想看看当年楚雨荨和慕容云海一起看流星雨的校园，想去一望无际的沙滩捡捡贝壳，和喜欢的人漫步在宁静的鼓浪屿。 初见厦门 第一眼看到的厦门，我同样也是欣喜的，因为她的感觉和西安是完全不一样的，</description>
+    </item>
+    
+    <item>
+      <title>Security in DNA</title>
+      <link>https://wdanna.com/posts/blog/2017-10/security-in-dna/</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-10/security-in-dna/</guid>
+      <description>第三周周的第一天，不得不说，时间真的很快，早上的一个session是关于Security的，听的不是很懂，临走前pair被一个问题卡住了，虽然不是什么大问题，但还是挺影响心情的。 商量了team outing的事情，也总算有了着落，第一次的case study，虽然没有完全看完，但真的是尽力了，还是没有调整到很好的状态，但如果没有感觉错，应该比之前好些吧，总之，又是一周事情很多的时候。 Security about DNA Threat modelling Structured Indentify quantify Secrity</description>
     </item>
     
     <item>
@@ -102,6 +165,33 @@
     </item>
     
     <item>
+      <title>不写了，可以吗？</title>
+      <link>https://wdanna.com/posts/blog/2017-06/%E4%B8%8D%E5%86%99%E4%BA%86%E5%8F%AF%E4%BB%A5%E5%90%97/</link>
+      <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-06/%E4%B8%8D%E5%86%99%E4%BA%86%E5%8F%AF%E4%BB%A5%E5%90%97/</guid>
+      <description>因为被温柔待过 在我还没出生的时候，妈妈就开始对我说话了，是用那笨重的老式录音机插上一张张磁带的方式留给我的。 小的时候，我听过很多很多遍，但留在脑海中的只是妈妈总在哭着对我说些什么，哭的最大声的那次，如果没记错那次是妈妈在纠结要不要生下弟弟&amp;hellip;&amp;hellip; 那时候，什么都不懂，什么都不会懂，也不会陪着妈妈哭，只觉得桌子上那个黑色的发着彩色光的东西里有妈妈的声音，咯咯地笑，要知道，在小孩</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 安装 mongoDB 报错</title>
+      <link>https://wdanna.com/posts/blog/2017-06/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-06/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</guid>
+      <description>一、安装步骤一切ok 启动时 $ sudo service mongodb start #报错 couldn&#39;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146 #停止时 $ sudo service mongodb stop #报错 unknown instance 搜了下有人这样解决了： Step 1: Remove lock file.sudo rm /var/lib/mongodb/mongod.lock Step 2: Repair mongodb. sudo mongod &amp;ndash;repair Step 3: start mongodb.sudo start mongodb orsudo service mongodb start Step 4: Check status of mongodb.sudo status mongodb or sudo service mongodb status Step 5: Start mongo console.mongo 但我也试了，却没有解决&amp;hellip; 卸载之前装的mongodb $ sudo apt-get purge mongodb-org $ sudo apt-get autoremoveRemove the old mongodb.list you created $ sudo rm /etc/apt/sources.list.d/mongodb.list 准备重新安装，由失败到成功，整理了一下： 执行命令 sudo apt-get install mongodb-server 进入目录 vim ~/.bashrc 添加此句 $ export PATH=/home/yhl/mongodb-linux/bin:$PATH 查看版本号 $ mongod -version $ mkdir</description>
+    </item>
+    
+    <item>
+      <title>分群了，然后呢？</title>
+      <link>https://wdanna.com/posts/blog/2017-06/%E5%88%86%E7%BE%A4%E4%BA%86%E7%84%B6%E5%90%8E%E5%91%A2/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-06/%E5%88%86%E7%BE%A4%E4%BA%86%E7%84%B6%E5%90%8E%E5%91%A2/</guid>
+      <description>终于还是决定分组了，又是一个月的尝试和挑战，最让我们高兴的是故事的结局让我们之前的种种疑虑和那些争的面红耳赤仿佛都沉寂于空气了。 很多一开始就想对了的东西 分组之前取大家一个月的打卡数据 * 分组后大家一个月的打卡数据 很多开始我们有争议的问题，现在从实践过的事实来看是没错的。比如分组后每个人的打卡率都稳定了许多，到现在那个良好群已经都在优秀群了，虽然中间有过波折，但是像那种出现四五次甚至更多的情况几乎没有</description>
+    </item>
+    
+    <item>
       <title>20岁,有五个女孩...</title>
       <link>https://wdanna.com/posts/blog/2017-06/20%E5%B2%81%E6%9C%89%E4%BA%94%E4%B8%AA%E5%A5%B3%E5%AD%A9.../</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
@@ -117,6 +207,15 @@
       
       <guid>https://wdanna.com/posts/books/2017-06/%E5%89%AA%E4%B8%8D%E6%96%AD%E7%90%86%E8%BF%98%E4%B9%B1gtd%E7%AC%AC%E4%B8%89%E5%BC%B9/</guid>
       <description>转眼又是两礼拜 生活时不时地会有些意外，这次就是，过了两周，第二次分享才终于完成了，昨晚听完的心情…复杂，惊喜，混乱，amazing！ 其实没有听第二次分享之前，我对自己建的清单还算是基本满意的，也许是真的觉得比以前好了很多，也充实了很多，所以随说没有按最优来也小小地满足了，但长此以往，这样会有问题的，大问题。 所以，听完后，开始意识到自己的问题是真的很有问题的。 先总结几个比较严重的几个问题。 * 关于过滤</description>
+    </item>
+    
+    <item>
+      <title>你也曾想看一眼沙漠吗 | 游沙坡头</title>
+      <link>https://wdanna.com/posts/blog/2017-05/%E4%BD%A0%E4%B9%9F%E6%9B%BE%E6%83%B3%E7%9C%8B%E4%B8%80%E7%9C%BC%E6%B2%99%E6%BC%A0%E5%90%97-%E6%B8%B8%E6%B2%99%E5%9D%A1%E5%A4%B4/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-05/%E4%BD%A0%E4%B9%9F%E6%9B%BE%E6%83%B3%E7%9C%8B%E4%B8%80%E7%9C%BC%E6%B2%99%E6%BC%A0%E5%90%97-%E6%B8%B8%E6%B2%99%E5%9D%A1%E5%A4%B4/</guid>
+      <description>你也曾想去沙漠看看吗？ 遗憾，我还没曾想过，就那样去了&amp;hellip; 以前，总觉得雪域西藏是最纯净的土地&amp;hellip; 也是我最想骑行去的地方&amp;hellip; 可是，当我有天站在通往天堂的路上 我才发现，沙漠竟也如此让我难以忘怀。 西行，去还是不去 这是一次说走就走，走的最快的旅行了。 其实在走之前我都不知道要去的地方是哪里，只知道是沙漠，叫沙坡头。 小爸告诉我那里很好玩，五A级景点，走吧，就这样，一家大大小小</description>
     </item>
     
     <item>
@@ -174,12 +273,48 @@
     </item>
     
     <item>
+      <title>以 URI 的视角看待这个世界</title>
+      <link>https://wdanna.com/posts/blog/2017-04/%E4%BB%A5uri%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E5%BE%85%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-04/%E4%BB%A5uri%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E5%BE%85%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
+      <description>-1- 场景回忆 2017年4月22日，实习地点还在欧亚，十点多，仝老师背着书包来检查我们画的概念图以及对项目一些知识点的熟悉程度，直到下午六点多看完一个有趣的视频，也找出了我们存在的一些问题，给我们讲了很多以前没有听过的东西&amp;hellip;&amp;hellip; 22日的前一天，印象很深刻，是因为20号请假，等到来的时候才知道了这个“悲伤”的故事，那天所有人都在以最快的速度熟悉整个项目的概念细节，林老师为此还压</description>
+    </item>
+    
+    <item>
       <title>Jenkins安装和配置</title>
       <link>https://wdanna.com/posts/blog/2017-04/jenkins%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2017-04/jenkins%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</guid>
       <description>一、作用 项目中一直在用Jenkins，但自己对这部分的开发参与的不是很多，最近准备毕设的时候才开始慌了，倒腾了大半天，之前也有人问我，就准备整理了下相关知识，也便以后回顾。 我们在做项目的时候简单来说一般会有这五个步骤，开发—&amp;gt;提交—&amp;gt;编译—&amp;gt;测试—&amp;gt;部署。人工的流程走就是把项目同步到Git，再用 SSH 登录服务器把项目pull下来，再migrate数据库，运行单元测试和迁移静态资</description>
+    </item>
+    
+    <item>
+      <title>依旧苟且，不曾远方</title>
+      <link>https://wdanna.com/posts/blog/2017-04/%E4%BE%9D%E6%97%A7%E8%8B%9F%E4%B8%94%E4%B8%8D%E6%9B%BE%E8%BF%9C%E6%96%B9/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-04/%E4%BE%9D%E6%97%A7%E8%8B%9F%E4%B8%94%E4%B8%8D%E6%9B%BE%E8%BF%9C%E6%96%B9/</guid>
+      <description>我曾想&amp;hellip; 世上有另一个我 以我想不到的方式 在过着我梦想的生活 那里&amp;hellip; 孩子在笑，鸟儿在叫 亲爱的，对不起 我现在&amp;hellip; 依旧苟且，不曾远方 慢慢地&amp;hellip; 我把生活过成了电视剧的样子 我们 总想好好珍惜，却又浑身脾气 经得起风雨，却经不起平凡 就像你说的 我们始终都在练习微笑 终于变成不敢哭的样子 我对她说 借我些东西吧 比如&amp;hellip; 亡命天涯的勇敢 又或者&amp;hellip; 怦然心动如</description>
+    </item>
+    
+    <item>
+      <title>你总告诉自己要坚持，可你究竟走了多远</title>
+      <link>https://wdanna.com/posts/blog/2017-03/%E4%BD%A0%E6%80%BB%E5%91%8A%E8%AF%89%E8%87%AA%E5%B7%B1%E8%A6%81%E5%9D%9A%E6%8C%81%E5%8F%AF%E4%BD%A0%E7%A9%B6%E7%AB%9F%E8%B5%B0%E4%BA%86%E5%A4%9A%E8%BF%9C/</link>
+      <pubDate>Sun, 26 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-03/%E4%BD%A0%E6%80%BB%E5%91%8A%E8%AF%89%E8%87%AA%E5%B7%B1%E8%A6%81%E5%9D%9A%E6%8C%81%E5%8F%AF%E4%BD%A0%E7%A9%B6%E7%AB%9F%E8%B5%B0%E4%BA%86%E5%A4%9A%E8%BF%9C/</guid>
+      <description>坚持的唯一办法，就是把它变成习惯 你总说时间还很多 你可以等我 以前我不懂得 未必明天就有以后 你是否总有一种时间还很多的错觉，然而到了每天结束的时候才发现自己错了，我是。 你是否曾经有很多坚持做过的事情，但大多都半途而废了，我是。 你是否无比羡慕那些减肥瘦下来的人，还有那些每天可以在太阳升起前起床的人，我是。 早上的时候我对自己说：＂你知道吗？你已经14天没有间断地七点钟起床了＂，连我自己都不敢相信。 要知道以前</description>
+    </item>
+    
+    <item>
+      <title>什么让你相信这世上有奇迹</title>
+      <link>https://wdanna.com/posts/blog/2017-01/%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E7%9B%B8%E4%BF%A1%E8%BF%99%E4%B8%96%E4%B8%8A%E6%9C%89%E5%A5%87%E8%BF%B9/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2017-01/%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E7%9B%B8%E4%BF%A1%E8%BF%99%E4%B8%96%E4%B8%8A%E6%9C%89%E5%A5%87%E8%BF%B9/</guid>
+      <description>若你问我什么时候开始想的这个问题? 好像我在写这些之前从来没有认真想过。 若你问我相信奇迹吗? 我会说，我信，一直都信。 有时候甚至觉得我21岁了都是个奇迹 一直觉得奇迹这个东西，好像是每个人伴随生命降临的产物，没有为什么，就是那么顺其自然应该有的东西。 只是每当意识到它发生的时候，就会有一种开心到要死掉的感觉，紧接着有一种不可思议的吃惊，和一种无以言说的激动和期待。 最近因为看了《鬼怪》，想认真想想这个东西。</description>
     </item>
     
     <item>
@@ -192,12 +327,30 @@
     </item>
     
     <item>
+      <title>与Ruby的第一天</title>
+      <link>https://wdanna.com/posts/blog/2016-12/%E4%B8%8Eruby%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-12/%E4%B8%8Eruby%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</guid>
+      <description>1、学习使我快乐 早就听说Ruby这个语言的表达能力是一般的语言不能比的，现在终于有机会见识见识啦，虽然一开始是拒绝的，但古人不常说嘛，学如逆水行舟，不进则退～何况语言都是相通的，那就开始吧 2、基本用法（与之前学过的比较） 定义类 在 Ruby 中，类总是以关键字 class 开始，后跟类的名称。类名的首字母应该大写，例如 class Customer 创建对象 下面的实例创建了类 Customer 的两个对象 cust1 和 cust2： cust1 = Customer. new cust2 = Customer. new 创建数组 names = Array.new 设置全局变量 全局</description>
+    </item>
+    
+    <item>
       <title>HTML 那些事儿</title>
       <link>https://wdanna.com/posts/blog/2016-12/html-%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
       <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2016-12/html-%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
       <description>1、第一个需求 我的思考 最外层的是两个无序列表（&amp;lt;ul&amp;gt;标签） 靠近最外层的分别是两个有序列表（&amp;lt;ol&amp;gt;标签） 最里层的也是无序列表（&amp;lt;ul&amp;gt;标签），这里应有一个type=“square”的属性 所有列表项目都需要使用&amp;lt;li&amp;gt; 标签 实现效果 错误纠正 对于开始理解的无序列表添加type=“square”的属性那块，在这里是不需要加的，因为默认的无序列表的嵌套结构是</description>
+    </item>
+    
+    <item>
+      <title>今天聊聊 CSS</title>
+      <link>https://wdanna.com/posts/blog/2016-12/%E4%BB%8A%E5%A4%A9%E8%81%8A%E8%81%8A-css/</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-12/%E4%BB%8A%E5%A4%A9%E8%81%8A%E8%81%8A-css/</guid>
+      <description>1、CSS是什么 CSS全称为Cascading Style Sheets，中文翻译为“层叠样式表”，简称CSS样式表，所以称之为层叠样式表（Cascading Stylesheet）简称CSS。 在网页制作时采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。只要对相应的代码做一些简单的修改，就可以改变同一页面的不同部分，或者页数不同的网页的外观和格式。 2、CSS作用 CSS具有对</description>
     </item>
     
     <item>
@@ -219,12 +372,39 @@
     </item>
     
     <item>
+      <title>你不知道 Ubuntu 我来告诉你</title>
+      <link>https://wdanna.com/posts/blog/2016-12/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</link>
+      <pubDate>Sat, 03 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-12/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</guid>
+      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发音 很庆</description>
+    </item>
+    
+    <item>
+      <title>优雅的Markdown</title>
+      <link>https://wdanna.com/posts/blog/2016-11/%E4%BC%98%E9%9B%85%E7%9A%84markdown/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-11/%E4%BC%98%E9%9B%85%E7%9A%84markdown/</guid>
+      <description>-1- 先感受下 你可以试着搜下，网上关于Markdown的介绍和称赞数不胜数，而且都写的很优美，在这里我就不用自己的话夸赞它了，引用几句话大家随意感受下 &amp;gt; * Markdown本身就是为写博客而生的 * 15分钟就能够基本了解，连续使用一星期就能够熟练掌握 * 专注文字内容本身，而更少的关注排版样式 * 低碳环保，可移植性高 哦&amp;hellip;对了，知道一下创始人也是必要的—约翰·格鲁伯（John Gruber），于200</description>
+    </item>
+    
+    <item>
       <title>神奇的 Linux 命令行</title>
       <link>https://wdanna.com/posts/blog/2016-11/%E7%A5%9E%E5%A5%87%E7%9A%84-linux-%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2016-11/%E7%A5%9E%E5%A5%87%E7%9A%84-linux-%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
       <description>1、命令行真的好吗 * 维基百科的解释 &amp;gt;命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。 * 也有人这样说 &amp;gt;熟练使用命令行是一种常常被忽视，或被认为难以掌握的技能，但实际上，它会提高你作为工程师的灵活性以及生产</description>
+    </item>
+    
+    <item>
+      <title>假如人死了真的可以复活</title>
+      <link>https://wdanna.com/posts/blog/2016-11/%E5%81%87%E5%A6%82%E4%BA%BA%E6%AD%BB%E4%BA%86%E7%9C%9F%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%A4%8D%E6%B4%BB/</link>
+      <pubDate>Fri, 18 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-11/%E5%81%87%E5%A6%82%E4%BA%BA%E6%AD%BB%E4%BA%86%E7%9C%9F%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%A4%8D%E6%B4%BB/</guid>
+      <description>好久没有这么&amp;hellip;平静地难过，缓缓地悲伤&amp;hellip; 你坐在我的墓碑上了&amp;hellip; 看完《复生》的我久久不能平静&amp;hellip; 如果有一天，死去的人可以复活，但他们会有吃掉你的可能，你会怎样选择？ &amp;gt; “别说你复生之后变成了僵尸，就算你变成了一条金鱼，妈也一样爱你” 是啊，母爱伟大的程度，不是简简单单的生死可以衡量的 人啊，在生死面前就是这么脆弱，脆弱到眼睁睁地却看不到任何东西。 起初的男主</description>
     </item>
     
     <item>
@@ -252,6 +432,24 @@
       
       <guid>https://wdanna.com/posts/books/2018-01/%E7%A7%98%E5%AF%86%E9%87%8C%E7%9A%84%E7%A7%98%E5%AF%86%E7%A9%B6%E7%AB%9F%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>有段时间不止一次地听到别人在讨论《秘密》这本书，哦，对了，不是东野圭吾那本，是这本。 或许你也没有听过朗达·拜恩 其实一开始我也不认识她，甚至不知道这个她是位女性，开始了解是看到这样介绍她的 &amp;gt;她是一位澳大利亚电视工作者，她在人生跌至谷底、生活即将崩溃的时候，意外发现了隐藏在百年古书中的秘密并成功走出来的奇迹，那些秘密亘古以来存在于各种口述的历史、文学、宗教与哲学之中，但是她想让更多的人知道这个秘</description>
+    </item>
+    
+    <item>
+      <title>修改文件要不要重启 - 一期考试系统</title>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</guid>
+      <description>需要修改一期项目中的代码了,之前每次都是用&amp;rdquo;试一下&amp;rdquo;的方式得出要不要启动,现在总结下哪些情况需要启动什么 1、首先再熟悉下每条命令的作用 * docker-compose up -d —将会在后台启动并运行所有的容器 * docker-compose stop —停止一个已经运行的容器，但不删除它，可通过docker-compose start重新启动它 * docker exec -it XX bash —方便用户在容器之外让容器执行指定的命令 * docker logs XX —查看XX容器的日志 2、启动 * 修改前台代码 包</description>
+    </item>
+    
+    <item>
+      <title>一个从自动化走向程序员的女生</title>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%B8%80%E4%B8%AA%E4%BB%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B5%B0%E5%90%91%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%A5%B3%E7%94%9F/</link>
+      <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%B8%80%E4%B8%AA%E4%BB%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B5%B0%E5%90%91%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%A5%B3%E7%94%9F/</guid>
+      <description>三年前 记得填高考志愿的那天，我们一家人信心满满，第一志愿报了西安邮电大学的通信工程专业，觉得肯定能录上，没一点问题。 然而等待的结果却是差了四分，与通信无缘，当时的我伤心极了&amp;hellip; “没事，还有第二志愿呢”，家里人劝着我，带着些许沮丧&amp;hellip; 看看第二志愿吧—自动化，当时的我就一点也想不起来怎么填的第二志愿了，印象中似乎只考虑了没有半分钟的时间，就那么顺其自然，那会儿家里人为了劝我，又</description>
     </item>
     
     <item>
@@ -291,6 +489,24 @@
     </item>
     
     <item>
+      <title>与仝健老师的一次谈话</title>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%B8%8E%E4%BB%9D%E5%81%A5%E8%80%81%E5%B8%88%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%88%E8%AF%9D/</link>
+      <pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%B8%8E%E4%BB%9D%E5%81%A5%E8%80%81%E5%B8%88%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%88%E8%AF%9D/</guid>
+      <description>对仝老师的爱称是“大胡子老师 看了Q版的照片你就知道为什么了，原谅我到现在也没有记清楚老师的脸，因为都被头发和胡子挡光了，分辨率太低&amp;hellip;&amp;hellip; 第一次见到的“仝老师” 对大胡子老师的第一印象 简单而不随意，潇洒带着霸气，总之很有个性，浑身散发着一种神秘感,当然我和所有人一样以为是个他是个老外，可听了自我介绍后才知道不是的 一次进一步的了解 有一次在群里看到有同学跟仝老师有关与学术问题的讨</description>
+    </item>
+    
+    <item>
+      <title>使用apt-get和nvm安装node的区别</title>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>初识 apt-get 和 nvm apt-get 是什么 在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统 如何使用 apt-get 安装 node $ sudo apt-get install nodejs $ sudo apt-get install npm 这里，因为使用 apt-get 安装的 node 的包管理工具 npm 并没有初始安装，所以需要安装 npm 查看安装版本 查看 node 版本 $ node --version v6.3.0 查看 npm 版本 $ npm --version 3.10.3 在查看版本号时，也可以通</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://wdanna.com/posts/blog/%E6%88%91%E5%8F%88%E6%8B%BF%E8%B5%B7%E4%B9%A6%E4%BA%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -300,228 +516,12 @@
     </item>
     
     <item>
-      <title>Pecha Kucha - Constellations</title>
-      <link>https://wdanna.com/posts/blog/pecha-kucha-constellations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/pecha-kucha-constellations/</guid>
-      <description>Hello everyone, Tonight my topic is about constellations. Do you know about every one&amp;rsquo;s charactor of your friends and colleagues？ Anyway, I&amp;rsquo;m not! I often like ask them, Whats your sign? There are two versions of the sign origin.One is basic on the ancient Greek mythology,Another one is more scientific. It says the twelve constellations is the sign of the zodiac to mark the sun&amp;rsquo;s position. The first is the Aries, The fire element of Aries full of energy and they also very active. but sometimes impatient. Your persistence will lead you to success. The second is the Taurus, The most traditional one. Taurus&amp;rsquo;s element is earth. That&amp;rsquo;s bring the strength for life. You might be a little bit slow-witted, but your consistency will make it up. Gemini usually express their love through speech and mental activities, Gemini&amp;rsquo;s element is air, They good at communication and intellect Your mutable motivation brings adaptability. Cancer has a great need for love, Cancer’s element is water. water signs need to give and receive. So for yours good memory is your born gift. Leo is fire to</description>
-    </item>
-    
-    <item>
-      <title>Security in DNA</title>
-      <link>https://wdanna.com/posts/blog/security-in-dna/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/security-in-dna/</guid>
-      <description>第三周周的第一天，不得不说，时间真的很快，早上的一个session是关于Security的，听的不是很懂，临走前pair被一个问题卡住了，虽然不是什么大问题，但还是挺影响心情的。 商量了team outing的事情，也总算有了着落，第一次的case study，虽然没有完全看完，但真的是尽力了，还是没有调整到很好的状态，但如果没有感觉错，应该比之前好些吧，总之，又是一周事情很多的时候。 Security about DNA Threat modelling Structured Indentify quantify Secrity</description>
-    </item>
-    
-    <item>
-      <title>TWU那些曾经不认识的单词们</title>
-      <link>https://wdanna.com/posts/blog/twu%E9%82%A3%E4%BA%9B%E6%9B%BE%E7%BB%8F%E4%B8%8D%E8%AE%A4%E8%AF%86%E7%9A%84%E5%8D%95%E8%AF%8D%E4%BB%AC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/twu%E9%82%A3%E4%BA%9B%E6%9B%BE%E7%BB%8F%E4%B8%8D%E8%AE%A4%E8%AF%86%E7%9A%84%E5%8D%95%E8%AF%8D%E4%BB%AC/</guid>
-      <description>在TWU（ThoughtWorks University）的这段时间，有一点特别深的感触，那就是单词，很多应该知道却不知道，应该应该见过却没见过的，很多见过但没有记住意思的，很多要是去之前就知道的话，或许能学到的会更多些。 如果知道它们的意思，也不至于因为一两个单词影响整个session的理解，有些可以本理解的东西就那样错过了，有些知道答案的的问题也就那样过去了。 当然，你完全可以不知道就直接问coac</description>
-    </item>
-    
-    <item>
-      <title>Ubuntu 安装 mongoDB 报错</title>
-      <link>https://wdanna.com/posts/blog/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</guid>
-      <description>一、安装步骤一切ok 启动时 $ sudo service mongodb start #报错 couldn&#39;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146 #停止时 $ sudo service mongodb stop #报错 unknown instance 搜了下有人这样解决了： Step 1: Remove lock file.sudo rm /var/lib/mongodb/mongod.lock Step 2: Repair mongodb. sudo mongod &amp;ndash;repair Step 3: start mongodb.sudo start mongodb orsudo service mongodb start Step 4: Check status of mongodb.sudo status mongodb or sudo service mongodb status Step 5: Start mongo console.mongo 但我也试了，却没有解决&amp;hellip; 卸载之前装的mongodb $ sudo apt-get purge mongodb-org $ sudo apt-get autoremoveRemove the old mongodb.list you created $ sudo rm /etc/apt/sources.list.d/mongodb.list 准备重新安装，由失败到成功，整理了一下： 执行命令 sudo apt-get install mongodb-server 进入目录 vim ~/.bashrc 添加此句 $ export PATH=/home/yhl/mongodb-linux/bin:$PATH 查看版本号 $ mongod -version $ mkdir</description>
-    </item>
-    
-    <item>
-      <title>一个从自动化走向程序员的女生</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%80%E4%B8%AA%E4%BB%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B5%B0%E5%90%91%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%A5%B3%E7%94%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%80%E4%B8%AA%E4%BB%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B5%B0%E5%90%91%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%A5%B3%E7%94%9F/</guid>
-      <description>三年前 记得填高考志愿的那天，我们一家人信心满满，第一志愿报了西安邮电大学的通信工程专业，觉得肯定能录上，没一点问题。 然而等待的结果却是差了四分，与通信无缘，当时的我伤心极了&amp;hellip; “没事，还有第二志愿呢”，家里人劝着我，带着些许沮丧&amp;hellip; 看看第二志愿吧—自动化，当时的我就一点也想不起来怎么填的第二志愿了，印象中似乎只考虑了没有半分钟的时间，就那么顺其自然，那会儿家里人为了劝我，又</description>
-    </item>
-    
-    <item>
-      <title>不写了，可以吗？</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%8D%E5%86%99%E4%BA%86%E5%8F%AF%E4%BB%A5%E5%90%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%8D%E5%86%99%E4%BA%86%E5%8F%AF%E4%BB%A5%E5%90%97/</guid>
-      <description>因为被温柔待过 在我还没出生的时候，妈妈就开始对我说话了，是用那笨重的老式录音机插上一张张磁带的方式留给我的。 小的时候，我听过很多很多遍，但留在脑海中的只是妈妈总在哭着对我说些什么，哭的最大声的那次，如果没记错那次是妈妈在纠结要不要生下弟弟&amp;hellip;&amp;hellip; 那时候，什么都不懂，什么都不会懂，也不会陪着妈妈哭，只觉得桌子上那个黑色的发着彩色光的东西里有妈妈的声音，咯咯地笑，要知道，在小孩</description>
-    </item>
-    
-    <item>
-      <title>不知道最近怎么了</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%9C%80%E8%BF%91%E6%80%8E%E4%B9%88%E4%BA%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%9C%80%E8%BF%91%E6%80%8E%E4%B9%88%E4%BA%86/</guid>
-      <description>不知道最近怎么了，感觉心里有些东西在翻动，像海水，像夏风，那种感觉，呼呼的，会一阵一阵地强烈，一阵一阵地出现，是那种无法忽略的，总能会想到以前很多事情，好像可以做的更好或者做的更早的，只是好像从来都没开始过。 又不知道自己在说什么了，好了，简单一些，从小事做起吧。今天是2017年11月14日，就从今天开始，你要比以前好一点点，至少别让一些无关紧要的事情影响自己的心情，一点点改变，总有一天会好的。 取完</description>
-    </item>
-    
-    <item>
-      <title>与仝健老师的一次谈话</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%8E%E4%BB%9D%E5%81%A5%E8%80%81%E5%B8%88%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%88%E8%AF%9D/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%8E%E4%BB%9D%E5%81%A5%E8%80%81%E5%B8%88%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%88%E8%AF%9D/</guid>
-      <description>对仝老师的爱称是“大胡子老师 看了Q版的照片你就知道为什么了，原谅我到现在也没有记清楚老师的脸，因为都被头发和胡子挡光了，分辨率太低&amp;hellip;&amp;hellip; 第一次见到的“仝老师” 对大胡子老师的第一印象 简单而不随意，潇洒带着霸气，总之很有个性，浑身散发着一种神秘感,当然我和所有人一样以为是个他是个老外，可听了自我介绍后才知道不是的 一次进一步的了解 有一次在群里看到有同学跟仝老师有关与学术问题的讨</description>
-    </item>
-    
-    <item>
-      <title>为什么我会梦到曼陀罗</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E6%A2%A6%E5%88%B0%E6%9B%BC%E9%99%80%E7%BD%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BC%9A%E6%A2%A6%E5%88%B0%E6%9B%BC%E9%99%80%E7%BD%97/</guid>
-      <description>不知道为什么，最近又开始整天整夜的做梦了。 还是和往常一样，没有征兆，也没有为什么得来的答案。 是午睡，阳光很好。 闭上眼，使劲地想&amp;hellip;&amp;hellip; 第一个想到的是结局&amp;hellip;. 最后一幕是我蹲在一个白色的门前种下了一朵紫色的叫曼陀罗花，花名我记得最清楚，因为梦里觉得很好听。 旁边蹲着的，是一个男孩子，长相怎么也想不起来。 梦里也是在睡觉，和A一起，还是平时睡觉的房间，不一样的是，房间多</description>
-    </item>
-    
-    <item>
-      <title>什么让你相信这世上有奇迹</title>
-      <link>https://wdanna.com/posts/blog/%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E7%9B%B8%E4%BF%A1%E8%BF%99%E4%B8%96%E4%B8%8A%E6%9C%89%E5%A5%87%E8%BF%B9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BB%80%E4%B9%88%E8%AE%A9%E4%BD%A0%E7%9B%B8%E4%BF%A1%E8%BF%99%E4%B8%96%E4%B8%8A%E6%9C%89%E5%A5%87%E8%BF%B9/</guid>
-      <description>若你问我什么时候开始想的这个问题? 好像我在写这些之前从来没有认真想过。 若你问我相信奇迹吗? 我会说，我信，一直都信。 有时候甚至觉得我21岁了都是个奇迹 一直觉得奇迹这个东西，好像是每个人伴随生命降临的产物，没有为什么，就是那么顺其自然应该有的东西。 只是每当意识到它发生的时候，就会有一种开心到要死掉的感觉，紧接着有一种不可思议的吃惊，和一种无以言说的激动和期待。 最近因为看了《鬼怪》，想认真想想这个东西。</description>
-    </item>
-    
-    <item>
-      <title>以 URI 的视角看待这个世界</title>
-      <link>https://wdanna.com/posts/blog/%E4%BB%A5uri%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E5%BE%85%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BB%A5uri%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E5%BE%85%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C/</guid>
-      <description>-1- 场景回忆 2017年4月22日，实习地点还在欧亚，十点多，仝老师背着书包来检查我们画的概念图以及对项目一些知识点的熟悉程度，直到下午六点多看完一个有趣的视频，也找出了我们存在的一些问题，给我们讲了很多以前没有听过的东西&amp;hellip;&amp;hellip; 22日的前一天，印象很深刻，是因为20号请假，等到来的时候才知道了这个“悲伤”的故事，那天所有人都在以最快的速度熟悉整个项目的概念细节，林老师为此还压</description>
-    </item>
-    
-    <item>
-      <title>优雅的Markdown</title>
-      <link>https://wdanna.com/posts/blog/%E4%BC%98%E9%9B%85%E7%9A%84markdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BC%98%E9%9B%85%E7%9A%84markdown/</guid>
-      <description>-1- 先感受下 你可以试着搜下，网上关于Markdown的介绍和称赞数不胜数，而且都写的很优美，在这里我就不用自己的话夸赞它了，引用几句话大家随意感受下 &amp;gt; * Markdown本身就是为写博客而生的 * 15分钟就能够基本了解，连续使用一星期就能够熟练掌握 * 专注文字内容本身，而更少的关注排版样式 * 低碳环保，可移植性高 哦&amp;hellip;对了，知道一下创始人也是必要的—约翰·格鲁伯（John Gruber），于200</description>
-    </item>
-    
-    <item>
-      <title>你不知道 Ubuntu 我来告诉你</title>
-      <link>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</guid>
-      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发音 很庆</description>
-    </item>
-    
-    <item>
-      <title>你也曾想看一眼沙漠吗 | 游沙坡头</title>
-      <link>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B9%9F%E6%9B%BE%E6%83%B3%E7%9C%8B%E4%B8%80%E7%9C%BC%E6%B2%99%E6%BC%A0%E5%90%97-%E6%B8%B8%E6%B2%99%E5%9D%A1%E5%A4%B4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B9%9F%E6%9B%BE%E6%83%B3%E7%9C%8B%E4%B8%80%E7%9C%BC%E6%B2%99%E6%BC%A0%E5%90%97-%E6%B8%B8%E6%B2%99%E5%9D%A1%E5%A4%B4/</guid>
-      <description>你也曾想去沙漠看看吗？ 遗憾，我还没曾想过，就那样去了&amp;hellip; 以前，总觉得雪域西藏是最纯净的土地&amp;hellip; 也是我最想骑行去的地方&amp;hellip; 可是，当我有天站在通往天堂的路上 我才发现，沙漠竟也如此让我难以忘怀。 西行，去还是不去 这是一次说走就走，走的最快的旅行了。 其实在走之前我都不知道要去的地方是哪里，只知道是沙漠，叫沙坡头。 小爸告诉我那里很好玩，五A级景点，走吧，就这样，一家大大小小</description>
-    </item>
-    
-    <item>
-      <title>你总告诉自己要坚持，可你究竟走了多远</title>
-      <link>https://wdanna.com/posts/blog/%E4%BD%A0%E6%80%BB%E5%91%8A%E8%AF%89%E8%87%AA%E5%B7%B1%E8%A6%81%E5%9D%9A%E6%8C%81%E5%8F%AF%E4%BD%A0%E7%A9%B6%E7%AB%9F%E8%B5%B0%E4%BA%86%E5%A4%9A%E8%BF%9C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E6%80%BB%E5%91%8A%E8%AF%89%E8%87%AA%E5%B7%B1%E8%A6%81%E5%9D%9A%E6%8C%81%E5%8F%AF%E4%BD%A0%E7%A9%B6%E7%AB%9F%E8%B5%B0%E4%BA%86%E5%A4%9A%E8%BF%9C/</guid>
-      <description>坚持的唯一办法，就是把它变成习惯 你总说时间还很多 你可以等我 以前我不懂得 未必明天就有以后 你是否总有一种时间还很多的错觉，然而到了每天结束的时候才发现自己错了，我是。 你是否曾经有很多坚持做过的事情，但大多都半途而废了，我是。 你是否无比羡慕那些减肥瘦下来的人，还有那些每天可以在太阳升起前起床的人，我是。 早上的时候我对自己说：＂你知道吗？你已经14天没有间断地七点钟起床了＂，连我自己都不敢相信。 要知道以前</description>
-    </item>
-    
-    <item>
       <title>你还记得18岁暗恋的那个人吗</title>
-      <link>https://wdanna.com/posts/blog/%E4%BD%A0%E8%BF%98%E8%AE%B0%E5%BE%9718%E5%B2%81%E6%9A%97%E6%81%8B%E7%9A%84%E9%82%A3%E4%B8%AA%E4%BA%BA%E5%90%97/</link>
+      <link>https://wdanna.com/posts/blog/2016-10/%E4%BD%A0%E8%BF%98%E8%AE%B0%E5%BE%9718%E5%B2%81%E6%9A%97%E6%81%8B%E7%9A%84%E9%82%A3%E4%B8%AA%E4%BA%BA%E5%90%97/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E8%BF%98%E8%AE%B0%E5%BE%9718%E5%B2%81%E6%9A%97%E6%81%8B%E7%9A%84%E9%82%A3%E4%B8%AA%E4%BA%BA%E5%90%97/</guid>
+      <guid>https://wdanna.com/posts/blog/2016-10/%E4%BD%A0%E8%BF%98%E8%AE%B0%E5%BE%9718%E5%B2%81%E6%9A%97%E6%81%8B%E7%9A%84%E9%82%A3%E4%B8%AA%E4%BA%BA%E5%90%97/</guid>
       <description>* 那是 一次准备得并不怎么充分的演讲 * 同样，熬夜修改准备了许久的文稿 * 感情是永远不可以复制的，尽管只有三分钟的时间 据说每个人都曾经暗恋过别人，你们还记得自己十七八岁的时候暗恋的那个人吗？他是那个 学习很好长相清秀 的沈佳宜，还是那个 阳光帅气爱打篮球 的欧皓晨？你现在再想起他的时候，是在微笑，还是在沉默，还是觉得 你当年的求之不得 如今看来也不过如此。 我高二的时候开始有了暗恋的人，暗恋是一件惊心动魄的事情，每次</description>
-    </item>
-    
-    <item>
-      <title>使用apt-get和nvm安装node的区别</title>
-      <link>https://wdanna.com/posts/blog/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BD%BF%E7%94%A8apt-get%E5%92%8Cnvm%E5%AE%89%E8%A3%85node%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
-      <description>初识 apt-get 和 nvm apt-get 是什么 在各个平台都有相关的包管理工具，比如 ubuntu 下面有 apt-get，centos 下面有 yum，mac 下面有 brew 等，它们都是安装软件的非常方便的利器，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统 如何使用 apt-get 安装 node $ sudo apt-get install nodejs $ sudo apt-get install npm 这里，因为使用 apt-get 安装的 node 的包管理工具 npm 并没有初始安装，所以需要安装 npm 查看安装版本 查看 node 版本 $ node --version v6.3.0 查看 npm 版本 $ npm --version 3.10.3 在查看版本号时，也可以通</description>
-    </item>
-    
-    <item>
-      <title>依旧苟且，不曾远方</title>
-      <link>https://wdanna.com/posts/blog/%E4%BE%9D%E6%97%A7%E8%8B%9F%E4%B8%94%E4%B8%8D%E6%9B%BE%E8%BF%9C%E6%96%B9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BE%9D%E6%97%A7%E8%8B%9F%E4%B8%94%E4%B8%8D%E6%9B%BE%E8%BF%9C%E6%96%B9/</guid>
-      <description>我曾想&amp;hellip; 世上有另一个我 以我想不到的方式 在过着我梦想的生活 那里&amp;hellip; 孩子在笑，鸟儿在叫 亲爱的，对不起 我现在&amp;hellip; 依旧苟且，不曾远方 慢慢地&amp;hellip; 我把生活过成了电视剧的样子 我们 总想好好珍惜，却又浑身脾气 经得起风雨，却经不起平凡 就像你说的 我们始终都在练习微笑 终于变成不敢哭的样子 我对她说 借我些东西吧 比如&amp;hellip; 亡命天涯的勇敢 又或者&amp;hellip; 怦然心动如</description>
-    </item>
-    
-    <item>
-      <title>修改文件要不要重启 - 一期考试系统</title>
-      <link>https://wdanna.com/posts/blog/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</guid>
-      <description>需要修改一期项目中的代码了,之前每次都是用&amp;rdquo;试一下&amp;rdquo;的方式得出要不要启动,现在总结下哪些情况需要启动什么 1、首先再熟悉下每条命令的作用 * docker-compose up -d —将会在后台启动并运行所有的容器 * docker-compose stop —停止一个已经运行的容器，但不删除它，可通过docker-compose start重新启动它 * docker exec -it XX bash —方便用户在容器之外让容器执行指定的命令 * docker logs XX —查看XX容器的日志 2、启动 * 修改前台代码 包</description>
-    </item>
-    
-    <item>
-      <title>假如人死了真的可以复活</title>
-      <link>https://wdanna.com/posts/blog/%E5%81%87%E5%A6%82%E4%BA%BA%E6%AD%BB%E4%BA%86%E7%9C%9F%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%A4%8D%E6%B4%BB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E5%81%87%E5%A6%82%E4%BA%BA%E6%AD%BB%E4%BA%86%E7%9C%9F%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%A4%8D%E6%B4%BB/</guid>
-      <description>好久没有这么&amp;hellip;平静地难过，缓缓地悲伤&amp;hellip; 你坐在我的墓碑上了&amp;hellip; 看完《复生》的我久久不能平静&amp;hellip; 如果有一天，死去的人可以复活，但他们会有吃掉你的可能，你会怎样选择？ &amp;gt; “别说你复生之后变成了僵尸，就算你变成了一条金鱼，妈也一样爱你” 是啊，母爱伟大的程度，不是简简单单的生死可以衡量的 人啊，在生死面前就是这么脆弱，脆弱到眼睁睁地却看不到任何东西。 起初的男主</description>
-    </item>
-    
-    <item>
-      <title>分群了，然后呢？</title>
-      <link>https://wdanna.com/posts/blog/%E5%88%86%E7%BE%A4%E4%BA%86%E7%84%B6%E5%90%8E%E5%91%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E5%88%86%E7%BE%A4%E4%BA%86%E7%84%B6%E5%90%8E%E5%91%A2/</guid>
-      <description>终于还是决定分组了，又是一个月的尝试和挑战，最让我们高兴的是故事的结局让我们之前的种种疑虑和那些争的面红耳赤仿佛都沉寂于空气了。 很多一开始就想对了的东西 分组之前取大家一个月的打卡数据 * 分组后大家一个月的打卡数据 很多开始我们有争议的问题，现在从实践过的事实来看是没错的。比如分组后每个人的打卡率都稳定了许多，到现在那个良好群已经都在优秀群了，虽然中间有过波折，但是像那种出现四五次甚至更多的情况几乎没有</description>
-    </item>
-    
-    <item>
-      <title>动手前记得问自己一个问题</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility-%E4%B8%8A/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility-%E4%B8%8A/</guid>
-      <description>我们可能都见过的 不知道你有没有注意到，身边有很多每天都在用的东西，很多特别好用也习惯了在用的东西，好像从来都只是觉得很好用，并没有真正思考过设计它们的本来用意，或者换句话说叫思考过它为什么要做成那个样子。 比如你有没有想过很多电梯里为什么设计成半透明的，或者直接四面都是镜子呢？它其实是为了增加空间感，让人们觉得不太压抑，甚至可以在等电梯的时候可以整理自己的衣物或者照照镜子，不会觉得等电梯的时候无聊，</description>
-    </item>
-    
-    <item>
-      <title>动手前记得问自己一个问题</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility%E4%B8%8A/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%8D%E8%83%BD%E6%B0%B8%E8%BF%9C%E5%BF%BD%E7%95%A5%E7%9A%84accessibility%E4%B8%8A/</guid>
-      <description>我们可能都见过的 不知道你有没有注意到，身边有很多每天都在用的东西，很多特别好用也习惯了在用的东西，好像从来都只是觉得很好用，并没有真正思考过设计它们的本来用意，或者换句话说叫思考过它为什么要做成那个样子。 比如你有没有想过很多电梯里为什么设计成半透明的，或者直接四面都是镜子呢？它其实是为了增加空间感，让人们觉得不太压抑，甚至可以在等电梯的时候可以整理自己的衣物或者照照镜子，不会觉得等电梯的时候无聊，</description>
-    </item>
-    
-    <item>
-      <title>动手前记得问自己一个问题</title>
-      <link>https://wdanna.com/posts/blog/%E4%B8%8Eruby%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%B8%8Eruby%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/</guid>
-      <description>1、学习使我快乐 早就听说Ruby这个语言的表达能力是一般的语言不能比的，现在终于有机会见识见识啦，虽然一开始是拒绝的，但古人不常说嘛，学如逆水行舟，不进则退～何况语言都是相通的，那就开始吧 2、基本用法（与之前学过的比较） 定义类 在 Ruby 中，类总是以关键字 class 开始，后跟类的名称。类名的首字母应该大写，例如 class Customer 创建对象 下面的实例创建了类 Customer 的两个对象 cust1 和 cust2： cust1 = Customer. new cust2 = Customer. new 创建数组 names = Array.new 设置全局变量 全局</description>
-    </item>
-    
-    <item>
-      <title>动手前记得问自己一个问题</title>
-      <link>https://wdanna.com/posts/blog/%E4%BB%8A%E5%A4%A9%E8%81%8A%E8%81%8A-css/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E4%BB%8A%E5%A4%A9%E8%81%8A%E8%81%8A-css/</guid>
-      <description>1、CSS是什么 CSS全称为Cascading Style Sheets，中文翻译为“层叠样式表”，简称CSS样式表，所以称之为层叠样式表（Cascading Stylesheet）简称CSS。 在网页制作时采用CSS技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。只要对相应的代码做一些简单的修改，就可以改变同一页面的不同部分，或者页数不同的网页的外观和格式。 2、CSS作用 CSS具有对</description>
     </item>
     
     <item>
@@ -540,15 +540,6 @@
       
       <guid>https://wdanna.com/posts/blog/%E5%8A%A8%E6%89%8B%E5%89%8D%E8%AE%B0%E5%BE%97%E9%97%AE%E8%87%AA%E5%B7%B1%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/</guid>
       <description>在写任何页面之前记得问自己一个问题 — 真的确定看清楚了吗？ 要实现的页面 乍一看挺简单的一张页面，但是写完后和大神交流了下才发现，很多东西是我没有看清楚的，更或者说一些东西只看到了其中的一部分，写完反复感受了下大神提到的需要改进的地方，在这里简单总结了一下。 我们想的一样吗 有兴趣的可以试试按自己的想法划分一下这个页面，挺好玩的。 按功能块划分大的整体应该是分三部分的，依据有背景颜色、页面功能、重复性用户体验</description>
-    </item>
-    
-    <item>
-      <title>厦门踩坑3日游</title>
-      <link>https://wdanna.com/posts/blog/2019-01/%E5%8E%A6%E9%97%A8%E8%B8%A9%E5%9D%913%E6%97%A5%E6%B8%B8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/2019-01/%E5%8E%A6%E9%97%A8%E8%B8%A9%E5%9D%913%E6%97%A5%E6%B8%B8/</guid>
-      <description>踏上厦门那片土地之前，总是想象不来她的样子，鼓浪屿，厦大，海盗，沙滩，曾厝垵，异国建筑&amp;hellip;&amp;hellip; 那是所有的零散记忆，虽然看过了许多照片，听到过不止一个人提起它的欣喜若狂，我想，还是自己去看一看吧，想看看当年楚雨荨和慕容云海一起看流星雨的校园，想去一望无际的沙滩捡捡贝壳，和喜欢的人漫步在宁静的鼓浪屿。 初见厦门 第一眼看到的厦门，我同样也是欣喜的，因为她的感觉和西安是完全不一样的，</description>
     </item>
     
     <item>
