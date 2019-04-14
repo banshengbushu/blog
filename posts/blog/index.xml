@@ -89,7 +89,7 @@
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/2017-04/jenkins%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</guid>
-      <description></description>
+      <description>一、作用 项目中一直在用Jenkins，但自己对这部分的开发参与的不是很多，最近准备毕设的时候才开始慌了，倒腾了大半天，之前也有人问我，就准备整理了下相关知识，也便以后回顾。 我们在做项目的时候简单来说一般会有这五个步骤，开发—&amp;gt;提交—&amp;gt;编译—&amp;gt;测试—&amp;gt;部署。人工的流程走就是把项目同步到Git，再用 SSH 登录服务器把项目pull下来，再migrate数据库，运行单元测试和迁移静态资</description>
     </item>
     
     <item>

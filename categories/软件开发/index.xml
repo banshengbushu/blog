@@ -30,12 +30,39 @@
     </item>
     
     <item>
+      <title>Ubuntu 安装 mongoDB 报错</title>
+      <link>https://wdanna.com/posts/blog/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/</guid>
+      <description>一、安装步骤一切ok 启动时 $ sudo service mongodb start #报错 couldn&#39;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146 #停止时 $ sudo service mongodb stop #报错 unknown instance 搜了下有人这样解决了： Step 1: Remove lock file.sudo rm /var/lib/mongodb/mongod.lock Step 2: Repair mongodb. sudo mongod &amp;ndash;repair Step 3: start mongodb.sudo start mongodb orsudo service mongodb start Step 4: Check status of mongodb.sudo status mongodb or sudo service mongodb status Step 5: Start mongo console.mongo 但我也试了，却没有解决&amp;hellip; 卸载之前装的mongodb $ sudo apt-get purge mongodb-org $ sudo apt-get autoremoveRemove the old mongodb.list you created $ sudo rm /etc/apt/sources.list.d/mongodb.list 准备重新安装，由失败到成功，整理了一下： 执行命令 sudo apt-get install mongodb-server 进入目录 vim ~/.bashrc 添加此句 $ export PATH=/home/yhl/mongodb-linux/bin:$PATH 查看版本号 $ mongod -version $ mkdir</description>
+    </item>
+    
+    <item>
+      <title>你不知道 Ubuntu 我来告诉你</title>
+      <link>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93ubuntu%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0/</guid>
+      <description>1、起源 发音—国际音标：英语发音：/ʊˈbʊntuː/ 由马克·舍特尔沃斯创立，其首个版本—4.10发布于2004年10月20日。 其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”，是非洲传统的一种价值观 独立之精神，自由之思想—与大家共勉，向开源致敬。 ###2、与Linux的关系 首先还是发音，有人这样调侃—Linux是自由的，包括它的发</description>
+    </item>
+    
+    <item>
       <title>修改文件要不要重启 - 一期考试系统</title>
       <link>https://wdanna.com/posts/blog/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/posts/blog/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%90%AF-%E4%B8%80%E6%9C%9F%E8%80%83%E8%AF%95%E7%B3%BB%E7%BB%9F/</guid>
       <description>需要修改一期项目中的代码了,之前每次都是用&amp;rdquo;试一下&amp;rdquo;的方式得出要不要启动,现在总结下哪些情况需要启动什么 1、首先再熟悉下每条命令的作用 * docker-compose up -d —将会在后台启动并运行所有的容器 * docker-compose stop —停止一个已经运行的容器，但不删除它，可通过docker-compose start重新启动它 * docker exec -it XX bash —方便用户在容器之外让容器执行指定的命令 * docker logs XX —查看XX容器的日志 2、启动 * 修改前台代码 包</description>
+    </item>
+    
+    <item>
+      <title>我来项目一周了</title>
+      <link>https://wdanna.com/posts/blog/%E6%88%91%E6%9D%A5%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%91%A8%E4%BA%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E6%88%91%E6%9D%A5%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%91%A8%E4%BA%86/</guid>
+      <description>6月26，是第一天正式去公司实习的日子。￼ 还记得那件可笑的事。25晚上都十一点了，翻聊天记录才发现HR姐姐要的身份证复印件学生证复印件银行卡复印件居然都没有印！！！重点是还忘得一干二净，丝毫不记得。我个猪脑子，居然会把这么重要的事忘记加到清单里。 当时我就慌了，大晚上的，刚搬来住的地方，一个人人生地不熟的，白天在附近都没有看到有复印店，况且，那会儿都十一点多了，幸好幸好的是，我告诉了箫声远，就是吐槽</description>
     </item>
     
     <item>
