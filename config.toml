@@ -1,0 +1,85 @@
+baseURL                    = "https://wdanna.com/"
+builddrafts                = false
+languageCode               = "zn-Hans"
+canonifyurls               = true
+contentdir                 = "content"
+layoutdir                  = "layouts"
+publishdir                 = "public"
+enableEmoji                = true
+hasCJKLanguage             = true
+summaryLength              = 200
+Paginate                   = 3
+
+theme                      = "AllinOne"
+title                      = "半生不熟 | Amber"
+
+pygmentsuseclasses         = true
+
+
+[permalinks]
+  blog                     = "blog/:year-:month/:slug/"
+
+
+[taxonomies]
+  tag                      = "tags"
+  series                   = "series"
+  category                 = "categories"
+
+
+[menu]
+  [[menu.main]]
+    name                   = "Blog"
+    weight                 = -120
+    identifier             = "blog"
+    url                    = "posts/blog/"
+
+  [[menu.main]]
+    name                   = "Books"
+    weight                 = -110
+    identifier             = "books"
+    url                    = "posts/books/"
+
+  [[menu.main]]
+    name                   = "About"
+    weight                 = -100
+    identifier             = "about"
+    url                    = "posts/about/"
+
+
+
+[params]
+  author                   = "半生不熟 | Amber"
+  description              = ["Be myself.", "Love the wonderful world.", "You Will Never Know unless You Try."]           # appears in the site header when set to a non-empty string
+  welcome_head             = "Hi,"
+  welcome_word             = "我是半生不熟，喜欢照自己的怪念头行事，喜欢一切意外 想把生活过成诗的样子。若哪天有幸相遇，请别诧异，其实我并不是个乖孩子。"
+
+  latestpostscount         = 5                             # how many posts to display on the home page
+  bloggroupby              = 'month'
+  dateform                 = "Jan 2, 2006"
+  dateformfull             = "2006-01-02  Monday  15:04:05"
+  noshowreadtime           = false                         # if true, don't show "<x> minutes read" in posts
+
+  # slides
+  slidesDirPath            = "themes/AllinOne/static/img/header-slides"    # path to image in local dir (path for hugo)
+  slidesDirPathURL         = "img/header-slides"    # path to image in static dir (for static pages)
+
+  # highlighting
+  highlightjs              = true
+
+  # latex
+  katex                    = true
+
+  # links
+  email                    = "wangdanna1995@outlook.com"
+  github                   = "https://github.com/banshengbushu"
+  zhihu                    = "https://www.zhihu.com/people/banshengbushu/activities"
+  jianshu                  = "https://www.jianshu.com/u/4c0a06c8a1f9"
+  facebook                 = "https://www.facebook.com/Amber.pepperr"
+  # googleplus             = "//google.com/you"
+  twitter                  = "https://twitter.com/Dannaw_"
+  px500                    = "https://500px.com/_amber"
+  instagram                = "https://www.instagram.com/amber.pepper_/"
+  include_rss              = true                          # include RSS <link> tag in <head> and show RSS icon
+
+  # analytics
+  googleAnalytics          = "your-google-analytic-id"

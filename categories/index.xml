@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 半生不熟 | Amber</title>
+    <link>https://wdanna.com/categories/</link>
+    <description>Recent content in Categories on 半生不熟 | Amber</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Thu, 27 Oct 2016 21:28:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://wdanna.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books</title>
+      <link>https://wdanna.com/categories/books/</link>
+      <pubDate>Thu, 27 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/categories/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://wdanna.com/categories/tools/</link>
+      <pubDate>Wed, 19 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

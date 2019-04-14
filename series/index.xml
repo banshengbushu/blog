@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on 半生不熟 | Amber</title>
+    <link>https://wdanna.com/series/</link>
+    <description>Recent content in Series on 半生不熟 | Amber</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Thu, 27 Oct 2016 21:28:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://wdanna.com/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我读的书并不多</title>
+      <link>https://wdanna.com/series/%E6%88%91%E8%AF%BB%E7%9A%84%E4%B9%A6%E5%B9%B6%E4%B8%8D%E5%A4%9A/</link>
+      <pubDate>Thu, 27 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/series/%E6%88%91%E8%AF%BB%E7%9A%84%E4%B9%A6%E5%B9%B6%E4%B8%8D%E5%A4%9A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://wdanna.com/series/ubuntu/</link>
+      <pubDate>Wed, 19 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/series/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on 半生不熟 | Amber</title>
+    <link>https://wdanna.com/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on 半生不熟 | Amber</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 19 Oct 2016 21:28:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://wdanna.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>这个 fish 不是鱼</title>
+      <link>https://wdanna.com/posts/blog/2016-10/%E8%BF%99%E4%B8%AA-fish-%E4%B8%8D%E6%98%AF%E9%B1%BC/</link>
+      <pubDate>Wed, 19 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-10/%E8%BF%99%E4%B8%AA-fish-%E4%B8%8D%E6%98%AF%E9%B1%BC/</guid>
+      <description>1、介绍 ![]() fish是一个用户友好的命令行外壳程序全称Friendly Interactive Shell可用于如 Linux 这样的 Unix 类操作系统中 二逼青年用 bash，普通青年用 zsh，文艺青年用 fish fish的主页这样说—好了，这是一个为 90 后而生的命令行 shell 对于一个没有学过并且不需要学习 bash（或者 Posix shell），我感觉 fish 是一个更好的选择 2、好处 那些高端的好处并没有使用过多少，就自身使用过的经验来说感觉最人性化的好处有 * 语法高亮—可以在</description>
+    </item>
+    
+  </channel>
+</rss>

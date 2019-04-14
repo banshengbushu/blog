@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 半生不熟 | Amber</title>
+    <link>https://wdanna.com/tags/</link>
+    <description>Recent content in Tags on 半生不熟 | Amber</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Thu, 27 Oct 2016 21:28:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://wdanna.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>小说</title>
+      <link>https://wdanna.com/tags/%E5%B0%8F%E8%AF%B4/</link>
+      <pubDate>Thu, 27 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/tags/%E5%B0%8F%E8%AF%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://wdanna.com/tags/ubuntu/</link>
+      <pubDate>Wed, 19 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>开发工具</title>
+      <link>https://wdanna.com/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 19 Oct 2016 21:28:48 +0800</pubDate>
+      
+      <guid>https://wdanna.com/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
