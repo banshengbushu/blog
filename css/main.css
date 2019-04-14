@@ -100,9 +100,20 @@ a:active .active-color  {
   width: 80px;
 } */
 
+@media (min-width: 800px)  {
+  .post-main-wrapper {
+    margin: 3rem 2rem 5rem;
+  }
+}
 
-.post-main-wrapper {
-  margin: 3rem 2rem 5rem;
+@media (max-width: 450px) {
+  .carousel-item .view {
+    background-position-x: -300px;
+  }
+
+  .post-main-wrapper .col-md-9 {
+    padding: 0;
+  }
 }
 
 .post-wrapper {
