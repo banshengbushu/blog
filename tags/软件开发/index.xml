@@ -84,6 +84,15 @@
     </item>
     
     <item>
+      <title>每个程序员都有一个博客梦</title>
+      <link>https://wdanna.com/posts/blog/%E6%AF%8F%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%A2%A6/</link>
+      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E6%AF%8F%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%A2%A6/</guid>
+      <description>不想写的时候 这是一篇拖了很久才写的文章。 从什么时候开始的呢？ 应该是从和韩亦乐同学讨论为什么要写博客，到底要怎么写的问题的时候就开始了吧。 看了看自己以前的CSDN，也看了看现在的简书，收获了很多，好像也丢掉了很多。 人总是要过一段时间就得回过头思考一些东西的。 半年前的时候&amp;hellip; * 总是觉得没有时间 * 没有意识到写作带来的好处 * 没有&amp;hellip;&amp;hellip; 感受到它好的时候 有一个广为流传的《</description>
+    </item>
+    
+    <item>
       <title>前端学习网站整理</title>
       <link>https://wdanna.com/posts/blog/2017-06/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E6%95%B4%E7%90%86/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
@@ -171,15 +180,6 @@
       
       <guid>https://wdanna.com/posts/blog/2016-10/reflux-%E5%AE%9E%E7%8E%B0-hello-world/</guid>
       <description>初识Reflux Reflux 是一个简单的单向数据流应用库，灵感来自于ReactJs Flux 解决了数据在React 应用中的流动方式及过程 需求分析 用 Reflux 实现界面渲染 hello world 分解任务 使用 React 创建一个组件，在页面渲染出 hello word 安装 Reflux 创建一个 Action 创建一个 Store，用来监听** Action **，并且获取 Action 传递的 hello world Store 将值传递给 Component，并且渲染到页面 将代码上传至 Github 分步实现任务 使用 React 创建一个组件，在页面渲染出 hello word &#39;use strict&#39;; import React from &#39;react&#39;; import {render} from &#39;react-dom&#39;; const App =</description>
-    </item>
-    
-    <item>
-      <title>每个程序员都有一个博客梦</title>
-      <link>https://wdanna.com/posts/blog/%E6%AF%8F%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%A2%A6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E6%AF%8F%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%A2%A6/</guid>
-      <description>不想写的时候 这是一篇拖了很久才写的文章。 从什么时候开始的呢？ 应该是从和韩亦乐同学讨论为什么要写博客，到底要怎么写的问题的时候就开始了吧。 看了看自己以前的CSDN，也看了看现在的简书，收获了很多，好像也丢掉了很多。 人总是要过一段时间就得回过头思考一些东西的。 半年前的时候&amp;hellip; * 总是觉得没有时间 * 没有意识到写作带来的好处 * 没有&amp;hellip;&amp;hellip; 感受到它好的时候 有一个广为流传的《</description>
     </item>
     
   </channel>

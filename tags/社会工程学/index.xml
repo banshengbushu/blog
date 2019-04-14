@@ -6,10 +6,19 @@
     <description>Recent content in 社会工程学 on 半生不熟 | Amber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 09 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Oct 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wdanna.com/tags/%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>由 &#34;sudo&#34; 想到的社会工程学</title>
+      <link>https://wdanna.com/posts/blog/%E7%94%B1-sudo-%E6%83%B3%E5%88%B0%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</link>
+      <pubDate>Wed, 12 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/%E7%94%B1-sudo-%E6%83%B3%E5%88%B0%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</guid>
+      <description>来源于 其实用了sudo，以后你用npm是以管理员权限执行的，安全性会成问题，当然要配合一些社会工程的手法才能真正触发这个安全漏洞 1、先不说这个会造成多大的安全性问题，从老师的话中，我想到一个一直在使用的命令但从来没有想过原因的问题—执行apt-get为什么一定要加sudo 2、安全性指的是什么，社会工程学的手法又是什么 3、试了试 不加sudo是这样的 apt-get install skype E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied) E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?</description>
+    </item>
     
     <item>
       <title>与仝健老师的一次谈话</title>
@@ -18,15 +27,6 @@
       
       <guid>https://wdanna.com/posts/blog/2016-10/%E4%B8%8E%E4%BB%9D%E5%81%A5%E8%80%81%E5%B8%88%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%88%E8%AF%9D/</guid>
       <description>对仝老师的爱称是“大胡子老师 看了Q版的照片你就知道为什么了，原谅我到现在也没有记清楚老师的脸，因为都被头发和胡子挡光了，分辨率太低&amp;hellip;&amp;hellip; 第一次见到的“仝老师” 对大胡子老师的第一印象 简单而不随意，潇洒带着霸气，总之很有个性，浑身散发着一种神秘感,当然我和所有人一样以为是个他是个老外，可听了自我介绍后才知道不是的 一次进一步的了解 有一次在群里看到有同学跟仝老师有关与学术问题的讨</description>
-    </item>
-    
-    <item>
-      <title>由 &#34;sudo&#34; 想到的社会工程学</title>
-      <link>https://wdanna.com/posts/blog/%E7%94%B1-sudo-%E6%83%B3%E5%88%B0%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/posts/blog/%E7%94%B1-sudo-%E6%83%B3%E5%88%B0%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/</guid>
-      <description>来源于 其实用了sudo，以后你用npm是以管理员权限执行的，安全性会成问题，当然要配合一些社会工程的手法才能真正触发这个安全漏洞 1、先不说这个会造成多大的安全性问题，从老师的话中，我想到一个一直在使用的命令但从来没有想过原因的问题—执行apt-get为什么一定要加sudo 2、安全性指的是什么，社会工程学的手法又是什么 3、试了试 不加sudo是这样的 apt-get install skype E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied) E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?</description>
     </item>
     
   </channel>
