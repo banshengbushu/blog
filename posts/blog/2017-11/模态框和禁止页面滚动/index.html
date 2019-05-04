@@ -42,7 +42,6 @@
       href="https://image.wdanna.com/avatar/my_profile.jpg"
   >
 
-
   
   
 
@@ -78,7 +77,6 @@
 </script>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
   <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
   
     
@@ -523,6 +521,23 @@ works exactly like &ldquo;auto&rdquo;. We should either remove it or rename it t
           </div>
 
           
+          <div id="git-comments"></div>
+          <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+          <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+          <script>
+              var gitment = new Gitment({
+                  owner: "https:\/\/github.com\/banshengbushu",
+                  repo: 'https://github.com/banshengbushu/my_blog_hugo',
+                  oauth: {
+                      client_id: '1977e86fd0a4696587e6',
+                      client_secret: '81dc2c452fa33a531a6f62e7e3da982674267d26',
+                  }
+              })
+              gitment.render('git-comments')
+          </script>
+          
+
+          
 
         </div>
         
@@ -588,10 +603,10 @@ works exactly like &ldquo;auto&rdquo;. We should either remove it or rename it t
   <div class="copyright py-4">
     
     <div>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </div>
-    <span id="busuanzi_container_site_pv">
+    <div id="busuanzi_container_site_pv">
             本网站访问量：<span id="busuanzi_value_site_pv"></span>次
-    <span/>
-  </span>
+    <div/>
+  </div>
   
 
 </footer>
