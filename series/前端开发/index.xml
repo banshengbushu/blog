@@ -209,5 +209,14 @@
       <description>这两天学习了Reflux的基础知识，贯彻5w1h的学习方法，加上思维导图有力地辅助，总结如下 首先戳这里 看官网是必须的 Reflux是什么 Reflux 是一个简单的单向数据流应用库，灵感来自于 ReactJS Flux Flux又是什么 React 标榜自己是 MVC 里面 V 的部分，那么 Flux 就相当于添加 M 和 C 的部分。Flux 是 Facebook 使用的一套前端应用的架构模式 Reflux是谁什么时候提出的 Facebook在2014年4月提出的 Facebook为什么要提出 因为Re</description>
     </item>
     
+    <item>
+      <title>Linux初学者指南-基本配置</title>
+      <link>https://wdanna.com/posts/blog/2016-04/linux%E5%88%9D%E5%AD%A6%E8%80%85%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-04/linux%E5%88%9D%E5%AD%A6%E8%80%85%E6%8C%87%E5%8D%97/</guid>
+      <description>安装Ubuntu 1.注意事项 32位与64位版本的取舍 基于性能、稳定性以及硬件成本的综合考虑，我们只推荐使用64位的Linux发行版，同时建议将个人电脑的内存升级到至少4G以上。 本设置指南全部基于64位Linux发行版进行编写。 什么样的电脑适合安装Linux？ 首先，请查阅 Ubuntu 桌面认证硬件列表，其中的品牌电脑具备良好的兼容性，你可以在硬件上减少很多生命的浪费： Ubuntu 桌面认证硬件 所以请优先采购列表中的设备。 如</description>
+    </item>
+    
   </channel>
 </rss>
