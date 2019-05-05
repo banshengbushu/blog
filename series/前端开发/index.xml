@@ -200,5 +200,14 @@
       <description>初识Reflux Reflux 是一个简单的单向数据流应用库，灵感来自于ReactJs Flux 解决了数据在React 应用中的流动方式及过程 需求分析 用 Reflux 实现界面渲染 hello world 分解任务 使用 React 创建一个组件，在页面渲染出 hello word 安装 Reflux 创建一个 Action 创建一个 Store，用来监听** Action **，并且获取 Action 传递的 hello world Store 将值传递给 Component，并且渲染到页面 将代码上传至 Github 分步实现任务 使用 React 创建一个组件，在页面渲染出 hello word &#39;use strict&#39;; import React from &#39;react&#39;; import {render} from &#39;react-dom&#39;; const App =</description>
     </item>
     
+    <item>
+      <title>初学 Reflux</title>
+      <link>https://wdanna.com/posts/blog/2016-09/%E5%88%9D%E5%AD%A6-reflux/</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2016-09/%E5%88%9D%E5%AD%A6-reflux/</guid>
+      <description>这两天学习了Reflux的基础知识，贯彻5w1h的学习方法，加上思维导图有力地辅助，总结如下 首先戳这里 看官网是必须的 Reflux是什么 Reflux 是一个简单的单向数据流应用库，灵感来自于 ReactJS Flux Flux又是什么 React 标榜自己是 MVC 里面 V 的部分，那么 Flux 就相当于添加 M 和 C 的部分。Flux 是 Facebook 使用的一套前端应用的架构模式 Reflux是谁什么时候提出的 Facebook在2014年4月提出的 Facebook为什么要提出 因为Re</description>
+    </item>
+    
   </channel>
 </rss>

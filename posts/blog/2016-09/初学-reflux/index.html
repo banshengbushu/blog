@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta name="baidu-site-verification" content="vwL9IDtS6Z" />
+  <meta name="msvalidate.01" content="3D940446722D9F6C89B75262C1500888" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="这两天学习了Reflux的基础知识，贯彻5w1h的学习方法，加上思维导图有力地辅助，总结如下 首先戳这里 看官网是必须的 Reflux是什么 Reflux 是一个简单的单向数据流应用库，灵感来自于 ReactJS Flux Flux又是什么 React 标榜自己是 MVC 里面 V 的部分，那么 Flux 就相当于添加 M 和 C 的部分。Flux 是 Facebook 使用的一套前端应用的架构模式 Reflux是谁什么时候提出的 Facebook在2014年4月提出的 Facebook为什么要提出 因为Re">
+
+  <title>
+  
+       初学 Reflux | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2016-09/%E5%88%9D%E5%AD%A6-reflux/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139547931-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139547931-1');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/slides/" >Slides  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 前端开发 </a></li>
+      
+    
+    
+      
+        <li><a href="https://wdanna.com/series/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>前端开发</a></li>
+      
+    
+  </ul>
+
+  <div class="px-2 post-heading">初学 Reflux</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 29, 2016</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>4 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h5 id="这两天学习了reflux的基础知识-贯彻5w1h的学习方法-加上思维导图有力地辅助-总结如下">这两天学习了Reflux的基础知识，贯彻5w1h的学习方法，加上思维导图有力地辅助，总结如下</h5>
+
+<hr />
+
+<h5 id="首先戳这里">首先戳这里</h5>
+
+<p><a href="https://www.npmjs.com/package/reflux" title="强迫自己看官网">看官网是必须的</a></p>
+
+<h5 id="reflux是什么"><strong>Reflux是什么</strong></h5>
+
+<ul>
+<li>Reflux 是一个简单的单向数据流应用库，灵感来自于 ReactJS Flux</li>
+</ul>
+
+<blockquote>
+<p><strong>Flux又是什么</strong></p>
+</blockquote>
+
+<ul>
+<li>React 标榜自己是 MVC 里面 V 的部分，那么 Flux 就相当于添加 M 和 C 的部分。Flux 是 Facebook 使用的一套前端应用的架构模式</li>
+</ul>
+
+<h5 id="reflux是谁什么时候提出的"><strong>Reflux是谁什么时候提出的</strong></h5>
+
+<ul>
+<li>Facebook在2014年4月提出的</li>
+</ul>
+
+<blockquote>
+<p><strong>Facebook为什么要提出</strong></p>
+</blockquote>
+
+<ul>
+<li>因为React在设计之初就只关注在View本身上，其余部分如数据的获取，事件处理等，全然不在考虑之内。不过构建大型的Web前端应用，这些点又实在不可避免。所以Facebook的工程师提出了前端的Flux架构，这个架构的最大特点是单向数据流（后面详述）。但是Flux本身的实现有很多不合理的地方，比如单例的Dispatcher会在系统中有多种事件时导致臃肿的switch-cases等，鉴于Flux本身只是一个架构，而且Facebook提供的参考实现又有一些问题，所以社区有了很多版本的Flux实现。比如我们这里会用到的Reflux。</li>
+</ul>
+
+<h5 id="reflux的提出解决了什么问题"><strong>Reflux的提出解决了什么问题</strong></h5>
+
+<ul>
+<li>解决了数据在 React 应用中的流动方式及过程</li>
+</ul>
+
+<blockquote>
+<p><strong>React中的流动方式是怎样的</strong></p>
+</blockquote>
+
+<ul>
+<li>我们将数据传送给顶层组件，同样作为父祖件的它，便可以通过组件的属性将一些有用的数据传给各个子组件，一级一级自上而下传递下去，最终每一个组件都得到自己渲染所需的数据，从而完成UI渲染</li>
+</ul>
+
+<blockquote>
+<p><strong>Reflux是怎么解决的</strong></p>
+</blockquote>
+
+<ul>
+<li>主要由actions和stores组成，例：当组件list增加Item时，会调用actions某个方法（如addItem（data）并将新的数据当参数传递进去，通过事件机制，数据会传送到stores中，stores可以向服务器发送请求并提交给数据库，数据更新后，再通过事件机制传递到list当中，并更新UI</li>
+</ul>
+
+<h5 id="reflux的优势在哪里"><strong>Reflux的优势在哪里</strong></h5>
+
+<ul>
+<li>单向数据流（核心思想）</li>
+<li>数据层（M）与视图层（V）抽离</li>
+</ul>
+
+<blockquote>
+<p><strong>什么是单向数据流</strong></p>
+</blockquote>
+
+<ul>
+<li>Actions ────────────&gt; Stores ────────────&gt;         View Components
+ ^
+ └──────────────────────────────────────┘
+如上图数据和操作在三者之间单向流动</li>
+</ul>
+
+<blockquote>
+<p><strong>数据单向流动的优点和缺点</strong></p>
+</blockquote>
+
+<ul>
+<li>优点：数据流动方向可以跟踪，流动单一，追查问题的时候可以跟快捷</li>
+<li>缺点：写起来不太方便。要使UI发生变更就必须创建各种action来维护对应的state</li>
+</ul>
+
+<h5 id="与flux的相同点"><strong>与Flux的相同点</strong></h5>
+
+<ul>
+<li>都有action、store、单项数据流</li>
+</ul>
+
+<h5 id="与flux的不同点"><strong>与Flux的不同点</strong></h5>
+
+<ul>
+<li>通过内部拓展actions的行为，移除了单例的dispatcher</li>
+<li>stores可以监听actions的行为，无需进行冗杂的switch判断</li>
+<li>stores可以相互监听，可以进行进一步的数据聚合操作，类似于，map/reduce</li>
+<li>waitFor被连续和平行的数据流所替代</li>
+</ul>
+
+<h5 id="reflux怎么安装"><strong>Reflux怎么安装</strong></h5>
+
+<ul>
+<li>npm安装：npm install reflux</li>
+<li>bower安装：bower install reflux</li>
+</ul>
+
+<h5 id="reflux主要内容有什么"><strong>Reflux主要内容有什么</strong></h5>
+
+<ul>
+<li>Action</li>
+<li>Store</li>
+<li>view（controller-views）</li>
+</ul>
+
+<blockquote>
+<p><strong>什么是Action</strong></p>
+</blockquote>
+
+<ul>
+<li>Action 是把数据从应用传到 store 的有效载荷，是store 数据的唯一来源，只用来描述“发生了什么”</li>
+</ul>
+
+<blockquote>
+<p><strong>怎么创建Action</strong></p>
+</blockquote>
+
+<ul>
+<li>创建单个actions：
+  <code>var addItem = Reflux.createAction();</code></li>
+
+<li><p>创建多个actions：</p>
+
+<pre><code>var TodoActions = Reflux.createActions([
+    'addItem',
+    'deleteItem'
+]);
+</code></pre></li>
+</ul>
+
+<blockquote>
+<p><strong>什么是Store</strong></p>
+</blockquote>
+
+<ul>
+<li>负责封装应用的业务逻辑和数据交互</li>
+</ul>
+
+<blockquote>
+<p><strong>怎么创建Store</strong></p>
+</blockquote>
+
+<pre><code>var TodoStore = Reflux.createStore({
+	    init: function () {
+	        this.listenTo(TodoActions.addItem, 'addItem');
+	        this.listenTo(TodoActions.deleteItem, 'deleteItem');
+	    },
+	    addItem: function (model) {
+	       console.log(model)
+	    },
+	    deleteItem:function(model){
+	        console.log(model);
+	    }
+	});
+</code></pre>
+
+<blockquote>
+<p><strong>什么是Views（controller-views）</strong></p>
+</blockquote>
+
+<ul>
+<li>整个App 的 入口，监听store 的变化以获取新的数据，重新render 自己及子组件</li>
+</ul>
+
+<h5 id="实现一个hello-world"><strong>实现一个Hello World</strong></h5>
+
+<blockquote>
+<p><strong>需求分析</strong></p>
+</blockquote>
+
+<ul>
+<li>学习 使用 reflux 实现 界面渲染hello world</li>
+</ul>
+
+<blockquote>
+<p><strong>分解任务</strong></p>
+</blockquote>
+
+<ol>
+<li>使用React创建一个组件，在页面渲染出hello word</li>
+<li>安装Reflux</li>
+<li>通过创建一个action 将“hello world”，传给创建的stores，然后 stores 将值传递给 component，并且渲染到页面</li>
+<li>将代码上传至github</li>
+</ol>
+
+<blockquote>
+<p><strong>分步实现任务</strong></p>
+</blockquote>
+
+<ul>
+<li>使用React创建一个组件，在页面渲染出hello word</li>
+</ul>
+
+<pre><code>'use strict';
+
+import React from 'react';
+import {render} from 'react-dom';
+
+const App = React.createClass({
+render:function(){
+	return &lt;div&gt;
+		hello world
+	&lt;/div&gt;
+}
+});
+render(&lt;App/&gt;, document.getElementById(&quot;content&quot;));
+</code></pre>
+
+<ul>
+<li>安装Reflux</li>
+</ul>
+
+<pre><code>npm install reflux
+</code></pre>
+
+<ul>
+<li>通过创建一个action 将“hello world”，传给创建的stores，然后 stores 将值传递给 component，并且渲染到页面</li>
+</ul>
+
+<pre><code>'use strict';
+
+import React from 'react';
+import Reflux from 'reflux';
+import {render} from 'react-dom';
+
+const action = Reflux.createActions(['getHello']);
+
+const store = Reflux.createStore({
+
+    listenables: [action],
+
+    onGetHello: function (hello) {
+        this.trigger(hello);
+    }
+});
+
+const App = React.createClass({
+    mixins: [Reflux.connect(store, &quot;hello&quot;)],
+
+    componentDidMount: function () {
+        action.getHello(&quot;hello world!&quot;);
+    },
+
+    render: function () {
+        return &lt;div&gt;
+            {this.state.hello}
+        &lt;/div&gt;
+    }
+});
+
+render(&lt;App/&gt;, document.getElementById(&quot;content&quot;));
+
+</code></pre>
+
+<ul>
+<li>将代码上传至github</li>
+</ul>
+
+<h5 id="总结"><strong>总结</strong></h5>
+
+<p><img src="http://img.blog.csdn.net/20161007143527209" alt="Reflux概念关系图" /></p>
+
+<ul>
+<li>以后学习新知识的时候要分清问题的侧重点，确定目标后再分步学习去完成目标</li>
+<li>学习知识要在最开始确定任务范围，尽量不引入别的新知识，增加学习负担</li>
+<li>学习知识时要始终保持一颗积极学习新知识的心</li>
+</ul>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" role="button">前端开发 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+          <div id="git-comments"></div>
+          <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+          <script>
+              var gitment = new Gitment({
+                  id: "2016-09-29 00:00:00 \x2b0000 UTC",
+                  owner: "banshengbushu",
+                  repo: 'blog_comments',
+                  oauth: {
+                      client_id: '1977e86fd0a4696587e6',
+                      client_secret: '81dc2c452fa33a531a6f62e7e3da982674267d26',
+                  }
+              })
+              gitment.render('git-comments')
+          </script>
+          
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <div>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </div>
+    <div id="busuanzi_container_site_pv">
+            本网站访问量：<span id="busuanzi_value_site_pv"></span>次
+    <div/>
+  </div>
+  
+
+</footer>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
