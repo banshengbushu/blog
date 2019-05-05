@@ -9,7 +9,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="半生不熟 | Amber">
-  <meta name="description" content="#效果展示 没掌握上传动图的操作，这里就先截静态图吧 #实现思路 自己的思路 一开始看到这个图的时候，想着应该不难 * 外面一个div，里面一个div，一个背景深蓝色，一个背景白色 * 蓝色的div加一个伪元素，背景浅蓝色，再裁剪一半 还是先试试，写着写着发现中间各种设置四周边距，才让中间div居中，我都看不下去了 参考了别人的思路 看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然">
+  <meta name="description" content="#效果展示 没掌握上传动图的操作，这里就先截静态图吧 实现思路 自己的思路 一开始看到这个图的时候，想着应该不难 * 外面一个div，里面一个div，一个背景深蓝色，一个背景白色 * 蓝色的div加一个伪元素，背景浅蓝色，再裁剪一半 还是先试试，写着写着发现中间各种设置四周边距，才让中间div居中，我都看不下去了 参考了别人的思路 看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然开">
 
   <title>
   
@@ -334,13 +334,16 @@
 
 
           <div class="post-content markdown">
-            <p>#效果展示
+            
+
+<p>#效果展示
 没掌握上传动图的操作，这里就先截静态图吧</p>
 
 <p><img src="http://upload-images.jianshu.io/upload_images/2190281-be2ac373c69142a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="25%" /></p>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/2190281-471f4406c7898dad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="50%" />
-#实现思路</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-471f4406c7898dad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="50%" /></p>
+
+<h1 id="实现思路">实现思路</h1>
 
 <blockquote>
 <p>自己的思路</p>
@@ -356,17 +359,24 @@
 <p>参考了别人的思路</p>
 </blockquote>
 
-<p>看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然开了窍，哇，这么简单，原来都是套路呀。
-#CSS属性
-* <code>clip</code> 设置裁剪，<a href="https://www.w3schools.com/cssref/pr_pos_clip.asp">详细介绍看这里</a>
-* <code>transform</code> 设置旋转，<a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">详细介绍看这里</a>
-* <code>animation</code> 一个简写属性，用于设置六个动画属性，<a href="https://www.w3schools.com/cssref/css3_pr_animation.asp">详细介绍看这里</a></p>
+<p>看了有很多例子，一开始没看懂的时候，觉得都写的什么呀，有这么复杂吗，但不知道怎么就突然开了窍，哇，这么简单，原来都是套路呀。</p>
 
-<p>#更合理的思路
-&gt;利用遮罩和裁剪的思想。
-&gt;* 想象你有一个浅蓝色的圆圈，一个浅蓝色的半圆圈，一个深蓝色的半圆圈，三个半径一样大；
-&gt;* 浅蓝色半圆圈，深蓝色半圆圈，浅蓝色圆圈，从上往下依次堆叠放置；
-&gt;* 这时候，你会发现将中间那层深蓝色半圆圈稍作转动，从上忘下俯视，就会发现有你要的效果；</p>
+<h1 id="css属性">CSS属性</h1>
+
+<ul>
+<li><code>clip</code> 设置裁剪，<a href="https://www.w3schools.com/cssref/pr_pos_clip.asp">详细介绍看这里</a></li>
+<li><code>transform</code> 设置旋转，<a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">详细介绍看这里</a></li>
+<li><code>animation</code> 一个简写属性，用于设置六个动画属性，<a href="https://www.w3schools.com/cssref/css3_pr_animation.asp">详细介绍看这里</a></li>
+</ul>
+
+<h1 id="更合理的思路">更合理的思路</h1>
+
+<blockquote>
+<p>利用遮罩和裁剪的思想。
+* 想象你有一个浅蓝色的圆圈，一个浅蓝色的半圆圈，一个深蓝色的半圆圈，三个半径一样大；
+* 浅蓝色半圆圈，深蓝色半圆圈，浅蓝色圆圈，从上往下依次堆叠放置；
+* 这时候，你会发现将中间那层深蓝色半圆圈稍作转动，从上忘下俯视，就会发现有你要的效果；</p>
+</blockquote>
 
 <ul>
 <li><p><code>HTML</code>设计如下
@@ -383,8 +393,9 @@
 <img src="http://upload-images.jianshu.io/upload_images/2190281-7c9d6c5a2c54c181.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="after裁剪右半部分" /></p></li>
 </ul>
 
-<p>#让它动起来
-设置从0°开始顺时针旋转90°
+<h1 id="让它动起来">让它动起来</h1>
+
+<p>设置从0°开始顺时针旋转90°
 <img src="http://upload-images.jianshu.io/upload_images/2190281-ebb23f5b374895cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="利用animation一些属性" /></p>
 
 <p>这样，一个动态的圆环就成功啦。</p>
@@ -458,6 +469,120 @@
 	
 	
 	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ae%9e%e7%8e%b0%e6%80%9d%e8%b7%af">
+												 实现思路
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#css%e5%b1%9e%e6%80%a7">
+												 CSS属性
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%9b%b4%e5%90%88%e7%90%86%e7%9a%84%e6%80%9d%e8%b7%af">
+												 更合理的思路
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%ae%a9%e5%ae%83%e5%8a%a8%e8%b5%b7%e6%9d%a5">
+												 让它动起来
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
 	
 
     </div>
