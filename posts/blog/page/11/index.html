@@ -459,6 +459,8 @@
 
   
 
+  
+
 
 
 
@@ -491,7 +493,7 @@
             
             <li class="py-1">
               <a href="https://wdanna.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91">
-                <span>前端开发 (20)</span>
+                <span>前端开发 (21)</span>
               </a>
             </li>           
           
@@ -687,6 +689,8 @@
 
   
 
+  
+
 
 
 
@@ -731,13 +735,13 @@
             <li><a href="https://wdanna.com/tags/ubuntu" role="button"><span>ubuntu (4)</span></a></li>
           
         
+            <li><a href="https://wdanna.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" role="button"><span>前端开发 (3)</span></a></li>
+          
+        
             <li><a href="https://wdanna.com/tags/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6" role="button"><span>我的大学 (3)</span></a></li>
           
         
             <li><a href="https://wdanna.com/tags/%E6%9C%89%E4%B8%80%E7%A7%8D%E8%B8%8F%E5%AE%9E%E6%98%AF%E4%BD%A0%E5%8F%A3%E4%B8%AD%E5%96%8A%E6%88%91%E5%90%8D%E5%AD%97" role="button"><span>有一种踏实是你口中喊我名字 (3)</span></a></li>
-          
-        
-            <li><a href="https://wdanna.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" role="button"><span>前端开发 (2)</span></a></li>
           
         
             <li><a href="https://wdanna.com/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7" role="button"><span>开发工具 (2)</span></a></li>
@@ -866,7 +870,7 @@
               
                 <div class="px-2 middot"></div>
                 <div>
-                  81 posts
+                  82 posts
                 </div>
               
             </div>
@@ -1165,7 +1169,16 @@
         
     
     
-    <li class="page-item"><a class="page-link" href="https://wdanna.com/posts/blog/page/27/">27</a></li>
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://wdanna.com/posts/blog/page/28/">28</a></li>
     
     
     <li class="page-item">
@@ -1173,12 +1186,66 @@
     </li>
     
     <li class="page-item">
-        <a href="https://wdanna.com/posts/blog/page/27/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="https://wdanna.com/posts/blog/page/28/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
 
           </div>
+
+          
+              <div class="post-wrapper white-bg post-card">
+  
+  <a href="https://wdanna.com/posts/blog/2017-06/ubuntu%E5%AE%89%E8%A3%85mongodb%E6%8A%A5%E9%94%99/">
+    <div class="post-header text-center">
+      <div class="px-2 post-heading">Ubuntu 安装 mongoDB 报错</div>
+      <ul class="post-meta li-x mt-1">
+        
+          <li>Jun 22, 2017</li>
+        
+    
+        
+          <li class="middot"></li>
+          <li>One minute read</li>
+        
+      </ul>
+    </div>
+    
+
+    
+      一、安装步骤一切ok 启动时 $ sudo service mongodb start #报错 couldn&#39;t connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146 #停止时 $ sudo service mongodb stop #报错 unknown instance 搜了下有人这样解决了： Step 1: Remove lock file.sudo rm /var/lib/mongodb/mongod.lock Step 2: Repair mongodb. sudo mongod –repair Step 3: start mongodb.sudo start mongodb orsudo service mongodb start Step 4: Check status of mongodb.sudo status mongodb or sudo service mongodb status Step 5: Start mongo console.mongo 但我也试了，却没有解决… 卸载之前装的mongodb $ sudo apt-get purge mongodb-org $ sudo apt-get autoremoveRemove the old mongodb.list you created $ sudo rm /etc/apt/sources.list.d/mongodb.list 准备重新安装，由失败到成功，整理了一下： 执行命令 sudo apt-get install mongodb-server 进入目录 vim ~/.bashrc 添加此句 $ export PATH=/home/yhl/mongodb-linux/bin:$PATH 查看版本号 $ mongod -version $ mkdir......
+    
+  </a>
+
+  
+  
+  <div class="post-meta li-x mt-2 div-x">
+    <div>
+      
+        
+          <li><a href="https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 软件开发 </a></li>
+        
+      
+      
+    </div>
+   
+    <div>
+      
+        
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/ubuntu" role="button">Ubuntu </a></li>
+      
+    
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+</div>
 
           
               <div class="post-wrapper white-bg post-card">
@@ -1282,64 +1349,6 @@
   <div class="tags-sm">
     
       <li><a href="https://wdanna.com/tags/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6" role="button">我的大学 </a></li>
-      
-    
-  </div>
-</div>
-      
-    </div>
-  </div>
-
-</div>
-
-          
-              <div class="post-wrapper white-bg post-card">
-  
-  <a href="https://wdanna.com/posts/blog/2017-05/%E4%BD%A0%E4%B9%9F%E6%9B%BE%E6%83%B3%E7%9C%8B%E4%B8%80%E7%9C%BC%E6%B2%99%E6%BC%A0%E5%90%97-%E6%B8%B8%E6%B2%99%E5%9D%A1%E5%A4%B4/">
-    <div class="post-header text-center">
-      <div class="px-2 post-heading">你也曾想看一眼沙漠吗 | 游沙坡头</div>
-      <ul class="post-meta li-x mt-1">
-        
-          <li>May 31, 2017</li>
-        
-    
-        
-          <li class="middot"></li>
-          <li>9 minutes read</li>
-        
-      </ul>
-    </div>
-    
-
-    
-      你也曾想去沙漠看看吗？ 遗憾，我还没曾想过，就那样去了… 以前，总觉得雪域西藏是最纯净的土地… 也是我最想骑行去的地方… 可是，当我有天站在通往天堂的路上 我才发现，沙漠竟也如此让我难以忘怀。 西行，去还是不去 这是一次说走就走，走的最快的旅行了。 其实在走之前我都不知道要去的地方是哪里，只知道是沙漠，叫沙坡头。 小爸告诉我那里很好玩，五A级景点，走吧，就这样，一家大大小小......
-    
-  </a>
-
-  
-  
-  <div class="post-meta li-x mt-2 div-x">
-    <div>
-      
-        
-          <li><a href="https://wdanna.com/categories/%E5%9C%A8%E8%B7%AF%E4%B8%8A"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 在路上 </a></li>
-        
-      
-      
-        
-          <li><a href="https://wdanna.com/series/%E9%BB%84%E6%98%8F%E8%A7%81%E8%AF%81%E4%BA%86%E6%9C%80%E5%BF%A0%E5%AE%9E%E7%9A%84%E4%BF%A1%E5%BE%92"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>黄昏见证了最忠实的信徒</a></li>
-        
-      
-    </div>
-   
-    <div>
-      
-        
-<div class="li-x div-x post-meta">
-  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
-  <div class="tags-sm">
-    
-      <li><a href="https://wdanna.com/tags/%E9%BB%84%E6%98%8F%E8%A7%81%E8%AF%81%E4%BA%86%E6%9C%80%E5%BF%A0%E5%AE%9E%E7%9A%84%E4%BF%A1%E5%BE%92" role="button">黄昏见证了最忠实的信徒 </a></li>
       
     
   </div>

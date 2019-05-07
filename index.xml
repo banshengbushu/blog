@@ -6,10 +6,19 @@
     <description>Recent content on 半生不熟 | Amber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wdanna.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用 Javascript 实现一个空格键功能</title>
+      <link>https://wdanna.com/posts/blog/2019-05/%E7%94%A8-javascript-%E5%AE%9E%E7%8E%B0%E7%A9%BA%E6%A0%BC%E9%94%AE%E7%9A%84%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/posts/blog/2019-05/%E7%94%A8-javascript-%E5%AE%9E%E7%8E%B0%E7%A9%BA%E6%A0%BC%E9%94%AE%E7%9A%84%E5%8A%9F%E8%83%BD/</guid>
+      <description>最近在做 Accessibility 相关的东西时候，又发现了一个坑，就是跟这个看似完美的tabindex=0的有关。 其实究其原因，还是年轻的我不仔细看文档导致的，但我觉得文档没有特别强调的但是确实很重要的东西就有可能是未来的坑，所以还是想分享一下给大家。 要实现的需求大概是这样的 有一个选择框是这个样子的，我们叫它 可以搜索的 Listbox，可以点击打开里面的List选择，也可以点击输入你想要的国家英文名称，它会模糊进行 Filt</description>
+    </item>
     
     <item>
       <title>厦门踩坑3日游</title>
