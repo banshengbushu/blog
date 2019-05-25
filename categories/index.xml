@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 半生不熟 | Amber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Tue, 07 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wdanna.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>工作相关</title>
+      <link>https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件开发</title>
+      <link>https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>前端开发</title>
@@ -71,24 +89,6 @@
       <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://wdanna.com/categories/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工作相关</title>
-      <link>https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/</link>
-      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>软件开发</title>
-      <link>https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
