@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta name="baidu-site-verification" content="vwL9IDtS6Z" />
+  <meta name="msvalidate.01" content="3D940446722D9F6C89B75262C1500888" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="半生不熟 | Amber">
+  <meta name="description" content="其实我不是来讲故事的 严格意义上来说，我是一名前端开发，清楚地记得我参与过的项目曾花费大量的人力和时间为网站的UI进行重新改版设计，尽可能多地吸引用户眼球，也曾花费大量人力和时间优化网站的性能，想方设法地提高首屏加载速度，追求极致的用户体验，但印象中好像从来没有人提过需要优化无障碍访问的问题。 项目上的原因，让我有机会开始关注这个从来没有和人聊过的话题，当客户说想优化网站Accessibility的时">
+
+  <title>
+  
+       关于信息无障碍我们能做些什么 | 半生不熟 | Amber 
+  
+  </title>
+
+  <link rel="canonical" href="https://wdanna.com/posts/blog/2019-06/%E5%85%B3%E4%BA%8E%E4%BF%A1%E6%81%AF%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%88%91%E4%BB%AC%E8%83%BD%E5%81%9A%E4%BA%9B%E4%BB%80%E4%B9%88/">
+
+  
+  
+
+  
+  <link href="https://wdanna.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wdanna.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wdanna.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wdanna.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wdanna.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+      href="https://image.wdanna.com/avatar/favicon.ico"
+      href="https://image.wdanna.com/avatar/my_profile.jpg"
+  >
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wdanna.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139547931-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139547931-1');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wdanna.com/">
+        <img class="avatar" src="https://image.wdanna.com/avatar/favicon.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        <strong> 半生不熟 | Amber</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wdanna.com/">Home</a>
+          </li>
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/books/" >Books  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/slides/" >Slides  </a>
+            </li>
+          
+             
+            <li class="nav-item " style="border-radius: 14px; !important;">
+              <a class="nav-link" href="https://wdanna.com/posts/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides/raw_1515691711.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691712.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wdanna.com/img/header-slides//raw_1515691719.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="background-color: rgba(0,0,0,.5);">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wdanna.com/">
+            <img class="pull-right avatar avatar-md" src="https://image.wdanna.com/avatar/favicon.ico" alt="">
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wdanna.com/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>半生不熟 | Amber</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/banshengbushu" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+
+            
+                <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+
+            
+                <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://wdanna.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 软件开发 </a></li>
+      
+        <li><a href="https://wdanna.com/categories/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 工作相关 </a></li>
+      
+    
+    
+  </ul>
+
+  <div class="px-2 post-heading">关于信息无障碍我们能做些什么</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jun 9, 2019</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>10 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h4 id="其实我不是来讲故事的">其实我不是来讲故事的</h4>
+
+<p>严格意义上来说，我是一名前端开发，清楚地记得我参与过的项目曾花费大量的人力和时间为网站的<code>UI</code>进行重新改版设计，尽可能多地吸引用户眼球，也曾花费大量人力和时间优化网站的性能，想方设法地提高首屏加载速度，追求极致的用户体验，但印象中好像从来没有人提过需要优化无障碍访问的问题。</p>
+
+<p>项目上的原因，让我有机会开始关注这个从来没有和人聊过的话题，当客户说想优化网站<code>Accessibility</code>的时候，我们竟然没有几个开发了解过，说实话还挺惭愧的。然后就是一系列的学习，实践，踩坑，再学习，再实践，再踩坑&hellip;&hellip;但是慢慢地发现，其实它并没有想象中难，但它缺少关注的确是真的，特别是在国内。我想，或许很多人和我一样，只是差一个不经意的关注和一个认识它的开始。</p>
+
+<blockquote>
+<p>“ 对无障碍最大的误区是，把它当做成了产品的情怀功能，而非基础功能或者<code>Bug</code>去对待。”</p>
+</blockquote>
+
+<h4 id="在谈论用户的时候-我们是不是忘了些什么">在谈论用户的时候，我们是不是忘了些什么</h4>
+
+<p>起床的第一眼就可以看到阳光，大口大口地呼吸新鲜空气，然后背上书包，踏上单车，去学校，去上班，去见自己喜欢的人，去和路过的每一个朋友微笑，这些看起来简单又平凡的事情，却是很多人日思夜想却永远也享受不到的。</p>
+
+<blockquote>
+<p>“当我哭泣我没有鞋子穿的时候，我发现有人却没有脚。”</p>
+</blockquote>
+
+<p>在我惊叹于一个个美如画的界面设计的时候，好像从未想到过这个世界有很多人什么都看不到，在我沉浸在实现了视频嵌入功能的喜悦中的时候，好像从未想到过这个世界有很多人连声音都听不到。我曾经完全不敢相信双目失明的人可以和正常人一样使用手机和电脑，直到有一天我看到了很多知乎的优秀回答是来自于世界不同角落的盲人，我曾经完全不敢相信身体有缺陷的人可以和正常人一样获得平等的工作机会，直到有一天我了解了盲人编程和聋哑程序员。</p>
+
+<p><strong>其实世界很大，大到我们根本无法用语言来描述每一个存在着的事物。</strong></p>
+
+<p>据公开数据统计，色盲患者中，平均12名男性中就有一例，200名女性中就有一例，他们可能难以区分红色和绿色，或者黄色和蓝色。弱视患者30名人群中就有一例，他们没有任何的角膜，尽管能看到东西的大致轮廓，却难以阅读印刷文字，在法律上会被视为盲人。</p>
+
+<blockquote>
+<p>中国有2亿多的障碍群体，其中包括 1700 万视障者，2000 万听力障碍者，7000 万读写障碍者，1.5 亿 65 岁以上的老年人等等，加上其他各种类型障碍人群，这些障碍人士加起来占中国人口总数 20% 以上。</p>
+</blockquote>
+
+<p>他们是我们的用户吗？真的是我们需要考虑的用户吗？我觉得没有理由不是，如果说非要找一个理由，那应该就是被我们的潜意识选择了遗忘吧。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-2e345fc5b06cd6d8.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="来自游戏《见》截图" /></p>
+
+<h4 id="所以无障碍是什么">所以无障碍是什么</h4>
+
+<p>你可能见过四面都是镜子的电梯，它的设计其实是为了增加空间感，让人们觉得不那么压抑，在等电梯的时候也可以整理整理自己的衣物，照照镜子，不会让人觉得等电梯的时候无聊；你可能见过马路边很多台阶有一段会做成坡度的，据我所知它设计的初衷是为了方便盲人的轮椅上下台阶，但是实际上大家都知道，它对自行车和婴儿推车也方便了许多；你可能见过很多电梯的按钮都刻有盲文，很多地铁站都设有无障碍通道，无障碍卫生间等等，这些都与无障碍有关。</p>
+
+<p>信息无障碍，英文词语来自<code>Accessibility</code>，我们主要会说到关于<code>Web</code>的无障碍问题，相比于<code>W3C</code>的定义，其实我更喜欢维基百科给出的解释。</p>
+
+<blockquote>
+<p><strong>Web accessibility refers to the inclusive practice of removing barriers that prevent interaction with, or access to websites, by people with disabilities. When sites are correctly designed, developed and edited, all users have equal access to information and functionality.</strong></p>
+</blockquote>
+
+<p>所有的用户,在任何情况下都能平等地、方便地、无障碍地获取信息、使用功能，无论是健全人还是残疾人，无论是轻年人还是老年人。</p>
+
+<p>有些眼睛看不太清楚的人会使用屏幕放大器来阅读文字，有些什么都看不见的人会使用盲文显示器来阅读文字，有些色盲患者会使用一些高对比模式来获得更好地体验，一些听力不太好的人，在看视频的时候会选择带有字幕的视频，如果你正在使用<code>Mac</code>，可以试着按下<code>Command+F5</code>，然后闭上眼睛，用另一种方式去感受你曾经可以看到的东西。其实只要你用心去发现，这些都与无障碍这个字眼有关，实际上很多设计不仅仅是方便了它们，也让正常人获得了更好的体验。</p>
+
+<h4 id="凡事都少不了标准">凡事都少不了标准</h4>
+
+<p><a href="https://www.w3.org/TR/WCAG20/">WCAG</a> 是<code>W3C</code>发布的一套网络内容可访问性指南，它是目前网络无障碍的国际标准，合规等级分为三级（A、AA 和 AAA）。总的来说，全篇围绕了四个原则：</p>
+
+<ul>
+<li><p><strong>可感知</strong>
+用户能否正确地感知到产品的内容？如果说我们的网站只提供凭借一种感官（例如视觉）才能让用户感知到内容，其实无形中就失去了很多用户。</p></li>
+
+<li><p><strong>可操作</strong>
+用户能否正常地使用每一个组件的功能？比如我们经常用到的下拉菜单，我见过很多网站只设计了<code>hover</code>上去的时候展开菜单的效果，却没有实现点击状态下的展开，设想，如果我们的用户群体根本就没有能力使用鼠标，是不是也就意味着不能使用我们的网站了？</p></li>
+
+<li><p><strong>可理解</strong>
+用户是否能很好地理解我们的内容？比如我们加了一个看着很时尚的小图标来代表<code>设置</code>功能，但并没有为读屏软件提供相关内容解释，如果我们的用户完全看不到东西，是不是也就意味着根本不能理解你的网站有什么，也就不能再继续交互下去了？</p></li>
+
+<li><p><strong>强健性</strong>
+我们网站或者产品的内容是否能被多种<code>User Agent</code>使用？使用屏幕阅读器的用户可以正常读出来我们想表达的内容吗？使用<code>IE</code>的用户是不是根本就打不开我们的网站呢？</p></li>
+</ul>
+
+<p>听着是不是还是有些不知所措，没关系， <a href="https://webaim.org/standards/wcag/checklist">WebAIM</a>（网络无障碍功能思维小组）将<code>WCAG</code>指南提炼成了一份详细的检查清单，专以网络内容为目标，这样我们就更容易知道我们网站存在些什么问题了。</p>
+
+<p><code>W3C</code>也提供了各个国家的相关无障碍法，有若干国家在其网络无障碍功能法律要求中明令，必须使用国际标准指南，了解过国内的一些资料，虽然到现在很多 App 已经在慢慢变好，但是大部分的网站无障碍访问依然不是很乐观。中山大学工学院教授富明慧教授曾经说过一句话：</p>
+
+<blockquote>
+<p>“目前我国99%的网站，由于没有实现无障碍，盲人难以正常浏览访问网站。”省盲协主席” 富明慧本身就是一名盲人，他失明后发明了半方盲文输入法，他还说，加快网站无障碍改造，政府部门网站应该先行一步。”</p>
+</blockquote>
+
+<p>很多发达国家，比如美国、欧洲、日本等国家都针对 a11y 立法，不符合 a11y 的软件程序很多都不在政府机关等的采购范围内。澳大利亚政府的“网络可访问性国内过渡战略”（NTS）规定，所有政府网站及其内容必须在 2012年12月31日以前达到 WCAG 2.0 的A级合规要求，并在2014年12月31日之前达到 AA 级合规要求。</p>
+
+<h4 id="至少我们可以做到这些">至少我们可以做到这些</h4>
+
+<ul>
+<li><p><strong>标题，段落，列表等内容的保持良好的结构</strong>
+对于<code>Accessibility</code>来说，良好的标题段落和列表结构会提高辅助设备对网站内容的识别度，提高用户的体验，比如屏幕阅读器在阅读到结构相对良好的标签的时候，会用帮助户更容易地理解我们网站的内容。</p></li>
+
+<li><p><strong>尽可能地使用语义化标签</strong>
+正确地使用各个语义化的标签，不仅是代码质量的提高，对阅读代码的人也会有极大的帮助，同样对于开发成本，网站的SEO来说都是有好处的。浏览器的调试工具里面有个叫<code>Accessibility tree</code>的东西，浏览器会获取<code>DOM</code>树，然后将其修改成适用于辅助技术的形式(无障碍树)，所以良好的使用语义化标签，能让辅助设备更合理地将我们网站的内容转化成<code>Accessibility tree</code>，从而解读给用户，确保页面中的重要的元素有正确的无障碍角色、状态和属性，这一点很重要。</p></li>
+
+<li><p><strong>为所有非文本内容提供文本替代项</strong>
+图片是大多数网页的重要组成部分，但其实也是对弱视用户造成阻碍的一个特定因素，这时候添加文本替代项是非常必要的，所有图像都应有<code>alt</code>属性，但它们无需都包含文本。 重要的图片应使用描述性替代文本简洁地说明图像内容，而装饰性类的图片应该使用空的<code>alt</code>属性，而直接删掉看起来没用的<code>alt</code>。</p></li>
+
+<li><p><strong>DOM 顺序和 Tab 键顺序保持一致</strong>
+一般我们设计的时候，往往考虑的都是以视觉为主的，其实对于只能使用屏幕阅读器浏览网站的用户来说，如果我们过多地使用一些样式让视觉显示的<code>DOM</code>结构和<code>Tab</code>键顺序不一致的话，就会造成用户的疑惑，比如样式中使用了<code>float</code>之后，记得用<code>tabindex</code>调整<code>Tab</code>键的顺序，使其和<code>DOM</code>顺序一致。</p></li>
+</ul>
+
+<blockquote>
+<p>“优秀的无障碍设计，不仅能让身体有缺陷的用户正常地与产品交互，还会为普通人提供更好的使用体验，实际不需要开发者编写很繁琐的代码，每增加一点支持，网站就能更加的平易近人。”</p>
+</blockquote>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-9199e9b3b07e0f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Accessibility-Tree" /></p>
+
+<h5 id="有些做法其实是不友好的">有些做法其实是不友好的</h5>
+
+<p>打开一个网页，用<code>Tab/Shift+Tab</code>进行跳转，不管是误触，还是故意为之，大家应该都多多少少会看到这样一个样式，也许你曾经见过，也许你可能发现同样的一个链接在有的网站却是没有这样的样式和交互的，其实它是浏览器默认的<code>Focus</code>的样式，代表着这个元素默认是<code>focusable</code>的，<code>HTML</code>默认的<code>focusable</code>元素，会自动插入到<code>Tab</code>键顺序中，并且内置了键盘事件处理，默认支持<code>keyboard</code>功能，基本的都可以在 <a href="https://www.w3.org/TR/2011/WD-html5-20110525/editing.html">这个链接</a> 里找到，不同的浏览器会有不同的的样式，<code>Chrome</code>通常使用蓝色边框突出显示聚焦的元素，而 <code>Firefox</code>则是使用虚线边框。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-4b64ea953b82f091.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="outline" /></p>
+
+<p>还记得你的处理方式吗？我清楚地记得，在得知我们设计师曾经说这个样式很丑，提议把它去掉的时候，<code>a { outline: none; }</code>一行这样看起来很完美的代码就解决了问题，但其实我们并不知道，就这样一行看起来天然无公害的代码，让网站成为了多少人的地狱。<a href="http://www.outlinenone.com/">outlinenone</a> 对<code>outline</code>做出了很好的解释，<strong>Web AIM 检查清单也在其第 2.1.1 节中指出，<a href="https://webaim.org/standards/wcag/checklist#sc2.1.1">所有页面功能应该都能使用键盘来执行</a></strong></p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-9c7153952582bd65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="outlinenone" /></p>
+
+<p>所以关于<code>focus</code>我们能做的有很多</p>
+
+<ul>
+<li><strong>不要删掉原生支持的 outline 样式，除非你有更好看的样式替代它</strong></li>
+<li><strong>尽量使用原生支持的可聚焦的元素</strong></li>
+<li><strong>如果有复杂的<code>UI</code>, 需要使用非语义化的标签来实现交互组件的时候，请为它加上<code>tabindex</code>和必要时的一些事件</strong></li>
+<li><strong>可以自己写一些 JavaScript 或用一些库来区分键盘和鼠标或者触摸事件，实现不同场景下的<code>outline</code>样式，比如只想在使用键盘的时候有<code>outline</code>，使用鼠标或者触摸板的时候去<code>outline</code>，我觉得这是相对合理的设计，可以参考 <a href="https://github.com/ten1seven/what-input">what-input</a> 的实现。</strong></li>
+</ul>
+
+<h5 id="3-请使用-wai-aria-https-www-w3-org-tr-html-aria-sec-strong-native-semantics">3. 请使用 <a href="https://www.w3.org/TR/html-aria/#sec-strong-native-semantics">WAI-ARIA</a></h5>
+
+<p>做到了以上几点，其实大多数时候，我们需要满足复杂的业务逻辑而使用一些非语义化的标签，完全没有问题，但是请为它加上<code>WAI-ARIA</code>相关属性, 它可以修改现有元素的语义，也可以向不存在原生语义的元素添加语义，通过增加浏览器和辅助技术可以识别的进一步语义来让用户知道正在发生的事情，它提供了一系列可以使用的<code>HTML</code>属性来达到该目的，常用的有<code>role, aria-label, aria-labellby,  aria-owns, aria-hidden</code>，学会使用它们，或许能为你带来一些别的收获，至少于我是这样的。</p>
+
+<h5 id="4-网页的对比度">4. 网页的对比度</h5>
+
+<p>有时候你会发现你的眼睛不舒服了，或许是你看的东西颜色对比度有问题了，下图红框的部分从下到上，我们能看到对比度越来越低，识别度也越来越低，如果我们设计开发网站过程中使用了不是很高的对比度，对于一些诵读困难症患者来说，他们会感觉文字在旋转、模糊，有人统计过，大约 5% 用户在访问网站的时候无法获得我们预想的体验。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-60a07afe045a4aaf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Contrast" /></p>
+
+<p>WCAG 2.0 对页面上文字的对比度有一个最低的要求 <strong>4.5 : 1</strong>，所以保持合理的对比度同样重要，如果你够细心，<code>Chrome</code>的选色器是会给出你的对比度是否符合要求的提示的，同样也可以在 <a href="https://webaim.org/resources/contrastchecker/">WebAIM’s Color Contrast Checker</a> 测试。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-935095cd5e6e6efe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="contract test" /></p>
+
+<h3 id="关于测试">关于测试</h3>
+
+<p>如果你愿意的话，你可以用几十几秒的时间打开谷歌浏览器的<code>Audits</code>找到你网站存在的所有无障碍问题，然后会看到你网站的<code>Accessibility</code>分数和所有的对需要修复的问题的建议。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-723451cc7d2c73dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Audits" /></p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2190281-a4d571b892f8d321.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>有着同样效果的 Chrome 插件，只是可能提示方式有些区别，<a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=zh-cn">ax</a> ，<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=zh-cn">WAVE</a>，还有可以自动化检查<code>A11y</code>问题的工具，<a href="http://pa11y.org/">pa11y</a> 同样可以集成到<code>CI</code>。</p>
+
+<h3 id="写在最后">写在最后</h3>
+
+<p>也许你目前没有足够的时间和预算来做无障碍设计，但只要你把它当做你日常工作要考虑的标准的一部分，你就会惊喜地发现，你其实能够满足很多无障碍设计标准，每个角落都有人在以不同的方式创造着奇迹，其实我们可以做的更好。</p>
+
+<p><strong>他们怀着希望期待着的明天，不会永远与我们无关，我想总有变好的那一天。</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=dEbl5jvLKGQ">Screen Reader Demo</a></p>
+
+<p><a href="https://v.qq.com/x/page/t0561x2zxd1.html">苹果公司无障碍宣传片</a></p>
+
+<p><a href="https://www.ted.com/talks/chieko_asakawa_how_new_technology_helps_blind_people_explore_the_world/transcript?/&amp;language=zh-cn">TED-帮助盲人探索世界</a></p>
+
+<p><strong>我是半生不熟，喜欢照自己的怪念头行事，喜欢一切意外 想把生活过成诗的样子若哪天有幸相遇，请别诧异，其实我并不是个乖孩子。</strong></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://wdanna.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://wdanna.com/tags/%E6%88%90%E9%95%BF" role="button">成长 </a></li>
+      
+    
+      <li><a href="https://wdanna.com/tags/thoughtworks" role="button">ThoughtWorks </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+          <div id="git-comments"></div>
+          <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+          <script>
+              var gitment = new Gitment({
+                  id: "2019-06-09 00:00:00 \x2b0000 UTC",
+                  owner: "banshengbushu",
+                  repo: 'blog_comments',
+                  oauth: {
+                      client_id: '1977e86fd0a4696587e6',
+                      client_secret: '81dc2c452fa33a531a6f62e7e3da982674267d26',
+                  }
+              })
+              gitment.render('git-comments')
+          </script>
+          
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/banshengbushu " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+      
+      <a href="https://www.zhihu.com/people/banshengbushu/activities" target="_blank" rel="noopener"><i class="fab fa-zhihu pr-1" aria-hidden="true"></i></a>
+      
+
+      
+      <a href="https://500px.com/_amber" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+      
+
+    
+      <a href="https://www.facebook.com/Amber.pepperr" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+        <a href="https://twitter.com/Dannaw_" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="https://www.instagram.com/amber.pepper_/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="mailto:wangdanna1995@outlook.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <div>  2016 - 2019 &copy; | By  <a href='https://github.com/banshengbushu/blog' target="_blank">Banshengbushu</a>  </div>
+    <div id="busuanzi_container_site_pv">
+            本网站访问量：<span id="busuanzi_value_site_pv"></span>次
+    <div/>
+  </div>
+  
+
+</footer>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wdanna.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wdanna.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://wdanna.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wdanna.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wdanna.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
