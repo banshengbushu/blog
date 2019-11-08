@@ -332,13 +332,13 @@
 
 <p>这样一来，很容易让人对它的认识比较模糊，也就很容易被忽略，有机会前两天和  <a href="https://liyaodong.com/">项目组大牛</a> Pair 研究了之后，想出了一个较为简单方法可以快速地验证了一些 Case，通过一些测试用例可以清楚地得出一些结论，文末会给出 repo 的地址。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-9ffea266c68d97d1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-9ffea266c68d97d1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <h3 id="cache">Cache</h3>
 
 <p>说到缓存，知乎上看到过这样一个解释，觉得还挺有意思。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-df5cca82a32a6b2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Cache" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-df5cca82a32a6b2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Cache" /></p>
 
 <blockquote>
 <p>如上图一样，Cache 可以认为是一种保管箱。
@@ -352,7 +352,7 @@
 
 <p>相信很多人应该经常也会看到 <code>304</code> 的请求吧</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-c456429b8d7a8e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-c456429b8d7a8e9d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <p>这也就为什么进入一个网页后之后的刷新会比首次快很多，归根结底都是 Cache 的功劳。</p>
 
@@ -431,7 +431,7 @@ server.listen(8080)
 <li><strong>Last-Modified &amp; If-Modified-Since</strong></li>
 </ul>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-d3c2dc76da10e9b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-d3c2dc76da10e9b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <p>在第一次请求资源，服务器将资源传递给浏览器时，会将资源最后更改的时间以 <code>Last-Modified: GMT</code> 的形式加在 <code>response</code> 首部上一起返回给浏览器。</p>
 
@@ -449,7 +449,7 @@ server.listen(8080)
 
 <p>为了解决上面这些问题，Http 1.1 还推出了 ETag (Entity Tag) 实体首部字段，具体的原理是这样的。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-acb37806b2bbca68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-acb37806b2bbca68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <p>服务器会通过某种算法，为每个资源都计算得出一个唯一标识符，比如 <code>md5</code> 标识符，一旦这个资源发生了变化，这个标识符就会发生变化。</p>
 
@@ -467,7 +467,7 @@ server.listen(8080)
 <p><strong>理想情况下，目标应该是在浏览器上缓存尽可能多的响应、缓存尽可能长的时间，并且为每个响应提供 ETag，以便进行高效的重新验证。</strong></p>
 </blockquote>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-a679fdec71fe8bc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="组合需合理" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-a679fdec71fe8bc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="组合需合理" /></p>
 
 <p>但说到这里，相信大家对具体情况到底该怎么组合应该还是有疑虑的，我们在研究后写了一些测试用例，建立在每个 Case 都可以被验证的事实上加深了对它的理解，得出的其中一个很重要的结论就是：<strong>组合需合理</strong></p>
 
@@ -483,9 +483,9 @@ server.listen(8080)
 <h3 id="最后">最后</h3>
 
 <p>最后想说的是，很多人应该也见到过同样是  <code>200</code>的 <code>code</code>， 有些资源是 from memory cache，而有些却是 from disk cache 的，如下图
-<img src="https://upload-images.jianshu.io/upload_images/2190281-ec05410362c558aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from disk cahce" /></p>
+<img src="http://upload-images.jianshu.io/upload_images/2190281-ec05410362c558aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from disk cahce" /></p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-f25375a25a1e7105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from memory cache" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-f25375a25a1e7105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="from memory cache" /></p>
 
 <p>这个我们其实没有做过多的研究，因为这并不影响缓存策略的设置，但确定的是，这完全是由浏览器自己决定的，<code>memory cache</code> 会将资源存到内存中，从内存中获取，<code>disk cache</code> 则会将资源缓存到磁盘中，从磁盘中获取，<strong>二者最大的区别在于：当退出进程时，内存中的数据会被清空，而磁盘的数据则不会。大家如果感兴趣可以自己再做些研究的啦。</strong></p>
 

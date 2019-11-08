@@ -369,7 +369,7 @@
 
 <p>他们是我们的用户吗？真的是我们需要考虑的用户吗？我觉得没有理由不是，如果说非要找一个理由，那应该就是被我们的潜意识选择了遗忘吧。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-2e345fc5b06cd6d8.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="来自游戏《见》截图" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-2e345fc5b06cd6d8.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="来自游戏《见》截图" /></p>
 
 <h4 id="所以无障碍是什么">所以无障碍是什么</h4>
 
@@ -433,17 +433,17 @@
 <p>“优秀的无障碍设计，不仅能让身体有缺陷的用户正常地与产品交互，还会为普通人提供更好的使用体验，实际不需要开发者编写很繁琐的代码，每增加一点支持，网站就能更加的平易近人。”</p>
 </blockquote>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-9199e9b3b07e0f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Accessibility-Tree" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-9199e9b3b07e0f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Accessibility-Tree" /></p>
 
 <h5 id="有些做法其实是不友好的">有些做法其实是不友好的</h5>
 
 <p>打开一个网页，用<code>Tab/Shift+Tab</code>进行跳转，不管是误触，还是故意为之，大家应该都多多少少会看到这样一个样式，也许你曾经见过，也许你可能发现同样的一个链接在有的网站却是没有这样的样式和交互的，其实它是浏览器默认的<code>Focus</code>的样式，代表着这个元素默认是<code>focusable</code>的，<code>HTML</code>默认的<code>focusable</code>元素，会自动插入到<code>Tab</code>键顺序中，并且内置了键盘事件处理，默认支持<code>keyboard</code>功能，基本的都可以在 <a href="https://www.w3.org/TR/2011/WD-html5-20110525/editing.html">这个链接</a> 里找到，不同的浏览器会有不同的的样式，<code>Chrome</code>通常使用蓝色边框突出显示聚焦的元素，而 <code>Firefox</code>则是使用虚线边框。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-4b64ea953b82f091.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="outline" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-4b64ea953b82f091.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="outline" /></p>
 
 <p>还记得你的处理方式吗？我清楚地记得，在得知我们设计师曾经说这个样式很丑，提议把它去掉的时候，<code>a { outline: none; }</code>一行这样看起来很完美的代码就解决了问题，但其实我们并不知道，就这样一行看起来天然无公害的代码，让网站成为了多少人的地狱。<a href="http://www.outlinenone.com/">outlinenone</a> 对<code>outline</code>做出了很好的解释，<strong>Web AIM 检查清单也在其第 2.1.1 节中指出，<a href="https://webaim.org/standards/wcag/checklist#sc2.1.1">所有页面功能应该都能使用键盘来执行</a></strong></p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-9c7153952582bd65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="outlinenone" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-9c7153952582bd65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="outlinenone" /></p>
 
 <p>所以关于<code>focus</code>我们能做的有很多</p>
 
@@ -462,19 +462,19 @@
 
 <p>有时候你会发现你的眼睛不舒服了，或许是你看的东西颜色对比度有问题了，下图红框的部分从下到上，我们能看到对比度越来越低，识别度也越来越低，如果我们设计开发网站过程中使用了不是很高的对比度，对于一些诵读困难症患者来说，他们会感觉文字在旋转、模糊，有人统计过，大约 5% 用户在访问网站的时候无法获得我们预想的体验。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-60a07afe045a4aaf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Contrast" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-60a07afe045a4aaf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Contrast" /></p>
 
 <p>WCAG 2.0 对页面上文字的对比度有一个最低的要求 <strong>4.5 : 1</strong>，所以保持合理的对比度同样重要，如果你够细心，<code>Chrome</code>的选色器是会给出你的对比度是否符合要求的提示的，同样也可以在 <a href="https://webaim.org/resources/contrastchecker/">WebAIM’s Color Contrast Checker</a> 测试。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-935095cd5e6e6efe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="contract test" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-935095cd5e6e6efe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="contract test" /></p>
 
 <h3 id="关于测试">关于测试</h3>
 
 <p>如果你愿意的话，你可以用几十几秒的时间打开谷歌浏览器的<code>Audits</code>找到你网站存在的所有无障碍问题，然后会看到你网站的<code>Accessibility</code>分数和所有的对需要修复的问题的建议。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-723451cc7d2c73dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Audits" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-723451cc7d2c73dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Audits" /></p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-a4d571b892f8d321.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-a4d571b892f8d321.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <p>有着同样效果的 Chrome 插件，只是可能提示方式有些区别，<a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=zh-cn">ax</a> ，<a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=zh-cn">WAVE</a>，还有可以自动化检查<code>A11y</code>问题的工具，<a href="http://pa11y.org/">pa11y</a> 同样可以集成到<code>CI</code>。</p>
 

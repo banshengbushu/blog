@@ -345,7 +345,7 @@
 
 <p>有一个选择框是这个样子的，我们叫它 可以搜索的 <code>Listbox</code>，可以点击打开里面的<code>List</code>选择，也可以点击输入你想要的国家英文名称，它会模糊进行 <code>Filter</code>给出你想要的结果。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-67d31af09933056b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-67d31af09933056b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <p>但我们今天想说的不是它的搜索和选择功能，而是你看到的这个组件的无障碍可访问功能（Web Accessibility）中的<strong>输入空格的功能</strong>。</p>
 
@@ -359,16 +359,16 @@
 
 <p>在我添加了一系列点击事件之后，我发现一旦它被<code>Focus</code>之后，按下空格和回车键的时候，它就会依次打开、关闭，心中窃喜，简直完美，也没有仔细看原因&hellip;&hellip;.</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-be1d116d68c5c68b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-be1d116d68c5c68b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
 
 <p>然后呢，再测试的时候就有问题了，当我在输入框输入一串字符，接着想输入一个空格的时候，我的<code>Listbox</code> 直接就给我合上了，这是怎么回事呢，什么都没干呢，怎么会有这种<code>Bug</code>，我输的明明是空格呀，我的空格哪去了呢&hellip;</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-0c68c13181fef798.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="按 Tab 键之后打开 Listbox" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-0c68c13181fef798.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="按 Tab 键之后打开 Listbox" /></p>
 
 <h3 id="果然多看文档才是王道呀">果然多看文档才是王道呀</h3>
 
 <p>人家大大的 Important 写着 <code>加了 tabindex=0的元素也就意味着会是以按钮形式显示的元素，必须是响应 Enter 和 Spacebar 键的</code>
-<img src="https://upload-images.jianshu.io/upload_images/2190281-6bedb39c7839c755.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" />
+<img src="http://upload-images.jianshu.io/upload_images/2190281-6bedb39c7839c755.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" />
 这样一看，为什么我加了点击和关闭事件以后，默认回车和空格键就生效了，你找个 Accessibility 做的好的页面，随便 Tab 一个 Button，人家按回车和空格都是可以 work 的呀。</p>
 
 <p>自然，在我没有自定义任何响应空格键的方法的情况下，输入框里输入空格，它不关闭我的 Listbox 才怪呢。</p>
@@ -394,11 +394,11 @@ onKeyDown = event =&gt; {
 </code></pre>
 
 <p>看着很健康，很完美，诱人的空格就这样出来了。
-<img src="https://upload-images.jianshu.io/upload_images/2190281-640fbdc0630802d2.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+<img src="http://upload-images.jianshu.io/upload_images/2190281-640fbdc0630802d2.gif?imageMogr2/auto-orient/strip" alt="" /></p>
 
 <p>但是我发现好像忘了按空格了，让我再回去加个空格。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-7fba81d1f0c97b4e.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-7fba81d1f0c97b4e.gif?imageMogr2/auto-orient/strip" alt="" /></p>
 
 <p>崩了，我还能说什么呢，只傻傻的给后面追加空字符串是真的不行啊，无论在哪里按空格，都是在最后面追加。</p>
 
@@ -410,7 +410,7 @@ onKeyDown = event =&gt; {
 
 <p>但是要怎么获取光标的位置，得解决这个问题，搜了很多资料加动了一些小脑筋之后，才发现两行代码就搞定了，这下才是真的完美。</p>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/2190281-22931c1dd368e258.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2190281-22931c1dd368e258.gif?imageMogr2/auto-orient/strip" alt="" /></p>
 
 <pre><code>if(event.KeyCode === 32) {
             event.preventDefault(); //同样禁用默认的打开关闭事件
